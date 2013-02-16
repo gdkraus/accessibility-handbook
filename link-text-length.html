@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Link text should not be too long</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>The link text should not be too long</h1>
+        <p></p>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> The link text is short enough to be quickly read, descriptive enough to know where it will take you, and is found in a context that tells you want the link does. </h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;p&gt;View examples, watch tutorials, download tools, and check your Web site's  accessibility at the &lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot;&gt;NC  State IT Accessibility Web site&lt;/a&gt;&lt;/p&gt;</pre>
+            <p class="implementation">View examples, watch tutorials, download tools, and check your Web site’s  accessibility at the <a href="http://accessibility.oit.ncsu.edu">NC State IT Accessibility Web site</a></p>
+        </section>
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> The link is too long to be quickly read by screen readers.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;p&gt;&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot;&gt;View examples, watch tutorials, download tools, and check your Web site's accessibility at the NC State IT  Accessibility Web site&lt;/a&gt;&lt;/p&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu">View examples, watch tutorials, download tools, and check your Web site’s accessibility at the NC State IT  Accessibility Web site</a></p>
+        </section>
+    </body>
+</html>

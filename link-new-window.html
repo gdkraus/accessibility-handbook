@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Links and New Windows</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+        <link href="new-window.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Links and new windows</h1>
+        <p>When opening a link it is best to open it in the same window or tab where the user currently is. Opening a link in a new window causes three main problems.</p>
+        <ul>
+            <li>Screen reader users, screen magnifier users, and users with certain cognitive impairments can become disoriented when they are taken to a new window</li>
+            <li>The use of the back button, the most used button within the browser, is broken.</li>
+            <li>Certain user agents, like kiosks, are unable to open new windows or tabs.</li>
+        </ul>
+        <p>Users have the ability to choose if they want to open a particular link in a new window or tab.</p>
+        <p>There are times when it is appropriate to open a link in a new window, such as when launching a Web application. There are some cases where you do not want the user to be able to back out of an application. <strong>If you do open a link in a new window you need to alert the user that you are doing so.</strong></p>
+        <p>There are a number of solutions to this problem.</p>
+        <h2>Correct Implementations</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Using text to alert the user that the link is opening in a new window.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility (new window)&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility (new window)</a></p>
+        </section>
+
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Using an image with alt text to alert the user the link is opening in a new window.</h3>
+                        <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility <img src="new-window.jpg" alt="opens in new window"></a></p>
+
+        </section>
+
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Using an image that is only visible on :hover and :focus that alerts the user the link is opening in a new window</h3>
+            <h4>Source Code</h4>
+            <pre class="code">a.ncsu-a11y-link-new-window img {
+    border: 0 none;
+}
+a.ncsu-a11y-link-new-window span {
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+a.ncsu-a11y-link-new-window:hover span, a.ncsu-a11y-link-new-window:focus span, a.ncsu-a11y-link-new-window:active span {
+    background-color: #FFFFFF;
+    border: 1px solid #888888;
+    border-radius: 5px 5px 5px 5px;
+    display: inline;
+    height: inherit;
+    left: inherit;
+    margin-left: 0.5em;
+    padding: 0.2em 0.2em 0.1em;
+    position: absolute;
+    top: inherit;
+    width: inherit;
+}
+
+&lt;a target=&quot;_blank&quot; href=&quot;http://www.ncsu.edu&quot; class=&quot;ncsu-a11y-link-new-window&quot;&gt;External link&lt;span&gt;&lt;img alt=&quot;opens in a new window&quot; src=&quot;new-window.jpg&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a target="_blank" href="http://www.ncsu.edu" class="ncsu-a11y-link-new-window">External link<span><img alt="opens in a new window" src="new-window.jpg"></span></a></p>
+        </section>
+
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> The user will be taken to a window when clicking on the link and will not be notified.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility</a></p>
+        </section>
+    </body>
+</html>

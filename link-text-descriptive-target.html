@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>The link text should be descriptive of its target location</h1>
+        <p>The link text should be descriptive of its target location. Do not use “click here” as part of the text.</p>
+        <h2>Correct Implementations</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> The link text describes where the link will take the user.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">Find out more information at the &lt;a href="http://accessibility.oit.ncsu.edu"&gt;NC State IT  Accessibility&lt;/a&gt; home page.</pre>
+            <h4>Implementation</h4>
+            <p>Find out more information at the <a href="http://accessibility.oit.ncsu.edu">NC State IT  Accessibility</a> home page.</p>
+        </section>
+        <h2>Incorrect Implementations</h2>
+        <section class="example bad">
+           <h3><span class="first-word">Principle:</span> The text click here does not describe where the link will go. The description for the link follows the actual link.</h3> 
+        <h4>Source Code</h4>
+        <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here&lt;/a&gt; to find out more information at the NC State  IT Accessibility home page.</pre>
+        <h4>Implementation</h4>
+        <p><a href="http://accessibility.oit.ncsu.edu">Click here</a> to find out more information at the NC State  IT Accessibility home page.</p>
+        </section>
+        <section class="example bad">
+          <h3><span class="first-word">Principle:</span> The text "click here" is unnecessary because users already know they need to click a link to follow it.</h3>
+              <h4>Source Code</h4>
+        <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here to find out more information at the NC State  IT Accessibility home page.&lt;/a&gt;</pre>
+<h4>Implementation</h4>
+<p><a href="http://accessibility.oit.ncsu.edu">Click here to find out more information at the NC State  IT Accessibility home page.</a></p>
+        </section>
+    </body>
+</html>

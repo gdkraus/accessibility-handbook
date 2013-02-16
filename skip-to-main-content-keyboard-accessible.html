@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Skip to Main Content - Keyboard Accessible</title>
+<style type="text/css">
+a.skip-main {
+	left:-999px;
+	position:absolute;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:scroll;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+	background-color:#000;
+    left: 0;
+    top: 0;
+    width: auto;
+	height: auto;
+	overflow:auto;
+}
+</style>
+</head>
+
+<body>
+<a class="skip-main" href="#main">Skip to main content</a>
+<h1>Skip to Main Content - Keyboard Accessible</h1>
+<ul>
+  <li><a href="#">Nav Item 1</a></li>
+  <li><a href="#">Nav Item 2</a></li>
+  <li><a href="#">Nav Item 3</a></li>
+  <li><a href="#">Nav Item 4</a></li>
+</ul>
+<p id="main">This is the main content. In this example you will note that the &quot;Skip to main content&quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screenread uers, an easy way to skip reptitive navigation. The key components to implementing this are</p>
+<ol>
+  <li>provide a link at the top of the page that says &quot;skip to main content&quot;</li>
+  <li>have it link to an internal anchor further down in the page where the main content begins.</li>
+  <li>uss CSS :focus and :activate to make the skip link visible when the user tabs to it</li>
+</ol>
+<p>For <a href="http://accessibility.oit.ncsu.edu/blog/">more tutorials visit http://accessibility.oit.ncsu.edu/blog/</a>.</p>
+</body>
+</html>

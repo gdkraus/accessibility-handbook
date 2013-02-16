@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Don't Make the Target URL the Actual Hyperlink Text</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Don't Make the Target URL the Actual Hyperlink Text</h1>
+        <p>Whenever possible and appropriate, the visible link text should be readable text and not the same as the hyperlink text. Some hyperlinks are very long and become cumbersome to display and read on the page. There are times when it is appropriate to display the link text as the actual URL, and in those cases it is fine to do so.</p>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> The link text is short and descriptive and lets the user know where it will be taking them.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&amp;primary=CC0000,000000,FFFFFF&amp;secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&amp;tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&amp;level=AA&amp;ncsu=1&quot;&gt;NC State Color Palette Accessibility Evaluator&lt;/a&gt;</pre>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&primary=CC0000,000000,FFFFFF&secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&level=AA&ncsu=1">NC State Color Palette Accessibility Evaluator</a> </p>
+        </section>
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> While the link will take the user to the correct location, determining what the link actually does can be challenging.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&amp;primary=CC0000,000000,FFFFFF&amp;secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&amp;tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&amp;level=AA&amp;ncsu=1&quot;&gt;http://accessibility.oit.ncsu.edu/tools/color-contrast/index.php&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&primary=CC0000,000000,FFFFFF&secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&level=AA&ncsu=1">http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&primary=CC0000,000000,FFFFFF&secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&level=AA&ncsu=1</a> </p>
+        </section>
+    </body>
+</html>

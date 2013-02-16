@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Skip to main content link</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Skip to main content</h1>
+        <p>When keyboard-only users interact with your site they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.</p>
+        <p>Note: These techniques are also sometimes referred to as "skip navigation links". </p>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Having a skip to main content link appear when it receives keyboard focus.</h3>
+            <p>The text is hidden offscreen in a manner that allows screen reader users to interact with it.</p>
+            <h4>Source Code</h4>
+            <pre class="code">a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:scroll;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color:#000;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow:auto;
+}
+            
+&lt;a class=&quot;skip-main&quot; href=&quot;#main&quot;&gt;Skip to main content&lt;/a&gt;
+&lt;h1&gt;Skip to Main Content - Keyboard Accessible&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p id=&quot;main&quot;&gt;This is the main content. In this example you will note that the &amp;quot;Skip to main content&amp;quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screenread uers, an easy way to skip reptitive navigation. The key components to implementing this are&lt;/p&gt;            </pre>
+            <h4>Implementation</h4>
+            <p class="implementation">View the <a href="http://accessibility.oit.ncsu.edu/training/html/skip-to-main-content-keyboard-accessible.html">skip to main content implementation</a> on another page.</p>
+        </section>
+        
+    </body>
+</html>

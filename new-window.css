@@ -1,0 +1,24 @@
+a.ncsu-a11y-link-new-window img {
+    border: 0 none;
+}
+a.ncsu-a11y-link-new-window span {
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+a.ncsu-a11y-link-new-window:hover span, a.ncsu-a11y-link-new-window:focus span, a.ncsu-a11y-link-new-window:active span {
+    background-color: #FFFFFF;
+    border: 1px solid #888888;
+    border-radius: 5px 5px 5px 5px;
+    display: inline;
+    height: inherit;
+    left: inherit;
+    margin-left: 0.5em;
+    padding: 0.2em 0.2em 0.1em;
+    position: absolute;
+    top: inherit;
+    width: inherit;
+}

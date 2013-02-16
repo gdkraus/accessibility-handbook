@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Link text should be uniquely identifiable</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Link text needs to be uniquely identifiable within the page</h1>
+        <p>The link text should be unique among all of the links on the page, or alternatively the unique function of the link should be able to be determined from the link’s context. This helps in determining what a link's function is and differentiating it among similar links. <strong>If it is necessary to have multiple links on the same page with the same link text</strong> there are a number of ways to address this problem.</p>
+        <ul>
+            <li><a href="#hidden">Hidden link text</a></li>
+            <li><a href="#parent">Link as a Child of a Unique Parent Element</a></li>
+            <li><a href="#heading">Link as a Child of a Unique Heading</a></li>
+            <li><a href="#list">Link as a Child of a Unique List Item</a></li>
+        </ul>
+        <h2 id="hidden">Hidden Link Text</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> The visible link text is not descriptive enough and might not be unique from other links on a page. The hidden text will be read by screen readers to give them enough context to discern the function of the link.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">.offscreen {
+position:absolute;
+left:-999px;
+width:1px;
+height:1px;
+top:auto;
+}
+
+&lt;p&gt;&lt;a href="#"&gt;Read more &lt;span class="offscreen"&gt;About NC State&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="#">Read more<span style="position:absolute;left:-999px;width:1px;height:1px;top:auto;"> About NC State</span></a></p>
+        </section>
+
+        <h2 id="parent">Link as a Child of a Unique Parent Element</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> <strong>(Correct)</strong> Link text found within the context of a descriptive parent element</h3>
+            <p>This demonstrates the correct implementation where the non-unique or non-fully-descriptive text is found within the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a child of the descriptive &lt;p&gt;.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I’ve seen used the least. &lt;a href=&quot;file.html&quot;&gt;[Read more...]&lt;/a&gt;&lt;/p&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation">How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible
+                version is the one I’ve seen used the least. <a href="file.html">[Read more...]</a></p>
+        </section>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> <strong>(Incorrect)</strong> Link text found outside the context of a descriptive element</h3>
+            <p>This demonstrates the <strong>incorrect</strong> implementation where the non-unique or non-fully-descriptive text is found outside the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a sibling of the descriptive &lt;p&gt;</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I&rsquo;ve seen used the least.&lt;/p&gt;
+&lt;p&gt;&lt;a href="file.html"&gt;[Read more...]&lt;/a&gt;&lt;/p&gt;</pre>
+            <h4>Implementation</h4>
+            <p>How should you display the parts of a form that are read-only? There are
+                three main implementations that I have seen, and unfortunately the accessible
+                version is the one I’ve seen used the least.</p>
+            <p><a href="file.html">[Read more...]</a></p>
+        </section>
+
+        <h2 id="heading">Link as a Child of a Unique Heading</h2>
+        <section class="example good"> 
+            <h3><span class="first-word">Principle: </span>Link text paired with the text of the immediately preceeding heading, forming a uniquely identifiable context.</h3>
+            <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent heading. This allows the unique function of the link to be determined.</p>
+            <h4>Source Code</h4>
+            <pre>&lt;h5&gt;Annual Report 2007-2008&lt;/h5&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;annrep0708.html&quot;&gt;(HTML)&lt;/a&gt;&amp;nbsp;
+    &lt;a href=&quot;annrep0708.pdf&quot;&gt;(PDF)&lt;/a&gt;&amp;nbsp;
+    &lt;a href=&quot;annrep0708.rtf&quot;&gt;(RTF)&lt;/a&gt;
+  &lt;/p&gt;
+  
+&lt;h5&gt;Annual Report 2006-2007&lt;/h5&gt;
+  &lt;p&gt; 
+    &lt;a href=&quot;annrep0607.html&quot;&gt;(HTML)&lt;/a&gt;&amp;nbsp;
+    &lt;a href=&quot;annrep0607.pdf&quot;&gt;(PDF)&lt;/a&gt;&amp;nbsp;
+    &lt;a href=&quot;annrep0607.rtf&quot;&gt;(RTF)&lt;/a&gt;
+  &lt;/p&gt;</pre>
+            <h4>Implementation</h4>
+            <h5>Annual Report 2007-2008</h5>
+            <p>
+                <a href="annrep0708.html">(HTML)</a>&nbsp;
+                <a href="annrep0708.pdf">(PDF)</a>&nbsp;
+                <a href="annrep0708.rtf">(RTF)</a>
+            </p>
+
+            <h5>Annual Report 2006-2007</h5>
+            <p> 
+                <a href="annrep0607.html">(HTML)</a>&nbsp;
+                <a href="annrep0607.pdf">(PDF)</a>&nbsp;
+                <a href="annrep0607.rtf">(RTF)</a>
+            </p>
+        </section> 
+        
+        <h2 id="list">Link as a Child of a Unique List Item</h2>
+<section class="example good"> 
+        <h3><span class="first-word">Principle: </span>Link text paired with the text of the immediately preceeding parent list item, forming a uniquely identifiable context.</h3>
+            <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent list item. This allows the unique function of this link to be determined.</p>
+        <h4>Source Code</h4>
+        <pre class="code">&lt;ul&gt;
+  &lt;li&gt;Annual Report 2005-2006
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0506.html&quot;&gt;(HTML)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0506.pdf&quot;&gt;(PDF)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0506.rtf&quot;&gt;(RTF)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Annual Report 2006-2007
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0607.html&quot;&gt;(HTML)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0607.pdf&quot;&gt;(PDF)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a  href=&quot;annrep0607.rtf&quot;&gt;(RTF)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+<h4>Implementation</h4>
+<ul>
+  <li>Annual Report 2005-2006
+  <ul>
+    <li><a  href="annrep0506.html">(HTML)</a></li>
+    <li><a  href="annrep0506.pdf">(PDF)</a></li>
+    <li><a  href="annrep0506.rtf">(RTF)</a></li>
+  </ul>
+  </li>
+  <li>Annual Report 2006-2007
+  <ul>
+    <li><a  href="annrep0607.html">(HTML)</a></li>
+    <li><a  href="annrep0607.pdf">(PDF)</a></li>
+    <li><a  href="annrep0607.rtf">(RTF)</a></li>
+  </ul>
+  </li>
+  </ul>
+</section>
+
+    </body>
+</html>

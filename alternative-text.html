@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Alternative Text</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Alternative Text</h1>
+        <p>The basic premise of alternative text is to make it so all users can read the same information and have the same interactions with a Web page, regardless of whether or not they can see the images. Alternative text is often used by visually disabled users with screen reading software, where the description of an image is read to the user in place of the image. Alternative text can take a couple of different forms.</p>
+        <div class="tip">
+            <p>If you don't know what to write for your alt text, think of the function that the image plays within the page and make that your alt text. What were you hoping to convey visually to users with that image? Make that your alt text.</p>
+        </div>
+        <h2>Correct Implementations</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Alternative text stored in the alt attribute</h3>
+            <p>Text can be stored in the alt attribute of the image tag. These are brief descriptions that tell the function this image plays in the page or the information this image is trying to convey.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;email-deleted.png&quot; alt=&quot;Warning, all of your email is about to be deleted!&quot;&gt;&lt;/a&gt;</pre>
+            <p class="implementation"><a href="#"><img src="email-deleted.png" alt="Warning, all of your email is about to be deleted!"></a></p>
+        </section>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> An empty string stored in the alt attribute</h3>
+            <p>If an image is used simply for decoration and provides no substantive meaning to the page, the alt attribute can be set to the empty string. alt="" This tells screen readers to skip this image. Leaving off the alt attribute altogether is not correct.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;img src=&quot;divider.jpg&quot; alt=&quot;&quot;&gt;</pre>
+            <p class="implementation"><img src="divider.jpg" alt=""></p>
+        </section>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> A contextual description</h3>
+            <p>Sometimes the function or the information an image is conveying is already present within the text of the page surrounding the image. For example, an image of the Mona Lisa with an accompanying paragraph describing the Mona Lisa would not require a lengthy alt attribute since the information is already present within the context on the page. In this case, the alt attribute could be something simple like "Mona Lisa." That way the screen reader user knows the image is present and knows what it is, and they will be able to discern the information it is conveying from the context.</p>
+            <p>Note, the image and text from this example are used from the <a href="http://en.wikipedia.org/wiki/Mona_Lisa">Wikipedia entry on the Mona Lisa</a>.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;img src=&quot;mona-lisa.jpg&quot; alt=&quot;Mona Lisa&quot;&gt;
+&lt;p&gt;The Mona Lisa is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as &quot;the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world.&quot; The painting, thought to be a portrait of Lisa Gherardini, the wife of Francesco del Giocondo, is in oil on a poplar panel, and is believed to have been painted between 1503 and 1506.&lt;/p&gt;</pre>
+            <img src="mona-lisa.jpg" alt="Mona Lisa">
+            <p>The Mona Lisa is a half-length portrait of a woman by the Italian artist Leonardo da Vinci, which has been acclaimed as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world." The painting, thought to be a portrait of Lisa Gherardini, the wife of Francesco del Giocondo, is in oil on a poplar panel, and is believed to have been painted between 1503 and 1506.</p>
+        </section>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> A linked image with appropriate alt text.</h3>
+            <p>In this case, screen readers will announce the alt attribute to the user.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href="#"&gt;&lt;img src="get-help.jpg" alt="Get Help">&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><a href="#"><img src="get-help.jpg" alt="Get Help"></a></p>
+        </section>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> A button image with appropriate alt text.</h3>
+            <p>Images used as buttons need to have alternative text too, just like linked images. </p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;input type=&quot;image&quot; name=&quot;submitbutton&quot; src=&quot;submit-this-form-button.jpg&quot; alt=&quot;Submit this form&quot; /&gt;</pre>
+            <h4>Implementation</h4>
+            <p class="implementation"><input type="image" name="submitbutton" src="submit-this-form-button.jpg" alt="Submit this form" /></p>
+        </section>        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> An image missing the alt attribute</h3>
+            <p>Screen readers will not have any information about this image. Usually the name of the file will be read to them when there is no alt attribute.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;email-deleted.png&quot;&gt;&lt;/a&gt;</pre>
+            <p class="implementation"><a href="#"><img src="email-deleted.png"></a></p>
+        </section>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> An important image with an empty alt attribute.</h3>
+            <p>When the alt attribute is blank, you are in essence telling the screen reader to ignore this image. If the image is important they will miss information available to other users.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;email-deleted.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;</pre>
+            <p class="implementation"><a href="#"><img src="email-deleted.png" alt=""></a></p>
+        </section>
+        <h2>Further Reading</h2>
+        <ul>
+            <li><a href="http://webaim.org/techniques/alttext/">WebAIM's Tutorial on Appropriate Use of Alternative Text</a></li>
+            <li><a href="http://webaim.org/techniques/images/">WebAIM's Tutorial on Creating Accessible Images</a></li>
+        </ul>
+    </body>
+</html>

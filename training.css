@@ -1,0 +1,51 @@
+table, th, td {
+    border: 1px solid #333;
+}
+th, td {
+    padding:3px;
+}
+caption {
+    caption-side: bottom;
+    font-size:0.9em;
+}
+
+.tip {
+    border:thin solid #cc0;
+    background-color:#ffd;
+    margin:1em;
+    padding:0 1em;
+}
+
+.code {
+    font-family: "Courier New", Courier, monospace;
+    border: thin solid #666;
+    background-color:#eee;
+    padding:0.5em;
+    white-space: pre-wrap;
+    
+}
+
+.example {
+    border: thin dashed #666;
+    background-color:#fff;
+    margin-left:3em;
+    padding:0.5em;
+    margin-bottom:1em;
+}
+
+.good {
+    border: thick solid #090;
+}
+
+.bad {
+    border: thick solid #900;
+}
+section.example h3{
+    font-weight: normal;
+    font-size: 1em;
+    background-color:#eef;
+    padding: .5em 0;
+}
+section.example .first-word{
+    font-weight: bold;
+}
