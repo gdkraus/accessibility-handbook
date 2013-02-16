@@ -66,6 +66,13 @@
             <pre class="code">&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;email-deleted.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;</pre>
             <p class="implementation"><a href="#"><img src="email-deleted.png" alt=""></a></p>
         </section>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> An alt attribute on a decorative image</h3>
+            <p>Any time you include an alt attribute, screen reader users will have it read to them. If an image is used simply for decoration and provides no substantive meaning to the page, the alt attribute should be set to the empty string. alt="" This tells screen readers to skip this image. Leaving off the alt attribute altogether is not correct.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;img src=&quot;divider.jpg&quot; alt=&quot;divider&quot;&gt;</pre>
+            <p class="implementation"><img src="divider.jpg" alt="divider"></p>
+        </section>
         <h2>Further Reading</h2>
         <ul>
             <li><a href="http://webaim.org/techniques/alttext/">WebAIM's Tutorial on Appropriate Use of Alternative Text</a></li>
