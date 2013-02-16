@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Language</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Define the Language of the Document</h1>
+        <p>Defining the language of the document allows the following.</p>
+        <ul>
+            <li>Text-to-speech engines, like screen readers, know how to read the text</li>
+            <li>Spell checkers know what language to use</li>
+            <li>Text styling</li>
+        </ul>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Defining the language for an HTML5 or HTML 4 document</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;html lang=&quot;en-US&quot;&gt;</pre>
+        </section>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Defining the language for an XHTML document</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;html lang=&quot;en&quot; xml:lang=&quot;en&quot; xmlns= &quot;http://www.w3.org/1999/xhtml&quot;&gt;</pre>
+        </section>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with one predominant language</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;!doctype html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Welcome - Bienvenue&lt;/title&gt; 
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;Lots of text in English...&lt;/p&gt;
+    &lt;p lang=&quot;fr&quot;&gt;Une petite quantité de texte en français...&lt;/p&gt;
+  &lt;/body&gt; 
+&lt;/html&gt;</pre>
+        </section>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with the quantity of each language being roughly equally</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Welcome - Bienvenue&lt;/title&gt; 
+  &lt;/head&gt; 
+  &lt;body&gt; 
+    &lt;div lang=&quot;en&quot;&gt; 
+      &lt;h1&gt;Welcome!&lt;/h1&gt; 
+      &lt;p&gt;Lots of text in English...&lt;/p&gt; 
+    &lt;/div&gt; 
+    &lt;div lang=&quot;fr&quot;&gt; 
+      &lt;h1&gt;Bienvenue !&lt;/h1&gt; 
+      &lt;p&gt;Beaucoup de texte en français...&lt;/p&gt; 
+    &lt;/div&gt; 
+  &lt;/body&gt; 
+&lt;/html&gt;</pre>
+        </section>
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> Not defining the language of the document.</h3>
+            <p>If you do not define the language of the page, the user agent will default to using its own default language setting for rendering the page. If both the page and the user agent are in the same language everything will work fine, however, if for instance the user agent is set up for English and the page is in French, a user agent such as a screen reader will attempt to speak the French text like a bad American tourist.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Welcome - Bienvenue&lt;/title&gt; 
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;Lots of text in English...&lt;/p&gt;
+    &lt;p&gt;Une petite quantité de texte en français...&lt;/p&gt;
+  &lt;/body&gt; 
+&lt;/html&gt;</pre>
+        </section>      
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> Simply defining the language of the doctype.</h3>
+            <p>Defining the language in the doctype declaration simply defines the language of the doctype schema, not the language of the page itself. You must also define the language of the page using one of the previous techniques.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</pre>
+        </section>
+
+        <h2>Further Reading</h2>
+        <p>For more information, please refer to the <a href="http://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479">W3C documentation on specifying languages</a>, from which these examples were created.</p>
+    </body>
+</html>
