@@ -29,7 +29,7 @@ caption {
     border:thin solid #cc0;
     background-color:#ffd;
     margin:1em;
-    padding:0 1em;
+    padding:1em;
 }
 
 .code {
@@ -44,9 +44,8 @@ caption {
 .example {
     border: thin dashed #666;
     background-color:#fff;
-    margin-left:1em;
+    margin:1em 0.5em;
     padding:0.5em;
-    margin-bottom:1em;
 }
 
 .good {
