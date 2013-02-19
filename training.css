@@ -64,3 +64,11 @@ section.example h3{
 section.example .first-word{
     font-weight: bold;
 }
+
+section.step {
+    border-top: thin solid #666;
+    border-bottom: thin solid #666;
+    margin:1em 0;
+    padding:1em;
+}
+
