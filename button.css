@@ -1,0 +1,8 @@
+.something-button {
+    border-top: 2px solid #e00;
+    border-left: 2px solid #e00;
+    border-right: 2px solid #300;
+    border-bottom: 2px solid #300;
+    background-color:#c00;
+    color:#fff;
+}

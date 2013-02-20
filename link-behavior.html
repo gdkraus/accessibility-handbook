@@ -4,6 +4,7 @@
         <title>Link Behavior</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="training.css" rel="stylesheet" type="text/css">
+        <link href="button.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1>Link Behavior</h1>
@@ -15,11 +16,29 @@
             <h4>Implementation</h4>
             <p><a href="http://www.ncsu.edu">NC State University</a></p>
         </section>
-        <p>The problem with links starts when developers start leveraging the functionality of links for alternative purposes. The most common example of this is using JavaScript to execute some type of action when the link is clicked. The following three examples demonstrate the popular patterns for implementing this functionality.</p>
+        <p>The problem with links starts when developers start leveraging the functionality of links for alternative purposes. Links provide some nice conveniences.</p>
+        <ul>
+            <li>Clicking on a link makes some other action happen.</li>
+            <li>The mouse usually changes shape when hovering over top of them, indicating to the user that the link does something.</li>
+            <li>They are automatically in the tab order, so users can use the keyboard to tab to them.</li>
+        </ul>
+        <p>The most common example of using links for other purposes is using JavaScript to execute some type of action when the link is clicked. What we as developers would really like is this.</p>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> An anchor without an href element but with an onlick event.</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a onclick=&quot;alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
+            <p>Developers would really like this because it gets rid of the action of going to another page through the href attribute, but it allows us to perform other actions on the page, and we get all of the other benefits of links like being clickable. However, we encounter a few problems.</p>
+            <ul>
+                <li>The link no longer looks like a link.</li>
+                <li>The mouse pointer doesn't change when hovering over it to indicate that it is clickable.</li>
+            </ul>
+            <h4>Implementation</h4>
+            <p><a onclick="alert('something');">Do something</a> </p>
+        </section>
+        <p>In the end developers end up using the anchor element in other creative ways to get around this problem. The following three examples demonstrate the popular patterns for implementing this functionality.</p>
         <section class="example bad">
             <h3><span class="first-word">Principle:</span> Hash tag for the href attribute and JavaScript for onclick event</h3>
             <p>In this instance the hash character is used to tell the browser to go to an unnamed target within the same page. What this ends up doing is making the page scroll back to the top of the page. In the meantime the JavaScript function executes.</p>
-            
             <h4>Source Code</h4>
             <pre class="code">&lt;a href=&quot;#&quot; onclick=&quot;alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
             <p>Here are the problems with this implementation.</p>
@@ -27,47 +46,68 @@
                 <li>It can cause the page to scroll back to the top</li>
                 <li>It adds an entry to the browser history, so it takes an additional click of the back button to go to the previous page.</li>
                 <li>If the user has JavaScript disabled, nothing happens.</li>
+                <li>For screen reader users, they hear that this is a &quot;link&quot; and they might assume that clicking it will do what all links do - it will take them to a new page.</li>
             </ul>
             <h4>Implementation</h4>
             <p><a href="#" onclick="alert('something');">Do something</a></p>
         </section>
         <section class="example bad">
             <h3><span class="first-word">Principle:</span> JavaScript for the href attribute</h3>
+            <p>In this instance, a javascript action is fired when the link is clicked in place of taking the user to a new location.</p>
             <h4>Source Code</h4>
             <pre class="code">&lt;a href=&quot;javascript:alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
+            <p>Here are the problems with this implementation.</p>
+            <ul>
+                <li>If the user has JavaScript disabled, nothing happens.</li>
+                <li>For screen reader users, they hear that this is a &quot;link&quot; and they might assume that clicking it will do what all links do - it will take them to a new page.</li>
+            </ul>
             <h4>Implementation</h4>
             <p><a href="javascript:alert('something');">Do something</a></p>
         </section>
         <section class="example bad">
             <h3><span class="first-word">Principle:</span> JavaScript void for the href attribute and JavaScript for the onclick event</h3>
+            <p>In this instance, the behavior of the href attribute is overridden and in it's place an onclick event fires some JavaScript.</p>
+            <p>This implementation borders on comical. An anchor element is chosen because it will perform an action when clicked. Then the anchor's ability to perform an action when clicked is overridden. In place of its default behavior, a new function is added to once again make the anchor perform an action when clicked.</p>
             <h4>Source Code</h4>
             <pre class="code">&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
             <p>Here are the problems with this implementation.</p>
             <ul>
-                <li>It can cause the page to scroll back to the top</li>
-                <li>It adds an entry to the browser history, so it takes an additional click of the back button to go to the previous page.</li>
                 <li>If the user has JavaScript disabled, nothing happens.</li>
+                <li>For screen reader users, they hear that this is a &quot;link&quot; and they might assume that clicking it will do what all links do - it will take them to a new page.</li>
             </ul>
             <h4>Implementation</h4>
             <p><a href="javascript:void(0)" onclick="alert('something');">Do something</a></p>
         </section>
-        <p>When is a link not a link? When it should be a button.</p>
-        <h2>Correct Implementation</h2>
+        <h2>When is a link not a link? When it should be a button</h2>
+        <p>If you want to have the user click on an item within a page and have some action via JavaScript performed within the same page, a button is your best option.</p>
         <section class="example good">
-            <h3><span class="first-word">Principle:</span> </h3>
+            <h3><span class="first-word">Principle:</span> Using a button with JavaScript</h3>
             <h4>Source Code</h4>
-            <pre class="code"></pre>
+            <pre class="code">&lt;input type=&quot;button&quot; value=&quot;Do Something&quot; onClick=&quot;alert('something');&quot;&gt;</pre>
             <h4>Implementation</h4>
-            <p class="implementation"></p>
+            <p><input type="button" value="Do Something" onClick="alert('something');"> </p>
         </section>
-        <h2>Incorrect Implementation</h2>
-        <section class="example bad">
-            <h3><span class="first-word">Principle:</span> </h3>
+
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Using a CSS-styled button with JavaScript</h3>
+            <p>This instance is identical to the previous one except it uses CSS to customize the button.</p>
             <h4>Source Code</h4>
-            <pre class="code"></pre>
+            <pre class="code">&lt;style&gt;
+.something-button {
+  border-top: 2px solid #e00;
+  border-left: 2px solid #e00;
+  border-right: 2px solid #300;
+  border-bottom: 2px solid #300;
+  background-color:#c00;
+  color:#fff;
+}
+&lt;/style&gt
+
+&lt;input class=&quot;something-button&quot; type=&quot;button&quot; value=&quot;Do Something&quot; onClick=&quot;alert('something');&quot;&gt;</pre>
             <h4>Implementation</h4>
-            <p class="implementation"></p>
+            <p><input class="something-button" type="button" value="Do Something" onClick="alert('something');"></p>
         </section>
+               
         <h2>Further Reading</h2>
         <section>
             <ul>
@@ -76,6 +116,6 @@
                 <li><a href="http://developer.yahoo.com/blogs/ydn/posts/2010/10/how-many-users-have-javascript-disabled/">How many users have JavaScript disabled?</a></li>
             </ul>
         </section>
-    http://www.w3.org/html/wg/drafts/html/master/links.html#links
+        http://www.w3.org/html/wg/drafts/html/master/links.html#links
     </body>
 </html>
