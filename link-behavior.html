@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Link Behavior</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Link Behavior</h1>
+        <p>At its heart, a link connects two Web resources. It has two ends with an explicit direction - a source and a destination. Links are most often used to take a user from one Web page to another or from one location in a page to another location in the same page.</p>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> </h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;http://www.ncsu.edu&quot;&gt;NC State University&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p><a href="http://www.ncsu.edu">NC State University</a></p>
+        </section>
+        <p>The problem with links starts when developers start leveraging the functionality of links for alternative purposes. The most common example of this is using JavaScript to execute some type of action when the link is clicked. The following three examples demonstrate the popular patterns for implementing this functionality.</p>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> Hash tag for the href attribute and JavaScript for onclick event</h3>
+            <p>In this instance the hash character is used to tell the browser to go to an unnamed target within the same page. What this ends up doing is making the page scroll back to the top of the page. In the meantime the JavaScript function executes.</p>
+            
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;#&quot; onclick=&quot;alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
+            <p>Here are the problems with this implementation.</p>
+            <ul>
+                <li>It can cause the page to scroll back to the top</li>
+                <li>It adds an entry to the browser history, so it takes an additional click of the back button to go to the previous page.</li>
+                <li>If the user has JavaScript disabled, nothing happens.</li>
+            </ul>
+            <h4>Implementation</h4>
+            <p><a href="#" onclick="alert('something');">Do something</a></p>
+        </section>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> JavaScript for the href attribute</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;javascript:alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
+            <h4>Implementation</h4>
+            <p><a href="javascript:alert('something');">Do something</a></p>
+        </section>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> JavaScript void for the href attribute and JavaScript for the onclick event</h3>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;alert('something');&quot;&gt;Do something&lt;/a&gt;</pre>
+            <p>Here are the problems with this implementation.</p>
+            <ul>
+                <li>It can cause the page to scroll back to the top</li>
+                <li>It adds an entry to the browser history, so it takes an additional click of the back button to go to the previous page.</li>
+                <li>If the user has JavaScript disabled, nothing happens.</li>
+            </ul>
+            <h4>Implementation</h4>
+            <p><a href="javascript:void(0)" onclick="alert('something');">Do something</a></p>
+        </section>
+        <p>When is a link not a link? When it should be a button.</p>
+        <h2>Correct Implementation</h2>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> </h3>
+            <h4>Source Code</h4>
+            <pre class="code"></pre>
+            <h4>Implementation</h4>
+            <p class="implementation"></p>
+        </section>
+        <h2>Incorrect Implementation</h2>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> </h3>
+            <h4>Source Code</h4>
+            <pre class="code"></pre>
+            <h4>Implementation</h4>
+            <p class="implementation"></p>
+        </section>
+        <h2>Further Reading</h2>
+        <section>
+            <ul>
+                <li><a href="http://www.w3.org/html/wg/drafts/html/master/links.html#links">HTML5 specification on links from the W3C</a></li>
+                <li><a href="http://www.w3.org/TR/html4/struct/links.html">HTML 4 specification on links from the W3C</a></li>
+                <li><a href="http://developer.yahoo.com/blogs/ydn/posts/2010/10/how-many-users-have-javascript-disabled/">How many users have JavaScript disabled?</a></li>
+            </ul>
+        </section>
+    http://www.w3.org/html/wg/drafts/html/master/links.html#links
+    </body>
+</html>
