@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>ARIA Landmarks</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>ARIA Landmarks</h1>
+        <p>ARIA landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region. For example, we often code our main menu like the following.</p>
+        <pre class="code">&lt;div id=&quot;nav&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li&gt;Products&lt;/li&gt;
+    &lt;li&gt;Support&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <p>When screen reader users encounter something like this they will hear a collection of links and have to intuit that it is the main menu. We could go a step further and code it with a heading to give the menu some context and just hide the heading offscreen.</p>
+        <pre class="code">&lt;h2 class=&quot;offscreen&quot;&gt;Main Menu&lt;/h2&gt;
+&lt;div id=”nav”&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li&gt;Products&lt;/li&gt;
+    &lt;li&gt;Support&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <p>However, with ARIA landmarks we can do this even more elegantly. By adding the attribute role=”navigation” to the containing &lt;div&gt;, we are marking this as a navigation region.</p>
+        <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li&gt;Products&lt;/li&gt;
+    &lt;li&gt;Support&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <section>
+            <h2><span class="first-word">Principle:</span> </h2>
+            <h4>Source Code</h4>
+            <pre class="code"></pre>
+            <h4>Implementation</h4>
+            <p class="implementation"></p>
+        </section>
+     </body>
+</html>
