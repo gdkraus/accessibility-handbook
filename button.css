@@ -6,3 +6,11 @@
     background-color:#c00;
     color:#fff;
 }
+.something-button:active {
+    border-top: 2px solid #300;
+    border-left: 2px solid #300;
+    border-right: 2px solid #e00;
+    border-bottom: 2px solid #e00;
+    background-color:#600;
+    color:#fff;
+}

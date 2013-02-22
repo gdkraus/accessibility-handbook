@@ -101,13 +101,63 @@
   background-color:#c00;
   color:#fff;
 }
+.something-button:active {
+  border-top: 2px solid #300;
+  border-left: 2px solid #300;
+  border-right: 2px solid #e00;
+  border-bottom: 2px solid #e00;
+  background-color:#600;
+  color:#fff;
+}
 &lt;/style&gt
 
 &lt;input class=&quot;something-button&quot; type=&quot;button&quot; value=&quot;Do Something&quot; onClick=&quot;alert('something');&quot;&gt;</pre>
             <h4>Implementation</h4>
             <p><input class="something-button" type="button" value="Do Something" onClick="alert('something');"></p>
         </section>
-               
+
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Using progressive enhancement to change a link to a button</h3>
+            <p>This instance is demonstrates progressive enhancement, testing to see what capabilities a browser has and then delivering code that it can handle.</p>
+            <p>In this case it starts with a basic link which takes you to another page where the functionality occurs. If the browser has JavaScript enabled it changes the link to a button and the behavior to a same page action. This implementation solves the problem of when the user does not have JavaScript enabled.</p>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;p id=&quot;something&quot; &gt;&lt;a href=&quot;something.html&quot;&gt;Do Something&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function(){
+    if(document.getElementById){
+      var e = document.getElementById('something');
+      if(e){
+        var but = document.createElement('input');
+        but.setAttribute('type','button');
+        but.setAttribute('value','Do Something');
+        but.onclick = function(){
+          alert('something');
+        };
+        e.parentNode.replaceChild(but);
+      }
+    }
+  })();
+&lt;/script&gt;</pre>
+            <h4>Implementation</h4>
+            <p id="something" ><a href="something.html">Do Something</a></p>
+            <script type="text/javascript">
+                (function(){
+                    if(document.getElementById){
+                        var e = document.getElementById('something');
+                        if(e){
+                            var but = document.createElement('input');
+                            but.setAttribute('type','button');
+                            but.setAttribute('value','Do Something');
+                            but.onclick = function(){
+                                alert('something');
+                            };
+                            e.parentNode.replaceChild(but,e)
+                        }
+                    }
+                })();
+            </script>
+        </section>
+
         <h2>Further Reading</h2>
         <section>
             <ul>
