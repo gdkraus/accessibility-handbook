@@ -16,7 +16,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
         <p>When screen reader users encounter something like this they will hear a collection of links and have to intuit that it is the main menu. We could go a step further and code it with a heading to give the menu some context and just hide the heading offscreen.</p>
-        <pre class="code">&lt;h2 class=&quot;offscreen&quot;&gt;Main Menu&lt;/h2&gt;
+        <pre class="code">&lt;h2 class=&quot;screen-reader-offscreen&quot;&gt;Main Menu&lt;/h2&gt;
 &lt;div id=”nav”&gt;
   &lt;ul&gt;
     &lt;li&gt;Home&lt;/li&gt;
@@ -32,6 +32,33 @@
     &lt;li&gt;Support&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
+        <h2>aria-label</h2>
+        <p>We can take this a step further and describe this navigation region using the aria-label attribute. aria-label is a description that is never displayed on screen but is relayed to the screen reader user. This can be very helpful if you have multiple navigation areas within a single page.</p>
+        <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-label=&quot;main navigation&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Home&lt;/li&gt;
+    &lt;li&gt;Products&lt;/li&gt;
+    &lt;li&gt;Support&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        
+&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-label=&quot;product navigation&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Product Description&lt;/li&gt;
+    &lt;li&gt;Technical Specifications&lt;/li&gt;
+    &lt;li&gt;Customer Reviews&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+        <h2>aria-labelledby</h2>
+        <p>Another option for labeling an ARIA landmark is to use the aria-labelledby attribute. The aria-labelledby attribute is used when a particular landmark can be labelled by another on-screen element. You just list the id for the item that labels that landmark.</p>
+        <pre class="code">&lt;div role=&quot;nav&quot; aria-labelledby=&quot;nav-heading&quot;&gt;
+  &lt;h2 id=&quot;nav-heading&quot;&gt;Learn About This Product&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Product Description&lt;/li&gt;
+    &lt;li&gt;Technical Specifications&lt;/li&gt;
+    &lt;li&gt;Customer Reviews&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
         <section>
             <h2><span class="first-word">Principle:</span> </h2>
             <h4>Source Code</h4>
@@ -39,5 +66,5 @@
             <h4>Implementation</h4>
             <p class="implementation"></p>
         </section>
-     </body>
+    </body>
 </html>
