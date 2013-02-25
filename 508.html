@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Section 508</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Section 508</h1>
+        <p>&quot;Section 508&quot; is actually part of a larger body of legislation - Section 508 of the Rehabilitation Act. The Rehabilitation Act was enacted in 1973 and prohibits discrimination on the basis of disability in Federal programs, among other things.</p>
+        <p>Section 508 was enacted in 1998 in order to eliminate barriers in information technology (IT) for people with disabilities. It applies to technologies that are purchased or developed by Federal agencies and covers all aspects of IT from Web pages to desktop software applications to telecommunications equipment. Each of the product areas Section 508 covers has technical standards.</p>
+        <ul>
+            <li>1194.21 Software applications and operating systems</li>
+            <li>1194.22 Web-based intranet and internet information and applications</li>
+            <li>1194.23 Telecommunications products</li>
+            <li>1194.24 Video and multimedia products</li>
+            <li>1194.25 Self contained, closed products</li>
+            <li>1194.26 Desktop and portable computers</li>
+        </ul>
+        <p>Additionally, there are requirements for 1194.41 Information, documentation, and support.</p>
+        <p>While the technical standards for the different types of products do vary from one to the other, their core requirements are quite similar. A good way to start to grasp the intention of Section 508 is to look at the subsection entitled &quot;Functional performance criteria.&quot;</p>
+        <h2>Functional performance criteria</h2>
+        <p>The functional performance criteria state that for any product there must be at least one way to interact with the product that allows <strong>all</strong> of the following types of users to interact with the product.</p>
+        <ul>
+            <li>visually impaired (blind)</li>
+            <li>visually impaired (visual acuity no better than 20/70)</li>
+            <li>hearing impaired (deaf)</li>
+            <li>hearing impaired (need assistive listening devices)</li>
+            <li>speech impaired</li>
+            <li>physically impaired</li>
+        </ul>
+        <p>If this task sounds daunting, the technical specifications define criteria for determining if a product meets these requirements. Since this is a guide on Web accessibility, subsection 1194.22 Web-based intranet and internet information and applications, will be looked at most closely.</p>
+        <h2>1194.22 Web-based intranet and internet information and applications</h2>
+        <p>There are 16 criteria in this subsection which cover the range of impairments listed in the Functional Performance Criteria.</p>
+        <ol class="section-508">
+            <li>A text equivalent for every non-text element shall be provided (e.g., via "alt", "longdesc", or in element content).</li>
+            <li>Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation.</li>
+            <li>Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup.</li>
+            <li>Documents shall be organized so they are readable without requiring an associated style sheet.</li>
+            <li>Redundant text links shall be provided for each active region of a server-side image map.</li>
+            <li>Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape.</li>
+            <li>Row and column headers shall be identified for data tables.</li>
+            <li>Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.</li>
+            <li>Frames shall be titled with text that facilitates frame identification and navigation.</li>
+            <li>Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</li>
+            <li>A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.</li>
+            <li>When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology.</li>
+            <li>When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21(a)</li>
+            <li>When electronic forms are designed to be completed on-line, the form shall allow people using assistive technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</li>
+            <li>A method shall be provided that permits users to skip repetitive navigation links.</li>
+            <li>When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.</li>
+        </ol>
+        <p>These requirements can be summarized with the following list</p>
+        <ul>
+            <li>Provide alternative text for all images, or links in the case of image maps</li>
+            <li>Do not depend on color alone for communicating information</li>
+            <li>The logical flow of the page should follow the source code, or <abbr title="Document Object Model">DOM</abbr>.</li>
+            <li>Data tables should have headings</li>
+            <li>Frames should have titles</li>
+            <li>Avoid flickering on the screen between 2-55 Hz</li>
+            <li>Content displayed with scripts must be accessible</li>
+            <li>Content delivered via plugins must be accessible</li>
+            <li>Online forms must be coded correctly</li>
+            <li>Provide a way for users to skip repetitive navigation links</li>
+            <li>Allow users to adjust timed permitted for timed responses</li>
+        </ul>
+        <p>If you try to apply these requirements to modern Web techniques, you might find yourself with more questions than answers. These requirements were written in 1998 when the Web was a very different platform. One of the reasons Section 508 is currently being updated is to better handle the way the modern Web works and to deal with those realities.</p>
+        <h2>Further Reading</h2>
+        <ul>
+            <li><a href="http://www.access-board.gov/508.htm#current">Current Section 508 Standards</a></li>
+        </ul>
+    </body>
+</html>
