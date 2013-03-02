@@ -64,3 +64,7 @@ section.example h3{
 section.example .first-word{
     font-weight: bold;
 }
+
+ol.section-508 {
+    list-style:lower-alpha;
+}
