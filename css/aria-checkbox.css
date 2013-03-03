@@ -1,0 +1,6 @@
+.checkbox {
+    background-image:url('../images/checkbox-unchecked.gif');
+    background-repeat: no-repeat;
+    padding-left:25px;
+    padding-top:10px;
+}

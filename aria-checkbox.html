@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>ARIA Checkbox</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="training.css" rel="stylesheet" type="text/css">
+        <link href="css/aria-checkbox.css" rel="stylesheet" type="text/css">
+        <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/aria-checkbox.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>ARIA Checkbox</h1>
+        <section class="step">
+            <h2>Starting Point: A simple checkbox</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;input id=&quot;signup&quot; type=&quot;checkbox&quot; /&gt;
+&lt;label for=&quot;signup&quot;&gt;Sign me up!&lt;/label&gt;</pre>
+            <h3>Implementation</h3>
+            <input id="signup" type="checkbox" />
+            <label for="signup">Sign me up!</label>
+        </section>
+
+        <section class="step">
+            <h2>Step 1: The plain text</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;div&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div>Sign me up!</div>
+        </section>
+
+        <section class="step">
+            <h2>Step 2: Introducing the &quot;role&quot;</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;div role=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div role="checkbox">Sign me up!</div>
+        </section>
+        <p>Add ATAT?</p>
+        <section class="step">
+            <h2>Step 3: Adding the checkbox</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+&lt;div role=&quot;checkbox&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div role="checkbox" style="background-image:url('images/checkbox-unchecked.gif'); background-repeat: no-repeat; padding-left:25px;padding-top:10px;">Sign me up!</div>
+        </section>
+
+        <section class="step">
+            <h2>Step 4: Storing the state of the checkbox</h2>
+            <p>Now we need some way to store the value of the ckeckbox. If it were a standard checkbox we could just query the object to find its state with something like</p>
+            <pre class="code">document.getElementById("myCheckBox").checked</pre>
+            <p>But since it's not a standard checkbox it doesn't have that property.</p>
+            <p>We could introduce a new attribute like isChecked and just query that.</p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+
+&lt;div role=&quot;checkbox&quot; isChecked=&quot;false&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+
+&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div role="checkbox" aria-checked="false" class="checkbox" onclick="toggleCheckBox(this);">Sign me up!</div>
+        </section>
+
+        <h2>Step 5: Responding to clicks</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+function toggleCheckBox(t) {
+  if(t.getAttribute(&quot;aria-checked&quot;)==&quot;false&quot;) {
+    t.style.backgroundImage = &quot;url('images/checkbox-checked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;true&quot;);
+  } else {
+    t.style.backgroundImage = &quot;url('images/checkbox-unchecked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;false&quot;); 
+  }
+  t.focus();
+}
+&lt;/script&gt;
+
+&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div role="checkbox" aria-checked="false" class="checkbox" onclick="toggleCheckBox(this);">Sign me up!</div>
+        </section>
+
+        <section class="step">
+            <h2>Step 6: Make it so you can tab to it</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+function toggleCheckBox(t) {
+  if(t.getAttribute(&quot;aria-checked&quot;)==&quot;false&quot;) {
+    t.style.backgroundImage = &quot;url('images/checkbox-checked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;true&quot;);
+  } else {
+    t.style.backgroundImage = &quot;url('images/checkbox-unchecked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;false&quot;); 
+  }
+  t.focus();
+}
+&lt;/script&gt;
+
+&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot; tabindex=&quot;0&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+            <div role="checkbox" class="checkbox" onclick="toggleCheckBox(this);" tabindex="0" aria-checked="false">Sign me up!</div>
+        </section>
+
+        <section class="step">
+            <h2>Step 7: Make it so you can use the keyboard to activate it</h2>
+            <p></p>
+            <h3>Source Code</h3>
+            <pre class="code">&lt;style&gt;
+.checkbox {
+  background-image:url('images/checkbox-unchecked.gif');
+  background-repeat: no-repeat;
+  padding-left:25px;
+  padding-top:10px;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+function trapSpaceKey(t,e){
+  if ( e.which == 32 ) {
+  toggleCheckBox(t);
+  }
+}
+
+function toggleCheckBox(t) {
+  if(t.getAttribute(&quot;aria-checked&quot;)==&quot;false&quot;) {
+    t.style.backgroundImage = &quot;url('images/checkbox-checked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;true&quot;);
+  } else {
+    t.style.backgroundImage = &quot;url('images/checkbox-unchecked.gif')&quot;;
+    t.setAttribute(&quot;aria-checked&quot;,&quot;false&quot;); 
+  }
+  t.focus();
+}
+&lt;/script&gt;
+
+&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot; tabindex=&quot;0&quot; onKeyPress=&quot;trapSpaceKey(this,event);&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <h3>Implementation</h3>
+<div role="checkbox" class="checkbox" aria-checked="false" onclick="toggleCheckBox(this);" tabindex="0" onKeyPress="trapSpaceKey(this,event);">Sign me up!</div>
+            
+            
+        </section>
+
+    </body>
+</html>
