@@ -65,6 +65,13 @@ section.example .first-word{
     font-weight: bold;
 }
 
+section.step {
+    border-top: medium solid #666;
+    border-bottom: medium solid #666;
+    margin:1em 0;
+    padding:1em;
+}
+
 ol.section-508 {
     list-style:lower-alpha;
 }

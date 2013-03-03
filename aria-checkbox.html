@@ -10,21 +10,21 @@
     </head>
     <body>
         <h1>ARIA Checkbox</h1>
+        <p>This is a demonstration on how to apply ARIA techniques to a custom UI control, a checkbox. In reality you can and should just use a regular checkbox when you want a checkbox on the page. This example uses a checkbox because it provides a common UI element with simple functionality that lets us easily demonstrate certain ARIA principles and techniques.</p>
         <section class="step">
             <h2>Starting Point: A simple checkbox</h2>
-            <p></p>
-            <h3>Source Code</h3>
+            <p>Normally when we want a checkbox we use code similar to the following to place one on the page.</p>
             <pre class="code">&lt;input id=&quot;signup&quot; type=&quot;checkbox&quot; /&gt;
 &lt;label for=&quot;signup&quot;&gt;Sign me up!&lt;/label&gt;</pre>
             <h3>Implementation</h3>
             <input id="signup" type="checkbox" />
             <label for="signup">Sign me up!</label>
+            <p>However, for demonstration purposes, we are going to completely reconstruct this UI element using HTML, CSS, and JavaScript, and will apply ARIA techniques to make it accessible.</p>
         </section>
 
         <section class="step">
             <h2>Step 1: The plain text</h2>
-            <p></p>
-            <h3>Source Code</h3>
+            <p>To start off with, we are just going to use some plain text in a &lt;div&gt; as the basis for our custom checkbox.</p>
             <pre class="code">&lt;div&gt;Sign me up!&lt;/div&gt;</pre>
             <h3>Implementation</h3>
             <div>Sign me up!</div>
@@ -32,17 +32,21 @@
 
         <section class="step">
             <h2>Step 2: Introducing the &quot;role&quot;</h2>
-            <p></p>
-            <h3>Source Code</h3>
+            <p>Right now it is just plain text and does nothing special when we click on it. There is an ARIA role for checkbox. Perhaps if we just say role="checkbox" it will magically turn into a checkbox.</p>
             <pre class="code">&lt;div role=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
             <h3>Implementation</h3>
             <div role="checkbox">Sign me up!</div>
+            <p>Unfortunately, that doesn't take care of all of the problems. What the ARIA role="checkbox" does is tell assistive technologies that this item should be treated as a checkbox, however, it does not add any of the functionality of a checkbox to the enclosing &lt;div&gt; element.</p>
+            <figure>
+                <img src="images/dog-at-at-costume.jpg" alt="a dog dressed in an at-at costume, one of the attack vehicles from the Empire Strikes Back">
+                <figcaption>&lt;dog role=&quot;at-at&quot;&gt;&lt;/dog&gt; does not turn the dog into an AT-AT. <a href="https://www.facebook.com/pages/Bones-Mello-the-AT-AT-Dog/225465154180747">Photo credit</a></figcaption>
+            </figure>
+
+            <p>Since we decided to build our own UI element instead of using the standard browser-based one, we are 100% responsible for handling all of the necessary user interactions necessary to make this look and behave as a checkbox.</p>
         </section>
-        <p>Add ATAT?</p>
         <section class="step">
             <h2>Step 3: Adding the checkbox</h2>
-            <p></p>
-            <h3>Source Code</h3>
+            <p>The first step is to add an image to make it look a little more like checkbox.</p>
             <pre class="code">&lt;style&gt;
 .checkbox {
   background-image:url('images/checkbox-unchecked.gif');
@@ -63,19 +67,8 @@
             <pre class="code">document.getElementById("myCheckBox").checked</pre>
             <p>But since it's not a standard checkbox it doesn't have that property.</p>
             <p>We could introduce a new attribute like isChecked and just query that.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;style&gt;
-.checkbox {
-  background-image:url('images/checkbox-unchecked.gif');
-  background-repeat: no-repeat;
-  padding-left:25px;
-  padding-top:10px;
-}
-&lt;/style&gt;
-
-
-&lt;div role=&quot;checkbox&quot; isChecked=&quot;false&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
-            <h3>Source Code</h3>
+            <pre class="code">&lt;div role=&quot;checkbox&quot; isChecked=&quot;false&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <p>But browsers and screen readers don't know what the attribute &quot;isChecked&quot; means, so they wouldn't know what to do with it. Fortunately ARIA does provide a property called aria-checked which browsers and screen readers do know how to handle. Implementing it is very straightforward.</p>
             <pre class="code">&lt;style&gt;
 .checkbox {
   background-image:url('images/checkbox-unchecked.gif');
@@ -89,11 +82,11 @@
 &lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot;&gt;Sign me up!&lt;/div&gt;</pre>
             <h3>Implementation</h3>
             <div role="checkbox" aria-checked="false" class="checkbox" onclick="toggleCheckBox(this);">Sign me up!</div>
+            <p>Now assistive technologies like screen readers will automatically be able to tell what the current state of the checkbox is.</p>
         </section>
-
-        <h2>Step 5: Responding to clicks</h2>
-            <p></p>
-            <h3>Source Code</h3>
+        <section class="step">
+            <h2>Step 5: Responding to clicks</h2>
+            <p>Of course, the checkbox still doesn't do anything. We need to make it so when a user clicks on it it will actually appear to be checked. This is simple with some JavaScript and CSS.</p>
             <pre class="code">&lt;style&gt;
 .checkbox {
   background-image:url('images/checkbox-unchecked.gif');
@@ -117,44 +110,16 @@ function toggleCheckBox(t) {
 &lt;/script&gt;
 
 &lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+            <p>Notice, in addition to changing the image when a user clicks on it, we also change the value of &quot;aria-checked&quot;. That way screen reader users will be able to determine the new state of the checkbox.</p>
             <h3>Implementation</h3>
             <div role="checkbox" aria-checked="false" class="checkbox" onclick="toggleCheckBox(this);">Sign me up!</div>
         </section>
 
         <section class="step">
-            <h2>Step 6: Make it so you can tab to it</h2>
-            <p></p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;style&gt;
-.checkbox {
-  background-image:url('images/checkbox-unchecked.gif');
-  background-repeat: no-repeat;
-  padding-left:25px;
-  padding-top:10px;
-}
-&lt;/style&gt;
-
-&lt;script&gt;
-function toggleCheckBox(t) {
-  if(t.getAttribute(&quot;aria-checked&quot;)==&quot;false&quot;) {
-    t.style.backgroundImage = &quot;url('images/checkbox-checked.gif')&quot;;
-    t.setAttribute(&quot;aria-checked&quot;,&quot;true&quot;);
-  } else {
-    t.style.backgroundImage = &quot;url('images/checkbox-unchecked.gif')&quot;;
-    t.setAttribute(&quot;aria-checked&quot;,&quot;false&quot;); 
-  }
-  t.focus();
-}
-&lt;/script&gt;
-
-&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot; tabindex=&quot;0&quot;&gt;Sign me up!&lt;/div&gt;</pre>
-            <h3>Implementation</h3>
-            <div role="checkbox" class="checkbox" onclick="toggleCheckBox(this);" tabindex="0" aria-checked="false">Sign me up!</div>
-        </section>
-
-        <section class="step">
-            <h2>Step 7: Make it so you can use the keyboard to activate it</h2>
-            <p></p>
+            <h2>Step 6: Make it keyboard accessible</h2>
+            <p>So far we've only implemented support for mouse actions. What if a user cannot use a mouse? We also need to add in support for keyboard access, just like a standard checkbox provides.</p>
+            <p>This is a two step process. First, we need to make it so the object can receive the focus by placing it in the tab order. This is done be setting 'tabindex=&quot;0&quot;'. This tells the browser to allow an object which cannot normally receive tab focus to receive it. It places the object in the natural tab order for the page based on the structural order of the page..</p>
+            <p>Second, we need to respond to keyboard events when users press the space bar when focused on the checkbox. Pressing the space bar is the standard way users toggle the state of an object in a browser.</p>
             <h3>Source Code</h3>
             <pre class="code">&lt;style&gt;
 .checkbox {
@@ -184,12 +149,13 @@ function toggleCheckBox(t) {
 }
 &lt;/script&gt;
 
-&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot; tabindex=&quot;0&quot; onKeyPress=&quot;trapSpaceKey(this,event);&quot;&gt;Sign me up!&lt;/div&gt;</pre>
+&lt;div role=&quot;checkbox&quot; aria-checked=&quot;false&quot; class=&quot;checkbox&quot; onclick=&quot;toggleCheckBox(this);&quot; onclick=&quot;toggleCheckBox(this);&quot; tabindex=&quot;0&quot;&gt;Sign me up!&lt;/div&gt;</pre>
             <h3>Implementation</h3>
-<div role="checkbox" class="checkbox" aria-checked="false" onclick="toggleCheckBox(this);" tabindex="0" onKeyPress="trapSpaceKey(this,event);">Sign me up!</div>
-            
-            
+            <div role="checkbox" class="checkbox" onclick="toggleCheckBox(this);" tabindex="0" onKeyPress="trapSpaceKey(this,event);" aria-checked="false">Sign me up!</div>
+            <p>Now we have a completely custom UI element that is able to communicate with the browser and the screen reader about its state and respond to user interactions with the control. By placing the &quot;role=checkbox&quot; attribute on the &lt;div&gt;, it didn't instantly solve all of our problems, but what it did do was tell the browser and the screen reader that for all practical purposes, the collection of HTML, CSS, and JavaScript that makes up this control should be thought of as a checkbox. That way when a screen reader user comes across it the screen reader won't just identify it as some text with an image. It will say "checkbox, not checked." </p>
         </section>
+
+
 
     </body>
 </html>
