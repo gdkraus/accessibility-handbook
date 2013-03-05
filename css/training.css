@@ -75,3 +75,12 @@ section.step {
 ol.section-508 {
     list-style:lower-alpha;
 }
+
+blockquote p {
+    margin:0;
+}
+
+blockquote p.attribution{
+    font-style: italic;
+    margin-left:3em;
+}
