@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Lists</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Lists</h1>
+        <p>It is important to use list elements when denoting a list of items. When sighted users view a set of items like the following, it is easily to visually discern that the relationship that exists between the items.</p>
+        <section class="example bad">
+            <h2><span class="first-word">Principle:</span> Using list elements to create a list</h2>
+            <h4>Source Code</h4>
+            <pre class="code">* milk
+* bread
+* butter
+* flour</pre>
+            <h4>Implementation</h4>
+            <p>* milk<br />
+                * bread<br />
+                * butter<br />
+                * flour</p>
+
+        </section>
+
+        <p>However, when a screen reader user heard this, they will hear "star milk, star bread, star butter, star flour."</p>
+        <p>To explicitly define the relationship these items have to one another, use the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; elements.</p>
+        <section class="example good">
+            <h2><span class="first-word">Principle:</span> Using list elements to create a list</h2>
+            <h4>Source Code</h4>
+            <pre class="code">&lt;ul&gt;
+  &lt;li&gt;milk&lt;/li&gt;
+  &lt;li&gt;bread&lt;/li&gt;
+  &lt;li&gt;butter&lt;/li&gt;
+  &lt;li&gt;flour&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            <h4>Implementation</h4>
+            <ul>
+                <li>milk</li>
+                <li>bread</li>
+                <li>butter</li>
+                <li>flour</li>
+            </ul>
+
+        </section>
+    </body>
+</html>
