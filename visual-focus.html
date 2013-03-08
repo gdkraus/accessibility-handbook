@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Visual Focus</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Visual Focus</h1>
+        <p>It is important to make sure that keyboard-only users can determine where they are in the page when they are using the Tab key to navigate. They can know where they are because when an object receives focus, there is a focus ring around the object.</p>
+        <p>By default, the browser will always show a focus ring around an object that is keyboard focusable by default, like a link, or any object which has a positive value for the tabindex attribute set. However, it is very popular to override this default browser behavior, often in CSS reset files. It is often accomplished with the following code.</p>
+        <pre class="code">&lt;style&gt;
+  :focus {outline:none;}
+&lt;/style&gt;</pre>
+        <p>The solution is very simple. You simply need to either not override the default browser behavior, or explicitly set a property for the focus</p>
+        <pre class="code">&lt;style&gt;
+  :focus {outline:2px solid #f00;}
+&lt;/style&gt;</pre>
+        <p>Also, be sure you don't have any overridden focus rules on objects like links.</p>
+        <pre class="code">&lt;style&gt;
+  a:focus {outline:none;}
+&lt;/style&gt;</pre>
+    </body>
+</html>
