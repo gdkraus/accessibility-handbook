@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Headings</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/training.css" rel="stylesheet" type="text/css">
+
+        <style> .really-big {font-size:1.4em; font-weight:bold;color:#000;margin:0;} .big {font-size:1.2em; font-weight:bold;color:#222;margin:0 2em;} .a-little-bigger {font-size:1em; font-weight:bold;color:#444;margin:0 4em;} </style>
+    </head>
+    <body>
+        <h1>Headings</h1>
+        <p>The first level of structure to add to a page is headings. Headings are used to break up the content into a hierarchical structure much like an outline. Where sighted users can skim a page quickly by reading the visual headlines, a screen reader user can also skim a page by quickly traversing the headings. To semantically define headings simply use heading tags to label the beginning of each section.</p>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Use headings to define the page structure</h3>
+            <p>This both creates a semantic structure for your page and it allows screen reader users to be able to navigate by heading and jump from section to section.</p>
+            <pre class="code">&lt;h1&gt;Our News Site&lt;/h1&gt;
+  &lt;h2&gt;World News&lt;/h2&gt;
+  &lt;h2&gt;National News&lt;/h2&gt;
+    &lt;h3&gt;Hot Topics&lt;/h3&gt;
+    &lt;h3&gt;Politics&lt;/h3&gt;
+  &lt;h2&gt;Science&lt;/h2&gt;
+    &lt;h3&gt;Health&lt;/h3&gt;
+    &lt;h3&gt;Environment&lt;/h3&gt;
+    &lt;h3&gt;Technology&lt;/h3&gt;
+  &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
+        </section>
+        <section class="example good">
+            <h3><span class="first-word">Principle:</span> Use CSS to style the headings</h3>
+            <p>If you don't like the way the default heading look, and most of us don't, just use CSS to style the headings.</p>
+            <pre class="code">&lt;style&gt;
+  h1 {font-size:1.4em; font-weight:bold; color:#000;}
+  h2 {font-size:1.2em; font-weight:bold; color:#222;}
+  h3 {font-size:1em; font-weight:bold; color:#444;}
+&lt;/style&gt;
+
+&lt;h1&gt;Our News Site&lt;/h1&gt;
+  &lt;h2&gt;World News&lt;/h2&gt;
+  &lt;h2&gt;National News&lt;/h2&gt;
+    &lt;h3&gt;Hot Topics&lt;/h3&gt;
+    &lt;h3&gt;Politics&lt;/h3&gt;
+  &lt;h2&gt;Science&lt;/h2&gt;
+    &lt;h3&gt;Health&lt;/h3&gt;
+    &lt;h3&gt;Environment&lt;/h3&gt;
+    &lt;h3&gt;Technology&lt;/h3&gt;
+  &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
+        </section>
+        <h2>General Rules for Applying Headings</h2>
+        <ul>
+            <li>Your &lt;h1&gt; should be where the unique main  content of your page begins, which usually means it will come after your navigation  system.</li>
+            <li>It is fine if your first heading on the page is not an &lt;h1&gt;, such as a having an &lt;h2&gt; come before your  first &lt;h1&gt;</li>
+            <li>You should have only 1 &lt;h1&gt; per page. If  you feel you must, you can use a second &lt;h1&gt; for the title of your page.</li>
+            <li>Don&rsquo;t obsess over making the first heading on  your page an &lt;h1&gt;.</li>
+            <li>Don&rsquo;t pick a heading level simply for font  sizing purposes. Pick a level that corresponds roughly to the outline of the  page.</li>
+            <li>It is not usually necessary to skip heading  levels, going from an &lt;h1&gt; directly to an &lt;h3&gt;.</li>
+            <li>There are always exceptions to rules. Just make  sure you are breaking the rules for a good reason.</li>
+        </ul>
+        <section class="example bad">
+            <h3><span class="first-word">Principle:</span> Only using styles to denote headings</h3>
+            <p>Do not use stylings as the only way to communicate what your headings are. This works for visual users, but screen reader users will not be able to easily divide your page into logical structures.</p>
+            <pre class="code">&lt;style&gt;
+  .really-big {font-size:1.4em; font-weight:bold; color:#000; margin:0;}
+  .big {font-size:1.2em; font-weight:bold; color:#222; margin:0 2em;}
+  .a-little-bigger {font-size:1em; font-weight:bold; color:#444; margin:0 4em;}
+&lt;/style&gt;
+
+&lt;p class=&quot;really-big&quot;&gt;Our News Site&lt;/p&gt;
+  &lt;p class=&quot;big&quot;&gt;World News&lt;/p&gt;
+  &lt;p class=&quot;big&quot;&gt;National News&lt;/p&gt;
+    &lt;p class=&quot;a-little-bigger&quot;&gt;Hot Topics&lt;/p&gt;
+    &lt;p class=&quot;a-little-bigger&quot;&gt;Politics&lt;/p&gt;
+  &lt;p class=&quot;big&quot;&gt;Science&lt;/p&gt;
+    &lt;p class=&quot;a-little-bigger&quot;&gt;Health&lt;/p&gt;
+    &lt;p class=&quot;a-little-bigger&quot;&gt;Environment&lt;/p&gt;
+    &lt;p class=&quot;a-little-bigger&quot;&gt;Technology&lt;/p&gt;
+  &lt;p class=&quot;big&quot;&gt;Entertainment&lt;/p&gt</pre>
+            <h4>Implementation</h4>
+            <p class="really-big">Our News Site</p> 
+            <p class="big">World News</p>
+            <p class="big">National News</p> 
+            <p class="a-little-bigger">Hot Topics</p>
+            <p class="a-little-bigger">Politics</p>
+            <p class="big">Science</p>
+            <p class="a-little-bigger">Health</p>
+            <p class="a-little-bigger">Environment</p>
+            <p class="a-little-bigger">Technology</p> 
+            <p class="big">Entertainment</p>
+        </section>
+    </body>
+</html>
