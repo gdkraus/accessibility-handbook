@@ -10,6 +10,51 @@
         <h2>Overview</h2>
         <p>Tables are primarily used to present tabular information, however, tables are also still used for creating layouts. While WCAG does not prohibit the use of tables for layouts, it encourages developers to use CSS instead.</p>
         <p>Tables used to display tabular information can be divided into two groups - simple layouts and complex layouts. Simple layouts have a single row of headers at the top of the table and/or a single column of headers on the left side of the table. Additionally, there are no merged cells within the table. Complex data tables have either multiple rows or columns of headers, contain merged cells, or contain blank rows or columns for visual effect.</p>
+        <p>Additionally, data tables must also have a caption or a summary.</p>
+        <h2>Caption</h2>
+        <p>The caption element identifies the table. It can be thought of as a title or a heading for a table.</p>
+        <pre class="code">&lt;table&gt;
+  &lt;caption&gt;Schedule for the week of March 6&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th scope="col">State & First&lt;/th&gt;
+    &lt;th scope="col">State & Sixth&lt;/th&gt;
+    &lt;th scope="col">State & Fifteenth&lt;/th&gt;
+    &lt;th scope="col">Fifteenth & Morrison&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td>4:00&lt;/td&gt;
+    &lt;td>4:05&lt;/td&gt;
+    &lt;td>4:11&lt;/td&gt;
+    &lt;td>4:19&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+
+&lt;/table&gt;
+</pre>
+        <h2>Summary</h2>
+        <p>The summary can perform two different functions. It is allowable to have the summary perform both functions at the same time.</p>
+        <ul>
+            <li>it can describe the layout of the table to help screen reader users know how to navigate the table</li>
+            <li>it can describe in narrative form what information the table is trying to convey</li>
+        </ul>
+        <pre class="code">&lt;table summary="Schedule for Route 7 going downtown. Service begins 
+at 4:00 AM and ends at midnight. Intersections are listed in the top row. 
+Find the intersection closest to your starting point or destination, then read 
+down that column to find out what time the bus leaves that intersection."&gt;
+  &lt;tr&gt;
+    &lt;th scope="col">State & First&lt;/th&gt;
+    &lt;th scope="col">State & Sixth&lt;/th&gt;
+    &lt;th scope="col">State & Fifteenth&lt;/th&gt;
+    &lt;th scope="col">Fifteenth & Morrison&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td>4:00&lt;/td&gt;
+    &lt;td>4:05&lt;/td&gt;
+    &lt;td>4:11&lt;/td&gt;
+    &lt;td>4:19&lt;/td&gt;
+  &lt;/tr&gt;
+  …
+&lt;/table&gt;</pre>
         <ul>
             <li>Correct Implementations
                 <ul>

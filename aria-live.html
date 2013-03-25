@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>ARIA Live</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/training.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>ARIA Live</h1>
+        <p>Any time you dynamically add, modify, or delete content from a Web page, you need to notify the user. The ARIA specification provides mechanisms to do this, called ARIA Live Regions. There are different ways to implement this depending on the type of modification being made.</p>
+        <ul>
+            <li>An <strong>alert</strong> notification where the alert message is delivered through a modal window.</li>
+            <li>A <strong>timer</strong> such as a clock or a countdown timer.</li>
+            <li>A <strong>status</strong> indicator for a Web application, indicating the general status of an application.</li>
+            <li>A <strong>marquee</strong> of scrolling information, such as a scrolling news ticker.</li>
+            <li>A running <strong>log</strong> of information, such as a chat room.</li>
+            <li>A generic <strong>live region</strong> where content is updating.</li>
+        </ul>
+        <p>Also with ARIA live regions is the ability to set how quickly the changes will be presented to the user.</p>
+        <ul>
+            <li>aria-live=&quot;assertive&quot;: The user will be notified immediately.</li>
+            <li>aria-live=&quot;polite&quot;: The user will be notified the next time they are idle.</li>
+            <li>aria-live=&quot;off&quot;: The user will not be notified of the change.</li>
+        </ul>
+        <p>All of the ARIA Live implementations above come with implied verbosity levels, except for the generic live region. For the implied verbosity, you do not need to assign a verbosity level unless you want to override the default value.</p>
+        
+        <h2>Generic Live Region</h2>
+        
+        <ul>
+            <li></li>
+        </ul>
+    </body>
+</html>
