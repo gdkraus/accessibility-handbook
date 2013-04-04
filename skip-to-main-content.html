@@ -21,15 +21,23 @@
     width:1px;
     height:1px;
     overflow:scroll;
+    z-index:-999;
 }
 a.skip-main:focus, a.skip-main:active {
     color: #fff;
     background-color:#000;
-    left: 0;
-    top: 0;
-    width: auto;
+    left: auto;
+    top: auto;
+    width: 30%;
     height: auto;
     overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
 }
             
 &lt;a class=&quot;skip-main&quot; href=&quot;#main&quot;&gt;Skip to main content&lt;/a&gt;
@@ -40,7 +48,12 @@ a.skip-main:focus, a.skip-main:active {
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Item 4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p id=&quot;main&quot;&gt;This is the main content. In this example you will note that the &amp;quot;Skip to main content&amp;quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screenread uers, an easy way to skip reptitive navigation. The key components to implementing this are&lt;/p&gt;            </pre>
+&lt;p id=&quot;main&quot;&gt;This is the main content. In this example you will note that the &amp;quot;Skip to main content&amp;quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screenreader users, an easy way to skip repetitive navigation. The key components to implementing this are&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;provide a link at the top of the page that says &quot;skip to main content&quot;&lt;/li&gt;
+  &lt;li&gt;have it link to an internal anchor further down in the page where the main content begins.&lt;/li&gt;
+  &lt;li&gt;use CSS :focus and :activate to make the skip link visible when the user tabs to it&lt;/li&gt;
+&lt;/ol&gt;</pre>
             <h4>Implementation</h4>
             <p class="implementation">View the <a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/skip-to-main-content-keyboard-accessible.html">skip to main content implementation</a> on another page.</p>
         </section>

@@ -274,14 +274,16 @@
             <pre class="code">&lt;label for=&quot;menu&quot;&gt;Go to the Web Site:&lt;/label&gt;
 &lt;select id=&quot;menu&quot; name=&quot;menu&quot;&gt;
   &lt;option value=&quot;http://www.ncsu.edu/&quot; selected=&quot;&quot;&gt;NC State University&lt;/option&gt;
-  &lt;option value=&quot;http://oit.ncsu.edu/itaccess&quot;&gt;NC State IT Accessibility&lt;/option&gt;
+  &lt;option value=&quot;http://accessibility.oit.ncsu.edu&quot;&gt;NC State IT Accessibility&lt;/option&gt;
+  &lt;option value=&quot;http://oit.ncsu.edu&quot;&gt;Office of Information Technology&lt;/option&gt;
 &lt;/select&gt;
 &lt;input type=&quot;button&quot; value=&quot;GO&quot; onclick=&quot;location= document.getElementById('menu').options[ document.getElementById('menu').selectedIndex].value;&quot;&gt;</pre>
             <h4>Implementation</h4>
             <label for="menu">Go to the Web Site:</label>
             <select id="menu" name="menu">
                 <option value="http://www.ncsu.edu/" selected="">NC State University</option>
-                <option value="http://oit.ncsu.edu/itaccess">NC State IT Accessibility</option>
+                <option value="http://accessibility.oit.ncsu.edu">NC State IT Accessibility</option>
+                <option value="http://oit.ncsu.edu">Office of Information Technology</option>
             </select>
             <input type="button" value="GO" onclick="location= document.getElementById('menu').options[ document.getElementById('menu').selectedIndex].value;">
         </section>
@@ -333,14 +335,16 @@
 &lt;select id=&quot;bad-jump-menu&quot; name=&quot;menu&quot; onChange=&quot;location= document.getElementById('bad-jump-menu').options[ document.getElementById('bad-jump-menu').selectedIndex].value;&quot;&gt;
   &lt;option value=&quot;#&quot; selected=&quot;&quot;&gt;&lt;/option&gt;
   &lt;option value=&quot;http://www.ncsu.edu/&quot;&gt;NC State University&lt;/option&gt;
-  &lt;option value=&quot;http://oit.ncsu.edu/itaccess&quot;&gt;NC State IT Accessibility&lt;/option&gt;
+  &lt;option value=&quot;http://accessibility.oit.ncsu.edu&quot;&gt;NC State IT Accessibility&lt;/option&gt;
+  &lt;option value=&quot;http://oit.ncsu.edu&quot;&gt;Office of Information Technology&lt;/option&gt;
 &lt;/select&gt;</pre>
             <h4>Implementation</h4>
             <label for="menu">Go to the Web Site:</label>
             <select id="bad-jump-menu" name="menu" onChange="location= document.getElementById('bad-jump-menu').options[ document.getElementById('bad-jump-menu').selectedIndex].value;">
                 <option value="#" selected=""></option>
                 <option value="http://www.ncsu.edu/">NC State University</option>
-                <option value="http://oit.ncsu.edu/itaccess">NC State IT Accessibility</option>
+                <option value="http://accessibility.oit.ncsu.edu">NC State IT Accessibility</option>
+                <option value="http://oit.ncsu.edu">Office of Information Technology</option>
             </select>
         </section>
 
