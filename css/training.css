@@ -1,6 +1,10 @@
 h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
+    background-color: #000;
+    color:#fff;
+    padding:2px;
+    margin:3px 0;
 }
 h2 {
     font-size: 1.2em;
@@ -13,6 +17,34 @@ h3 {
 h4 {
     font-size: 1em;
     font-weight: bold
+}
+nav {
+    background-color:#e1e1e1;
+    width:100%;
+    clear:both;
+    min-height: 1.4em;
+
+}
+nav p {
+    display:inline;
+    color:#000;
+    padding:.2px;
+    margin:0;
+}
+nav p.prev {
+    float:left;
+    padding-left:1em;
+    width:33%;
+}
+nav p.next{
+    float:right;
+    padding-right:1em;
+    width:30%;
+    text-align:right;
+}
+nav p.toc {
+    
+    float:left;
 }
 table, th, td {
     border: 1px solid #333;
@@ -38,7 +70,7 @@ caption {
     background-color:#eee;
     padding:0.5em;
     white-space: pre-wrap;
-    
+
 }
 
 .example {
