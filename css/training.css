@@ -18,6 +18,15 @@ h4 {
     font-size: 1em;
     font-weight: bold
 }
+.screen-reader {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:scroll;
+    z-index:-999;
+}
 nav {
     background-color:#eee;
     width:100%;
