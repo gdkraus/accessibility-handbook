@@ -35,28 +35,20 @@ nav {
 
 }
 nav p {
-    /*display:inline;*/
     color:#000;
-    /*padding:.2px;*/
     margin:0;
     width:100%;
-
+padding:0;
 }
 nav p.toc {
-    /*width:100%;*/
     text-align: center;
-    /*float:left;*/
-    /*margin-left:30%;*/
-    /*float:left;*/
-    /*margin:0 auto;*/
     top:0em;
     position:relative;
-
     padding: 2px 0;
-    height:1px;
+    height:1em;
 }
 nav p.toc select {
-    width:25%;
+    width:80%;
     /*margin:.5em auto;*/
 }
 nav p.toc go-button {
@@ -64,23 +56,49 @@ nav p.toc go-button {
 }
 
 nav p.prev {
-    /*float:left;*/
-    /*left:0%;*/
     padding-left:1%;
-    width:29%;
+    width:48%;
     display:inline-block;
-    top:-0.2em;
+    top:0.4em;
     position:relative;
+    /*padding:2px;*/
+    /*background-color:#333;*/
+min-height:2.6em;
 }
 nav p.next{
-    /*float:right;*/
-    left:38%;
-    /*padding-right:1%;*/
-    width:30%;
+    left:0%;
+    width:48%;
     text-align:right;
     display:inline-block;
-    top:-0.2em;
+    top:0.4em;
     position:relative;
+    /*padding:2px;*/
+    /*background-color:#333;*/
+    padding-right:1%;
+    min-height:2.6em;
+}
+    nav p.prev img {
+        position: relative;
+        top:0.4em;
+        margin-right:6px;
+    }
+    nav p.next img {
+        position: relative;
+        top:0.4em;
+        /*left:134px;*/
+        margin-left:6px;
+        
+    } 
+    #next-text {
+        padding-right:20px;
+    }
+nav p.prev a,nav p.prev a:link, nav p.prev a:visited, nav p.prev a:hover, nav p.prev active {
+    color:#000;
+    text-decoration: none;
+}
+nav p.next a,nav p.next a:link, nav p.next a:visited, nav p.next a:hover, nav p.next active {
+    color:#000;
+    text-decoration: none;
 
 }
 
@@ -108,7 +126,7 @@ caption {
     background-color:#eee;
     padding:0.5em;
     white-space: pre-wrap;
-
+    word-wrap:break-word;
 }
 
 .example {
@@ -181,62 +199,72 @@ a.skip-main:focus, a.skip-main:active {
     z-index:999;
 }
 
-@media only screen and (min-width: 49em){
-
-    nav {
-        background-color:#eee;
-        width:100%;
-        clear:both;
-        min-height: 1.4em;
-
-    }
+@media only screen and (min-width: 31em){
+nav {
+    min-height:2.3em;
+}
     nav p {
-        /*display:inline;*/
         color:#000;
-        /*padding:.2px;*/
         margin:0;
         width:100%;
 
     }
     nav p.toc {
-        /*width:100%;*/
         text-align: center;
-        /*float:left;*/
-        /*margin-left:30%;*/
-        /*float:left;*/
-        /*margin:0 auto;*/
-        top:0em;
+        top:0.2em;
         position:relative;
-
         padding: 2px 0;
         height:1px;
     }
     nav p.toc select {
         width:25%;
-        /*margin:.5em auto;*/
     }
     nav p.toc go-button {
         width:4%;
     }
 
     nav p.prev {
-        /*float:left;*/
-        /*left:0%;*/
         padding-left:1%;
         width:29%;
         display:inline-block;
-        top:-0.2em;
+        top:-0.3em;
         position:relative;
+        background-color:inherit;
+        min-height:1em;
     }
     nav p.next{
-        /*float:right;*/
         left:38%;
-        /*padding-right:1%;*/
         width:30%;
         text-align:right;
         display:inline-block;
-        top:-0.2em;
+        top:-0.3em;
         position:relative;
+        background-color:inherit;
+        padding-right:1%;
+        min-height:1em;
+    }
+
+       nav p.prev img {
+        position: relative;
+        top:0.4em;
+        margin-right:4px;
+    }
+    nav p.next img {
+        position: relative;
+        top:0.4em;
+        /*left:134px;*/
+        
+    } 
+    #next-text {
+        padding-right:20px;
+    }
+    nav p.prev a,nav p.prev a:link, nav p.prev a:visited, nav p.prev a:hover, nav p.prev active {
+        color:inherit;
+        text-decoration: inherit;
+    }
+    nav p.next a,nav p.next a:link, nav p.next a:visited, nav p.next a:hover, nav p.next active {
+        color:inherit;
+        text-decoration: inherit;
 
     }
 }
