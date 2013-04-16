@@ -4,7 +4,7 @@ h1 {
     background-color: #000;
     color:#fff;
     padding:2px;
-    margin:3px 0;
+    margin:3px 0 0 0;
 }
 h2 {
     font-size: 1.2em;
@@ -35,43 +35,55 @@ nav {
 
 }
 nav p {
-    display:inline;
+    /*display:inline;*/
     color:#000;
-    padding:.2px;
+    /*padding:.2px;*/
     margin:0;
     width:100%;
-}
-nav p.prev {
-    /*float:left;*/
-    left:0%;
-    padding-left:1em;
-    width:35%;
-    display:inline-block;
-}
-nav p.next{
-    /*float:right;*/
-    /*left:60%;*/
-    padding-right:1em;
-    width:32%;
-    text-align:right;
-    display:inline-block;
 
 }
 nav p.toc {
-    width:30%;
-    left:40%;
+    /*width:100%;*/
+    text-align: center;
     /*float:left;*/
     /*margin-left:30%;*/
     /*float:left;*/
     /*margin:0 auto;*/
+    top:0em;
+    position:relative;
+
+    padding: 2px 0;
+    height:1px;
 }
 nav p.toc select {
-    width:24%;
-    margin:0 auto;
+    width:25%;
+    /*margin:.5em auto;*/
 }
 nav p.toc go-button {
-    /*width:2%;*/
+    width:4%;
 }
+
+nav p.prev {
+    /*float:left;*/
+    /*left:0%;*/
+    padding-left:1%;
+    width:29%;
+    display:inline-block;
+    top:-0.2em;
+    position:relative;
+}
+nav p.next{
+    /*float:right;*/
+    left:38%;
+    /*padding-right:1%;*/
+    width:30%;
+    text-align:right;
+    display:inline-block;
+    top:-0.2em;
+    position:relative;
+
+}
+
 table, th, td {
     border: 1px solid #333;
 }
@@ -168,3 +180,64 @@ a.skip-main:focus, a.skip-main:active {
     font-size:1.2em;
     z-index:999;
 }
+
+@media only screen and (min-width: 49em){
+
+    nav {
+        background-color:#eee;
+        width:100%;
+        clear:both;
+        min-height: 1.4em;
+
+    }
+    nav p {
+        /*display:inline;*/
+        color:#000;
+        /*padding:.2px;*/
+        margin:0;
+        width:100%;
+
+    }
+    nav p.toc {
+        /*width:100%;*/
+        text-align: center;
+        /*float:left;*/
+        /*margin-left:30%;*/
+        /*float:left;*/
+        /*margin:0 auto;*/
+        top:0em;
+        position:relative;
+
+        padding: 2px 0;
+        height:1px;
+    }
+    nav p.toc select {
+        width:25%;
+        /*margin:.5em auto;*/
+    }
+    nav p.toc go-button {
+        width:4%;
+    }
+
+    nav p.prev {
+        /*float:left;*/
+        /*left:0%;*/
+        padding-left:1%;
+        width:29%;
+        display:inline-block;
+        top:-0.2em;
+        position:relative;
+    }
+    nav p.next{
+        /*float:right;*/
+        left:38%;
+        /*padding-right:1%;*/
+        width:30%;
+        text-align:right;
+        display:inline-block;
+        top:-0.2em;
+        position:relative;
+
+    }
+}
+
