@@ -30,25 +30,28 @@ nav p {
     color:#000;
     padding:.2px;
     margin:0;
+    width:100%;
 }
 nav p.prev {
     /*float:left;*/
-    margin-left:0%;
+    left:0%;
     padding-left:1em;
     width:35%;
     display:inline-block;
 }
 nav p.next{
     /*float:right;*/
-    margin-left:0%;
+    /*left:60%;*/
     padding-right:1em;
-    width:33%;
+    width:32%;
     text-align:right;
     display:inline-block;
 
 }
 nav p.toc {
     width:30%;
+    left:40%;
+    /*float:left;*/
     /*margin-left:30%;*/
     /*float:left;*/
     /*margin:0 auto;*/
@@ -58,7 +61,7 @@ nav p.toc select {
     margin:0 auto;
 }
 nav p.toc go-button {
-    width:2%;
+    /*width:2%;*/
 }
 table, th, td {
     border: 1px solid #333;
