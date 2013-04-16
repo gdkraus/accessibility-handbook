@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Color Contrast</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/forms.html">Previous: Forms</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/links.html">Next: Links Overview</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <h2>Overview</h2>
         <p>You need to ensure that your foreground and background colors have enough contrast so that users with visual disabilities can read your content. This is true for the main text of your document, menus and navigation, and any hover/focus effects you apply to elements.</p>
@@ -83,5 +83,5 @@
             <li><a href="http://paciellogroup.com/resources/contrastAnalyser">Contrast Analyser for Windows and Mac</a>, useful for selecting colors with an eyedropper for analysis.</li>
             <li><a href="https://addons.mozilla.org/en-US/firefox/addon/juicy-studio-accessibility-too/">Juicy Studio Accessibility Toolbar</a>, useful for generating a report of all possible color combinations for a Web page based on the CSS.</li>
         </ul>
-    </body>
+    </div></body>
 </html>

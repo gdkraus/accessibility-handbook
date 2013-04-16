@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Testing Tools</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/captioning.html">Previous: Captioning</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next">&nbsp;</p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <p>This is an annotated list of accessibility testing tools and techniques and the context in which they are best used.</p>
         <h2>General Testing Tools</h2>
@@ -111,5 +111,5 @@
             <li><a href="http://www.chromevox.com/">ChromeVox</a> - A free Chrome based screen reader which is available as an extension to the Chrome browser.</li>
             <li><a href="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> - A free OS X and iOS based screen reader that ships with OS X and iOS. For Web accessibility, VoiceOver works best with Safari.</li>
         </ul>
-    </body>
+    </div></body>
 </html>

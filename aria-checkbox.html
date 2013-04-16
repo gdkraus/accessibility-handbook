@@ -8,7 +8,7 @@
         <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="js/aria-checkbox.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>ARIA Checkbox</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/timed-events.html">Previous: Timed Events</a></p>
@@ -34,7 +34,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -74,7 +74,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/alternative-text.html">Next: Alternative Text</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <p>This is a demonstration on how to apply ARIA techniques to a custom UI control, a checkbox. In reality you can and should just use a regular checkbox when you want a checkbox on the page. This example uses a checkbox because it provides a common UI element with simple functionality that lets us easily demonstrate certain ARIA principles and techniques.</p>
         <section class="step">
@@ -223,5 +223,5 @@ function toggleCheckBox(t) {
 
 
 
-    </body>
+    </div></body>
 </html>

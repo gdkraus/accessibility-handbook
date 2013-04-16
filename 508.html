@@ -6,8 +6,9 @@
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Section 508</h1>
-                <nav>
+        <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/ada.html">Previous: Americans with Disabilities Act</a></p>
             <p class="toc">
                 <select id="toc-menu">
@@ -31,7 +32,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -72,74 +73,75 @@
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/wcag.html">Next: WCAG 2</a></p>
         </nav>
-
-        <p class="tip">Section 508 is currently being updated. It will most likely look quite similar to many aspects of WCAG 2 Level AA conformance. This page discusses the current Section 508 requirements and standards.</p>
-        <p>&quot;Section 508&quot; is actually part of a larger body of legislation - Section 508 of the Rehabilitation Act. The Rehabilitation Act was enacted in 1973 and prohibits discrimination on the basis of disability in Federal programs, among other things.</p>
-        <p>Section 508 was enacted in 1998 in order to eliminate barriers in information technology (IT) for people with disabilities. It is both a law and a standard. It's a law in that it requires Federal agencies to procure and develop technologies that meet a specific accessibility standard. Section 508 also defines what that standard is. It covers all aspects of IT from Web pages to desktop software applications to telecommunications equipment, and each of these product areas has specific technical standards.</p>
-        <ul>
-            <li>1194.21 Software applications and operating systems</li>
-            <li>1194.22 Web-based intranet and internet information and applications</li>
-            <li>1194.23 Telecommunications products</li>
-            <li>1194.24 Video and multimedia products</li>
-            <li>1194.25 Self contained, closed products</li>
-            <li>1194.26 Desktop and portable computers</li>
-        </ul>
-        <p>While the technical standards for the different types of products do vary from one to the other, their core requirements are quite similar. A good way to start to grasp the intention of Section 508 is to look at the 1194.31 Functional Performance Criteria. The functional performance criteria basically state that for any product there must be at least one way to interact with the product that allows <strong>all</strong> of the following types of users to interact with the product.</p>
-        <ul>
-            <li>visually impaired (blind)</li>
-            <li>visually impaired (visual acuity no better than 20/70)</li>
-            <li>hearing impaired (deaf)</li>
-            <li>hearing impaired (need assistive listening devices)</li>
-            <li>speech impaired</li>
-            <li>physically impaired</li>
-        </ul>
-        <p>Don't let these functional criteria sound too daunting. The technical specifications define criteria for helping determine if a product meets these functional requirements. Since this is a guide on Web accessibility, subsection 1194.22 Web-based intranet and internet information and applications, will be looked at most closely.</p>
-        <p>Additionally, there are requirements for 1194.41 Information, documentation, and support.</p>
-        <h2>1194.22 Web-based intranet and internet information and applications</h2>
-        <p>There are 16 criteria in this subsection which cover the range of impairments listed in the Functional Performance Criteria.</p>
-        <ol class="section-508">
-            <li>A text equivalent for every non-text element shall be provided (e.g., via "alt", "longdesc", or in element content).</li>
-            <li>Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation.</li>
-            <li>Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup.</li>
-            <li>Documents shall be organized so they are readable without requiring an associated style sheet.</li>
-            <li>Redundant text links shall be provided for each active region of a server-side image map.</li>
-            <li>Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape.</li>
-            <li>Row and column headers shall be identified for data tables.</li>
-            <li>Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.</li>
-            <li>Frames shall be titled with text that facilitates frame identification and navigation.</li>
-            <li>Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</li>
-            <li>A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.</li>
-            <li>When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology.</li>
-            <li>When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21(a)</li>
-            <li>When electronic forms are designed to be completed on-line, the form shall allow people using assistive technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</li>
-            <li>A method shall be provided that permits users to skip repetitive navigation links.</li>
-            <li>When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.</li>
-        </ol>
-        <p>To get a better handle on these requirements they can be summarized with the following list of 11 topics.</p>
-        <ul>
-            <li>Provide alternative text for all images, or in the case of image maps, provide plain text links</li>
-            <li>Do not depend on color alone for communicating information</li>
-            <li>The logical flow of the page should follow the source code, or <abbr title="Document Object Model">DOM</abbr>.</li>
-            <li>Data tables should have headings</li>
-            <li>Frames should have titles</li>
-            <li>Avoid flickering on the screen between 2-55 Hz</li>
-            <li>Content displayed with scripts must be accessible</li>
-            <li>Content delivered via plugins must be accessible</li>
-            <li>Online forms must be coded correctly</li>
-            <li>Provide a way for users to skip repetitive navigation links</li>
-            <li>Allow users to adjust the time permitted for timed responses</li>
-        </ul>
-        <p>If you try to apply these requirements to modern Web techniques, you might find yourself with more questions than answers. These requirements were written without concrete ways to test some of them. They were written in 1998 when the Web was a very different platform. One of the reasons Section 508 is currently being updated is to better handle the way the modern Web works and to deal with those realities.</p>
-        <p>Instead of obsessing about meeting Section 508 requirements, you should be planning on meeting WCAG 2, Level AA conformance, which the updated Section 508 will most likely reference. <strong>There is a good chance Section 508 will be updated within 2013.</strong></p>
-        <h2>Do I Have to Follow Section 508?</h2>
-        <p><strong>You don't have to follow Section 508 unless you have to follow Section 508.</strong> By default, the Federal government is the only group that has to follow Section 508. It is a requirement of Federal agencies - that's it.</p>
-        <p>Many other groups, like state governments and higher education institutions have made requirements that point to Section 508 as their state's or institutions standards. Those elections were made by those bodies - they were not forced on them by the Federal government.</p>
-        <p>Several other entities have created their own accessibility standards which are based on Section 508, but they might not be identical to Section 508.</p>
-        <p>Except for Federal agencies, unless your entity has explicitly adopted Section 508, you don't have to follow it.</p>
-        <h2>Further Reading</h2>
-        <ul>
-            <li><a href="http://www.access-board.gov/508.htm#current">Current Section 508 Standards</a></li>
-            <li><a href="http://www.access-board.gov/sec508/refresh/draft-rule.htm">2011 Draft of the Updated Standards and Guidelines</a></li>
-        </ul>
+        <div id="main" role="main">
+            <p class="tip">Section 508 is currently being updated. It will most likely look quite similar to many aspects of WCAG 2 Level AA conformance. This page discusses the current Section 508 requirements and standards.</p>
+            <p>&quot;Section 508&quot; is actually part of a larger body of legislation - Section 508 of the Rehabilitation Act. The Rehabilitation Act was enacted in 1973 and prohibits discrimination on the basis of disability in Federal programs, among other things.</p>
+            <p>Section 508 was enacted in 1998 in order to eliminate barriers in information technology (IT) for people with disabilities. It is both a law and a standard. It's a law in that it requires Federal agencies to procure and develop technologies that meet a specific accessibility standard. Section 508 also defines what that standard is. It covers all aspects of IT from Web pages to desktop software applications to telecommunications equipment, and each of these product areas has specific technical standards.</p>
+            <ul>
+                <li>1194.21 Software applications and operating systems</li>
+                <li>1194.22 Web-based intranet and internet information and applications</li>
+                <li>1194.23 Telecommunications products</li>
+                <li>1194.24 Video and multimedia products</li>
+                <li>1194.25 Self contained, closed products</li>
+                <li>1194.26 Desktop and portable computers</li>
+            </ul>
+            <p>While the technical standards for the different types of products do vary from one to the other, their core requirements are quite similar. A good way to start to grasp the intention of Section 508 is to look at the 1194.31 Functional Performance Criteria. The functional performance criteria basically state that for any product there must be at least one way to interact with the product that allows <strong>all</strong> of the following types of users to interact with the product.</p>
+            <ul>
+                <li>visually impaired (blind)</li>
+                <li>visually impaired (visual acuity no better than 20/70)</li>
+                <li>hearing impaired (deaf)</li>
+                <li>hearing impaired (need assistive listening devices)</li>
+                <li>speech impaired</li>
+                <li>physically impaired</li>
+            </ul>
+            <p>Don't let these functional criteria sound too daunting. The technical specifications define criteria for helping determine if a product meets these functional requirements. Since this is a guide on Web accessibility, subsection 1194.22 Web-based intranet and internet information and applications, will be looked at most closely.</p>
+            <p>Additionally, there are requirements for 1194.41 Information, documentation, and support.</p>
+            <h2>1194.22 Web-based intranet and internet information and applications</h2>
+            <p>There are 16 criteria in this subsection which cover the range of impairments listed in the Functional Performance Criteria.</p>
+            <ol class="section-508">
+                <li>A text equivalent for every non-text element shall be provided (e.g., via "alt", "longdesc", or in element content).</li>
+                <li>Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation.</li>
+                <li>Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup.</li>
+                <li>Documents shall be organized so they are readable without requiring an associated style sheet.</li>
+                <li>Redundant text links shall be provided for each active region of a server-side image map.</li>
+                <li>Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape.</li>
+                <li>Row and column headers shall be identified for data tables.</li>
+                <li>Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.</li>
+                <li>Frames shall be titled with text that facilitates frame identification and navigation.</li>
+                <li>Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</li>
+                <li>A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.</li>
+                <li>When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by assistive technology.</li>
+                <li>When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21(a)</li>
+                <li>When electronic forms are designed to be completed on-line, the form shall allow people using assistive technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</li>
+                <li>A method shall be provided that permits users to skip repetitive navigation links.</li>
+                <li>When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.</li>
+            </ol>
+            <p>To get a better handle on these requirements they can be summarized with the following list of 11 topics.</p>
+            <ul>
+                <li>Provide alternative text for all images, or in the case of image maps, provide plain text links</li>
+                <li>Do not depend on color alone for communicating information</li>
+                <li>The logical flow of the page should follow the source code, or <abbr title="Document Object Model">DOM</abbr>.</li>
+                <li>Data tables should have headings</li>
+                <li>Frames should have titles</li>
+                <li>Avoid flickering on the screen between 2-55 Hz</li>
+                <li>Content displayed with scripts must be accessible</li>
+                <li>Content delivered via plugins must be accessible</li>
+                <li>Online forms must be coded correctly</li>
+                <li>Provide a way for users to skip repetitive navigation links</li>
+                <li>Allow users to adjust the time permitted for timed responses</li>
+            </ul>
+            <p>If you try to apply these requirements to modern Web techniques, you might find yourself with more questions than answers. These requirements were written without concrete ways to test some of them. They were written in 1998 when the Web was a very different platform. One of the reasons Section 508 is currently being updated is to better handle the way the modern Web works and to deal with those realities.</p>
+            <p>Instead of obsessing about meeting Section 508 requirements, you should be planning on meeting WCAG 2, Level AA conformance, which the updated Section 508 will most likely reference. <strong>There is a good chance Section 508 will be updated within 2013.</strong></p>
+            <h2>Do I Have to Follow Section 508?</h2>
+            <p><strong>You don't have to follow Section 508 unless you have to follow Section 508.</strong> By default, the Federal government is the only group that has to follow Section 508. It is a requirement of Federal agencies - that's it.</p>
+            <p>Many other groups, like state governments and higher education institutions have made requirements that point to Section 508 as their state's or institutions standards. Those elections were made by those bodies - they were not forced on them by the Federal government.</p>
+            <p>Several other entities have created their own accessibility standards which are based on Section 508, but they might not be identical to Section 508.</p>
+            <p>Except for Federal agencies, unless your entity has explicitly adopted Section 508, you don't have to follow it.</p>
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="http://www.access-board.gov/508.htm#current">Current Section 508 Standards</a></li>
+                <li><a href="http://www.access-board.gov/sec508/refresh/draft-rule.htm">2011 Draft of the Updated Standards and Guidelines</a></li>
+            </ul>
+        </div>
     </body>
 </html>

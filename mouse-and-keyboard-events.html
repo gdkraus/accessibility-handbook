@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Mouse and Keyboard Events</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/tables.html">Previous: Tables</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/visual-focus.html">Next: Visual Focus</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <h2>Overview</h2>
         <p>When you use only mouse events to trigger an action, a keyboard-only user cannot trigger the event. The solution often involves one or two steps.</p>
@@ -111,5 +111,5 @@ function doSomething() {alert('Hello World!');}
         <ul>
             <li><a href="http://www.w3.org/TR/WCAG20-TECHS/SCR20.html">WCAG 2.0 Techniques for using both keyboard and other device-specific functions.</a></li>
         </ul>
-    </body>
+    </div></body>
 </html>

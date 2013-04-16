@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Alternative Text</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-checkbox.html">Previous: ARIA Checkbox Tutorial</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/captioning.html">Next: Captioning</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <p>The basic premise of alternative text is to make it so all users can read the same information and have the same interactions with a Web page, regardless of whether or not they can see the images. Alternative text is often used by visually disabled users with screen reading software, where the description of an image is read to the user in place of the image. Alternative text can take a couple of different forms.</p>
         <div class="tip">
@@ -144,5 +144,5 @@
             <li><a href="http://webaim.org/techniques/alttext/">WebAIM's Tutorial on Appropriate Use of Alternative Text</a></li>
             <li><a href="http://webaim.org/techniques/images/">WebAIM's Tutorial on Creating Accessible Images</a></li>
         </ul>
-    </body>
+    </div></body>
 </html>

@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Don't Make the Target URL the Actual Hyperlink Text</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-unique.html">Previous: Unique Link Text</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-underline.html">Next: Underline Style for Links</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <p>Whenever possible and appropriate, the visible link text should be readable text and not the same as the hyperlink text. Some hyperlinks are very long and become cumbersome to display and read on the page. There are times when it is appropriate to display the link text as the actual URL, and in those cases it is fine to do so.</p>
         <h2>Correct Implementation</h2>
@@ -89,5 +89,5 @@
             <h4>Implementation</h4>
             <p class="implementation"><a href="http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&primary=CC0000,000000,FFFFFF&secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&level=AA&ncsu=1">http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&primary=CC0000,000000,FFFFFF&secondary=383838,666666,CCCCCC,E1E1E1,5C5541,666633,556677,A20000&tertiary=A79574,C5BD9D,E5E1D0,778855,99AA77,CCDDAA,67849C,CC9900&level=AA&ncsu=1</a> </p>
         </section>
-    </body>
+    </div></body>
 </html>

@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>PDF</h1>
                 <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-html.html">Previous: HTML</a></p>
@@ -31,7 +31,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -71,7 +71,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-office.html">Next: Office Documents</a></p>
-        </nav>
+        </nav><div id="main" role="main">
 
         <p>PDF files are popular because they give the author exact control over the look and feel of a document, regardless of the platform on which the end user is viewing the content. Also there are numerous PDF creation tools that integrate with almost any application.</p>
         <p>However, PDF documents are very difficult to make accessible. Only a few applications will make a PDF accessible with no additional work. Making a PDF file accessible usually involves using tools in Adobe Acrobat Professional to add accessibility information. The tools are cumbersome and clunky and usually require a significant amount of effort to use. Additionally, if you invest all of the work in making a PDF file accessible, if you later need to go back to your original source document to make changes and create a new PDF file, all of your previous accessibility retrofitting will be lost.</p>
@@ -90,5 +90,5 @@
             <li>NCDAE <a href="http://ncdae.org/resources/cheatsheets/pdf.php">PDF Conversion in Microsoft Office/PowerPoint Accessibility Cheat Sheet</a></li>
             <li>NCDAE <a href="http://ncdae.org/resources/cheatsheets/indesign.php">Adobe InDesign CS 5.5 Accessibility Cheat Sheet</a></li>
         </ul>
-    </body>
+    </div></body>
 </html>

@@ -7,7 +7,7 @@
 
         <style> .really-big {font-size:1.4em; font-weight:bold;color:#000;margin:0;} .big {font-size:1.2em; font-weight:bold;color:#222;margin:0 2em;} .a-little-bigger {font-size:1em; font-weight:bold;color:#444;margin:0 4em;} </style>
     </head>
-    <body>
+    <body><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Headings</h1>
         <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Previous: Valid Code</a></p>
@@ -33,7 +33,7 @@
                     <optgroup label="Some Basics">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
-                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code</option>
                     </optgroup>
                     <optgroup label="Document Structure">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
@@ -73,7 +73,7 @@
                 <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-landmarks.html">Next: ARIA Landmarks</a></p>
-        </nav>
+        </nav><div id="main" role="main">
         <p>The first level of structure to add to a page is headings. Headings are used to break up the content into a hierarchical structure much like an outline. Where sighted users can skim a page quickly by reading the visual headlines, a screen reader user can also skim a page by quickly traversing the headings. To semantically define headings simply use heading tags to label the beginning of each section.</p>
         <section class="example good">
             <h3><span class="first-word">Principle:</span> Use headings to define the page structure</h3>
@@ -150,5 +150,5 @@
             <p class="a-little-bigger">Technology</p> 
             <p class="big">Entertainment</p>
         </section>
-    </body>
+    </div></body>
 </html>
