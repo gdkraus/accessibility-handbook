@@ -19,7 +19,7 @@ h4 {
     font-weight: bold
 }
 nav {
-    background-color:#e1e1e1;
+    background-color:#eee;
     width:100%;
     clear:both;
     min-height: 1.4em;
@@ -32,19 +32,33 @@ nav p {
     margin:0;
 }
 nav p.prev {
-    float:left;
+    /*float:left;*/
+    margin-left:0%;
     padding-left:1em;
-    width:33%;
+    width:35%;
+    display:inline-block;
 }
 nav p.next{
-    float:right;
+    /*float:right;*/
+    margin-left:0%;
     padding-right:1em;
-    width:30%;
+    width:33%;
     text-align:right;
+    display:inline-block;
+
 }
 nav p.toc {
-    
-    float:left;
+    width:30%;
+    /*margin-left:30%;*/
+    /*float:left;*/
+    /*margin:0 auto;*/
+}
+nav p.toc select {
+    width:25%;
+    margin:0 auto;
+}
+nav p.toc go-button {
+    width:2%;
 }
 table, th, td {
     border: 1px solid #333;

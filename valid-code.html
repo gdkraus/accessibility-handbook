@@ -7,6 +7,72 @@
     </head>
     <body>
         <h1>Valid Code</h1>
+                <nav>
+            <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Previous: Language</a></p>
+            <p class="toc">
+                <select id="toc-menu">
+                    <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
+                    <optgroup label="The Nature of What is Required">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/understand-nature.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/what-accessible-means.html">What Accessibility Means</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/law.html">Accessibility and the Law</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/ada.html">Americans with Disabilities Act</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/508.html">Section 508</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/wcag.html">WCAG 2</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/vpat.html">VPAT</option>
+                    </optgroup>
+                    <optgroup label="Choose a technology">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-overview.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-html.html">HTML</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-pdf.html">PDF</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-office.html">Office Documents</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/technology-rich-media.html">Rich Media</option>
+                    </optgroup>
+                    <optgroup label="Some Basics">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html">Overview</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/language.html">Language</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Overview</option>
+                    </optgroup>
+                    <optgroup label="Document Structure">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Headings</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-landmarks.html">ARIA Landmarks</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/lists.html">Lists</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/tables.html">Tables</option>
+                    </optgroup>
+                    <optgroup label="User Interactions">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/mouse-and-keyboard-events.html">Mouse and Keyboard Events</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/visual-focus.html">Visual Focus</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/menus.html">Menus</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/skip-to-main-content.html">Skip to Main Content Links</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/forms.html">Forms</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/color-contrast.html">Color Contrast</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/links.html">Links</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-new-window.html">Links Opening in New Windows</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-alt.html">Text or Alt Attribute for Links</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-internal.html">Internal Links</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-behavior.html">Link vs. Button</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-descriptive-target.html">Using Descriptive Link Text</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-length.html">Length of Link Text</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-unique.html">Unique Link Text</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-url.html">URL Text</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-underline.html">Underline Style for Links</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/find-content-multiple.html">Finding Content in Multiple Ways</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/timed-events.html">Timed Events</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-checkbox.html">ARIA Checkbox Tutorial</option>
+                    </optgroup>
+                    <optgroup label="Conveying Through Alternate Senses">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/alternative-text.html">Alternative Text</option>
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/captioning.html">Captioning</option>
+                    </optgroup>
+                    <optgroup label="Appendices">
+                        <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
+                    </optgroup>
+                </select>
+                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+            </p>
+            <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html">Next: Headings</a></p>
+        </nav>
+
         <p>It is important to have valid code on your Web pages. Web browsers are very forgiving with bad code, but that does not guarantee that your what you meant will actually be represented accurately by the browser and to assistive technologies.</p>
         <p>Just as a browser transforms your HTML code into a graphical Web page for the user, assistive technologies also transform your Web page into something that the assistive technology user needs. Your page might be transformed into an audio format or a braille format for visually impaired users. Those assistive technologies might not deal as well with coding errors as a browser does, so it is important to have valid code.</p>
         <p>Assistive technologies interpret Web page through various mechanisms. Some will rely on the browser to construct the DOM and it will interact directly with the browser to get information. Others will communicate directly with the operating system and whatever information the browser passes to it. Other still can take the raw HTML and build the page itself.</p>

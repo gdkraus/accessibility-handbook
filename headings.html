@@ -12,7 +12,7 @@
         <nav>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Previous: Valid Code</a></p>
             <p class="toc">
-                <select>
+                <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
                     <optgroup label="The Nature of What is Required">
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/understand-nature.html">Overview</option>
@@ -70,6 +70,7 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
+                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-landmarks.html">Next: ARIA Landmarks</a></p>
         </nav>
