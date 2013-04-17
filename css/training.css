@@ -1,10 +1,11 @@
 h1 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     background-color: #000;
     color:#fff;
     padding:2px;
     margin:3px 0 0 0;
+    text-align:center;
 }
 h2 {
     font-size: 1.2em;
@@ -38,7 +39,7 @@ nav p {
     color:#000;
     margin:0;
     width:100%;
-padding:0;
+    padding:0;
 }
 nav p.toc {
     text-align: center;
@@ -63,7 +64,7 @@ nav p.prev {
     position:relative;
     /*padding:2px;*/
     /*background-color:#333;*/
-min-height:2.6em;
+    min-height:2.6em;
 }
 nav p.next{
     left:0%;
@@ -77,21 +78,21 @@ nav p.next{
     padding-right:1%;
     min-height:2.6em;
 }
-    nav p.prev img {
-        position: relative;
-        top:0.4em;
-        margin-right:6px;
-    }
-    nav p.next img {
-        position: relative;
-        top:0.4em;
-        /*left:134px;*/
-        margin-left:6px;
-        
-    } 
-    #next-text {
-        padding-right:20px;
-    }
+nav p.prev img {
+    position: relative;
+    top:0.4em;
+    margin-right:6px;
+}
+nav p.next img {
+    position: relative;
+    top:0.4em;
+    /*left:134px;*/
+    margin-left:6px;
+
+} 
+#next-text {
+    padding-right:20px;
+}
 nav p.prev a,nav p.prev a:link, nav p.prev a:visited, nav p.prev a:hover, nav p.prev active {
     color:#000;
     text-decoration: none;
@@ -200,9 +201,13 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 @media only screen and (min-width: 31em){
-nav {
-    min-height:2.3em;
-}
+    h1 {
+        text-align:inherit;   
+    }
+
+    nav {
+        min-height:2.3em;
+    }
     nav p {
         color:#000;
         margin:0;
@@ -244,7 +249,7 @@ nav {
         min-height:1em;
     }
 
-       nav p.prev img {
+    nav p.prev img {
         position: relative;
         top:0.4em;
         margin-right:4px;
@@ -253,7 +258,7 @@ nav {
         position: relative;
         top:0.4em;
         /*left:134px;*/
-        
+
     } 
     #next-text {
         padding-right:20px;
