@@ -101,7 +101,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
         <p>In this case the screen reader user will hear something like &quot;navigation landmark.&quot;</p>
-        <p><strong>You should not place the &quot;role&quot; attribute on another element that already has semantic meaning. It should only be placed on &lt;div&gt; and &lt;span&gt; elements.</strong> The specification allows you to place the role attribute on other types of elements, however, poor screen reader support necessitates placing the role attribute on an element with out semantic meaning.</p>
+        <p class="tip"><strong>You should not place the &quot;role&quot; attribute on another element that already has semantic meaning, like a &lt;ul&gt;. It should only be placed on &lt;div&gt; and &lt;span&gt; elements.</strong> While the specification allows you to place the &quot;role&quot; attribute on other types of elements, poor screen reader support necessitates placing the role attribute on an element with out semantic meaning. If you place the &quot;role&quot; attribute on something like a &lt;ul&gt;, most screen readers will override the element's native role with the specified one. NVDA is the only screen reader at the time of testing that implements this functionality correctly.</p>
         <h2>aria-label</h2>
         <p>We can take this a step further and describe this navigation region using the aria-label attribute. aria-label is a description that is never displayed on screen but is relayed to the screen reader user. This can be very helpful if you have multiple navigation areas within a single page.</p>
         <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-label=&quot;main navigation&quot;&gt;
