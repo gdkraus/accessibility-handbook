@@ -202,6 +202,11 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 @media only screen and (min-width: 31em){
+    body {
+        max-width:960px;
+        margin:0 auto;
+        background-color:#fff;
+    }
     h1 {
         text-align:inherit;   
     }
