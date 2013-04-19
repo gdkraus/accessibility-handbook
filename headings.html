@@ -77,9 +77,16 @@
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html"><img src="images/left-arrow.png" alt="previous" />Valid Code</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-landmarks.html">ARIA Landmarks<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-        <p>The first level of structure to add to a page is headings. Headings are used to break up the content into a hierarchical structure much like an outline. Where sighted users can skim a page quickly by reading the visual headlines, a screen reader user can also skim a page by quickly traversing the headings. To semantically define headings simply use heading tags to label the beginning of each section.</p>
-        <section class="example good">
-            <h3><span class="first-word">Principle:</span> Use headings to define the page structure</h3>
+                <nav id="page-contents" role="navigation" aria-label="Page Contents">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Use CSS to style the headings</a></li>
+                <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Use headings to define the page structure</a></li>
+            </ul>
+        </nav>
+            <p>The first level of structure to add to a page is headings. Headings are used to break up the content into a hierarchical structure much like an outline. Where sighted users can skim a page quickly by reading the visual headlines, a screen reader user can also skim a page by quickly traversing the headings. To semantically define headings simply use heading tags to label the beginning of each section.</p>
+        <div class="example good">
+            <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Use headings to define the page structure</h2>
             <p>This both creates a semantic structure for your page and it allows screen reader users to be able to navigate by heading and jump from section to section.</p>
             <pre class="code">&lt;h1&gt;Our News Site&lt;/h1&gt;
   &lt;h2&gt;World News&lt;/h2&gt;
@@ -91,9 +98,9 @@
     &lt;h3&gt;Environment&lt;/h3&gt;
     &lt;h3&gt;Technology&lt;/h3&gt;
   &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
-        </section>
-        <section class="example good">
-            <h3><span class="first-word">Principle:</span> Use CSS to style the headings</h3>
+        </div>
+        <div class="example good">
+            <h2 id="2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Use CSS to style the headings</h2>
             <p>If you don't like the way the default heading look, and most of us don't, just use CSS to style the headings.</p>
             <pre class="code">&lt;style&gt;
   h1 {font-size:1.4em; font-weight:bold; color:#000;}
@@ -111,7 +118,7 @@
     &lt;h3&gt;Environment&lt;/h3&gt;
     &lt;h3&gt;Technology&lt;/h3&gt;
   &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
-        </section>
+        </div>
         <h2>General Rules for Applying Headings</h2>
         <ul>
             <li>Your &lt;h1&gt; should be where the unique main  content of your page begins, which usually means it will come after your navigation  system.</li>
@@ -122,7 +129,7 @@
             <li>It is not usually necessary to skip heading  levels, going from an &lt;h1&gt; directly to an &lt;h3&gt;.</li>
             <li>There are always exceptions to rules. Just make  sure you are breaking the rules for a good reason.</li>
         </ul>
-        <section class="example bad">
+        <div class="example bad">
             <h3><span class="first-word">Principle:</span> Only using styles to denote headings</h3>
             <p>Do not use stylings as the only way to communicate what your headings are. This works for visual users, but screen reader users will not be able to easily divide your page into logical structures.</p>
             <pre class="code">&lt;style&gt;
@@ -141,7 +148,7 @@
     &lt;p class=&quot;a-little-bigger&quot;&gt;Environment&lt;/p&gt;
     &lt;p class=&quot;a-little-bigger&quot;&gt;Technology&lt;/p&gt;
   &lt;p class=&quot;big&quot;&gt;Entertainment&lt;/p&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="really-big">Our News Site</p> 
             <p class="big">World News</p>
             <p class="big">National News</p> 
@@ -152,6 +159,6 @@
             <p class="a-little-bigger">Environment</p>
             <p class="a-little-bigger">Technology</p> 
             <p class="big">Entertainment</p>
-        </section>
+        </div>
     </div></body>
 </html>

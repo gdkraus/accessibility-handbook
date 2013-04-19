@@ -72,29 +72,33 @@
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html"><img src="images/left-arrow.png" alt="previous" />Basics Overview</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-
+        <nav id="page-contents" role="navigation" aria-label="Page Contents">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
+                <li><a href="#2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+            </ul>
+        </nav>
         <p>Defining the language of the document allows the following.</p>
         <ul>
             <li>Text-to-speech engines, like screen readers, know how to read the text</li>
             <li>Spell checkers know what language to use</li>
             <li>Text styling</li>
         </ul>
-        <h2>Correct Implementation</h2>
-        <section class="example good">
-            <h3><span class="first-word">Principle:</span> Defining the language for an HTML5 or HTML 4 document</h3>
-            <h4>Source Code</h4>
+        <div class="example good">
+            <h2><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an HTML5 or HTML 4 document</h2>
+            <h3>Source Code</h3>
             <pre class="code">&lt;html lang=&quot;en-US&quot;&gt;</pre>
-        </section>
-        <h2>Correct Implementation</h2>
-        <section class="example good">
-            <h3><span class="first-word">Principle:</span> Defining the language for an XHTML document</h3>
-            <h4>Source Code</h4>
+        </div>
+        <div class="example good">
+            <h2><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an XHTML document</h2>
+            <h3>Source Code</h3>
             <pre class="code">&lt;html lang=&quot;en&quot; xml:lang=&quot;en&quot; xmlns= &quot;http://www.w3.org/1999/xhtml&quot;&gt;</pre>
-        </section>
+        </div>
         <h2>Correct Implementation</h2>
-        <section class="example good">
+        <div class="example good">
             <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with one predominant language</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;!doctype html&gt;
 &lt;html lang=&quot;en-US&quot;&gt;
   &lt;head&gt;
@@ -107,11 +111,11 @@
     &lt;p lang=&quot;fr&quot;&gt;Une petite quantité de texte en français...&lt;/p&gt;
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </section>
+        </div>
         <h2>Correct Implementation</h2>
-        <section class="example good">
+        <div class="example good">
             <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with the quantity of each language being roughly equally</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -129,12 +133,12 @@
     &lt;/div&gt; 
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </section>
+        </div>
         <h2>Incorrect Implementation</h2>
-        <section class="example bad">
+        <div class="example bad">
             <h3><span class="first-word">Principle:</span> Not defining the language of the document.</h3>
             <p>If you do not define the language of the page, the user agent will default to using its own default language setting for rendering the page. If both the page and the user agent are in the same language everything will work fine, however, if for instance the user agent is set up for English and the page is in French, a user agent such as a screen reader will attempt to speak the French text like a bad American tourist.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -147,14 +151,14 @@
     &lt;p&gt;Une petite quantité de texte en français...&lt;/p&gt;
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </section>      
+        </div>      
         <h2>Incorrect Implementation</h2>
-        <section class="example bad">
+        <div class="example bad">
             <h3><span class="first-word">Principle:</span> Simply defining the language of the doctype.</h3>
             <p>Defining the language in the doctype declaration simply defines the language of the doctype schema, not the language of the page itself. You must also define the language of the page using one of the previous techniques.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</pre>
-        </section>
+        </div>
 
         <h2>Further Reading</h2>
         <p>For more information, please refer to the <a href="http://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479">W3C documentation on specifying languages</a>, from which these examples were created.</p>

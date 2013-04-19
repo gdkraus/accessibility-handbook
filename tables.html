@@ -137,9 +137,9 @@ down that column to find out what time the bus leaves that intersection."&gt;
             </li>
         </ul>
         <h2>Correct Implementations</h2>
-        <section id="correct-simple" class="example good">
+        <div id="correct-simple" class="example good">
             <h3><span class="first-word">Principle:</span> A simple data table with column and row headings</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.&quot;&gt;
   &lt;caption&gt;Pizza Prices&lt;/caption&gt;
   &lt;tr&gt;
@@ -167,7 +167,7 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td&gt;$14&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <table border="1" summary="Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.">
                 <caption>
                     Pizza Prices
@@ -198,11 +198,11 @@ down that column to find out what time the bus leaves that intersection."&gt;
                 </tr>
             </table>
 
-        </section>
+        </div>
 
-        <section id="correct-complex" class="example good">
+        <div id="correct-complex" class="example good">
             <h3><span class="first-word">Principle:</span> A complex data table using header and id attributes</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.&quot;&gt;
   &lt;caption&gt;Topping Prices&lt;/caption&gt;
   &lt;tr&gt;
@@ -247,7 +247,7 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td headers=&quot;veg tom lg&quot;&gt;$1.00&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <table border="1" summary="Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.">
                 <caption>
                     Topping Prices
@@ -294,11 +294,11 @@ down that column to find out what time the bus leaves that intersection."&gt;
                     <td headers="veg tom lg">$1.00</td>
                 </tr>
             </table>
-        </section>
+        </div>
 
-        <section id="correct-layout" class="example good">
+        <div id="correct-layout" class="example good">
             <h3><span class="first-word">Principle:</span> A layout table</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot;&gt;
   &lt;tr&gt;
     &lt;td colspan=&quot;2&quot; bgcolor=&quot;#c00&quot;&gt;&lt;h1 style=&quot;color:#fff&quot;&gt;Website Logo&lt;/h1&gt;&lt;/td&gt;
@@ -320,7 +320,7 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td colspan=&quot;2&quot; align=&quot;center&quot; height=&quot;20&quot; bgcolor=&quot;#000&quot;&gt;&lt;p style=&quot;color:#fff&quot;&gt;Contact Info&lt;/p&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <table width="100%" border="0">
                 <tr>
                     <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
@@ -345,11 +345,11 @@ down that column to find out what time the bus leaves that intersection."&gt;
                     <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
                 </tr>
             </table>
-        </section>
+        </div>
         <h2>Incorrect Implementation</h2>
-        <section id="incorrect-headers" class="example bad">
+        <div id="incorrect-headers" class="example bad">
             <h3><span class="first-word">Principle:</span> A data table with no headings, but using bold text to mimic headings</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;table border=&quot;1&quot;&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
@@ -376,7 +376,7 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td&gt;$14&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <table border="1">
                 <tr>
                     <td>&nbsp;</td>
@@ -404,11 +404,11 @@ down that column to find out what time the bus leaves that intersection."&gt;
                 </tr>
             </table>
 
-        </section>
-        <section id="incorrect-layout" class="example bad">
+        </div>
+        <div id="incorrect-layout" class="example bad">
             <h3><span class="first-word">Principle:</span> A layout table with a summary attribute</h3>
             <p>When you add the summary attribute to a layout table, screen reader users will have the summary attribute read to them. This is unnecessary and more cumbersome to the user. It is better to simply leave the summary attribute and caption element off.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot; summary=&quot;a layout table&quot;&gt;
   &lt;tr&gt;
     &lt;td colspan=&quot;2&quot; bgcolor=&quot;#c00&quot;&gt;&lt;h1 style=&quot;color:#fff&quot;&gt;Website Logo&lt;/h1&gt;&lt;/td&gt;
@@ -430,7 +430,7 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td colspan=&quot;2&quot; align=&quot;center&quot; height=&quot;20&quot; bgcolor=&quot;#000&quot;&gt;&lt;p style=&quot;color:#fff&quot;&gt;Contact Info&lt;/p&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <table width="100%" border="0" summary="a layout table">
                 <tr>
                     <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
@@ -455,9 +455,9 @@ down that column to find out what time the bus leaves that intersection."&gt;
                     <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
                 </tr>
             </table>
-        </section>
+        </div>
 
-        <section>
+        <div>
             <h2>Further Reading</h2>
             <ul>
                 <li><a href="http://webaim.org/techniques/tables/">WebAIM: Creating Accessible Tables</a></li>
@@ -467,6 +467,6 @@ down that column to find out what time the bus leaves that intersection."&gt;
                 <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H51.html">W3C: Presenting Tabular Information</a></li>
                 <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H63.html">W3C: Table Scope Attribute</a></li>
             </ul>
-        </section>
+        </div>
     </div></body>
 </html>

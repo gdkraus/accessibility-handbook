@@ -7,7 +7,7 @@
     </head>
     <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Visual Focus</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -71,20 +71,41 @@
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/mouse-and-keyboard-events.html"><img src="images/left-arrow.png" alt="previous" />Mouse and Keyboard Events</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/menus.html">Menus<img src="images/right-arrow.png" alt="next" /></a></p>
-        </nav><div id="main" role="main">
+        </nav>
 
-        <p>It is important to make sure that keyboard-only users can determine where they are in the page when they are using the Tab key to navigate. They can know where they are because when an object receives focus, there is a focus ring around the object.</p>
-        <p>By default, the browser will always show a focus ring around an object that is keyboard focusable by default, like a link, or any object which has a positive value for the tabindex attribute set. However, it is very popular to override this default browser behavior, often in CSS reset files. It is often accomplished with the following code.</p>
-        <pre class="code">&lt;style&gt;
+
+        <div id="main" role="main">
+            <nav id="page-contents" role="navigation" aria-label="Page Contents">
+                <h2>Page Contents</h2>
+                <ul>
+                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Disabling the browser's default outline style for focusable elements</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Explicitly set the focus ring style</a></li>
+                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Overriding the focus for specifically focusable elements, like links</a></li>
+                </ul>
+            </nav>
+            <p>It is important to make sure that keyboard-only users can determine where they are in the page when they are using the Tab key to navigate. They can know where they are because when an object receives focus, there is a focus ring around the object.</p>
+            <p>By default, the browser will always show a focus ring around an object that is keyboard focusable by default, like a link, or any object which has a positive value for the tabindex attribute set. However, it is very popular to override this default browser behavior, often in CSS reset files. It is often accomplished with the following code.</p>
+            <div class="example bad">
+                <h2 id="1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Disabling the browser's default outline style for focusable elements</h2>
+                <p>This makes it so elements that can receive the keyboard focus do not have a focus ring around them when the user tabs to it. This makes it very difficult for non-mouse users to know where they are on the page.</p>
+                <pre class="code">&lt;style&gt;
   :focus {outline:none;}
 &lt;/style&gt;</pre>
-        <p>The solution is very simple. You simply need to either not override the default browser behavior, or explicitly set a property for the focus</p>
-        <pre class="code">&lt;style&gt;
+            </div>
+            <p>The solution is very simple. You simply need to either not override the default browser behavior, or explicitly set a property for the focus</p>
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Explicitly set the focus ring style</h2>
+                <p>If you need to correct the issue, you can explicitly set the focus style to make it whatever style you want.</p>
+                <pre class="code">&lt;style&gt;
   :focus {outline:2px solid #f00;}
 &lt;/style&gt;</pre>
-        <p>Also, be sure you don't have any overridden focus rules on objects like links.</p>
-        <pre class="code">&lt;style&gt;
+            </div>
+            <p>Also, be sure you don't have any overridden focus rules on objects like links.</p>
+            <div class="example bad">
+                <h2 id="3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Overriding the focus for specifically focusable elements, like links</h2>
+                <pre class="code">&lt;style&gt;
   a:focus {outline:none;}
 &lt;/style&gt;</pre>
-    </div></body>
+            </div>
+        </div></body>
 </html>

@@ -102,34 +102,34 @@
         </ul>
         <h2>Correct Implementations</h2>
 
-        <section id="for-id" class="example good">
+        <div id="for-id" class="example good">
             <h3><span class="first-word">Principle:</span> Using &quot;for&quot; and &quot;id&quot; attributes to attach labels to form elements</h3>
             <p>All form input elements must have a corresponding label to indicate what information is being requested. This method explicitly ties a label to an input element by matching the &quot;for&quot; attribute in the label tag with the &quot;id&quot; attribute in the input element tag. NOTE: This method will usually give you more flexibility in applying custom styling to your form elements. All of the examples on this page will use this method.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;first-name&quot;&gt;First Name&lt;/label&gt; &lt;input id=&quot;first-name&quot; name=&quot;first-name&quot; type=&quot;text&quot; /&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="implementation"><label for="first-name">First Name</label> <input id="first-name" name="first-name" type="text" /></p>
-        </section>
+        </div>
 
-        <section id="nesting-label" class="example good">
+        <div id="nesting-label" class="example good">
             <h3><span class="first-word">Principle:</span> Nesting the input element within the label tag to attach labels to form elements</h3>
             <p>All form input elements must have a corresponding label to indicate what information is being requested. This method ties a label to an input element by wrapping the input element with the label tag.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label&gt;First Name &lt;input type=&quot;text&quot; name=&quot;first-name&quot; /&gt;&lt;/label&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="implementation"><label>First Name <input type="text" name="first-name" /></label> </p>
-        </section>
+        </div>
 
-        <section id="text-ideal" class="example good">
+        <div id="text-ideal" class="example good">
             <h3><span class="first-word">Principle:</span> Text field, ideal implementation</h3>
             <p>This method has a visible label that describes what information is being asked for in the text box.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;last-name&quot;&gt;Last Name&lt;/label&gt; &lt;input id=&quot;last-name&quot; type=&quot;text&quot; name=&quot;last-name&quot; /&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="implementation"><label for="last-name">Last Name</label> <input id="last-name" type="text" name="last-name" /></p>
-        </section>
+        </div>
 
-        <section id="text-alternative"class="example good">
+        <div id="text-alternative"class="example good">
             <h3><span class="first-word">Principle:</span> Text field, alternative implementation</h3>
             <p>Sometimes for stylistic reasons you do not want have a visible label displayed. Instead of a visible label you can use the title attribute of the input element to describe what information is being asked for. If this technique is used you still need to visually let your user know what information you are asking for. This is often handled by pre-populating the text field with the information being requested.</p>
             <p>This introduces new issues that must be dealt with, such as the following.</p>
@@ -139,7 +139,7 @@
             </ul>
             <p>These issues can be handled with JavaScript. While the following technique will sometimes produce errors or warnings by automated accessibility checkers, it is usable by major screen readers.</p>
             <p>This technique is derived from <a href="http://terrillthompson.com/blog/38">testing done by Terrill Thompson</a>.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;input name=&quot;state&quot; title=&quot;state&quot; id=&quot;state&quot; type=&quot;text&quot; /&gt;
 &lt;script&gt;
   var defaultValue = 'State';
@@ -176,7 +176,7 @@
     });
   }
 &lt;/script&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
 
             <p class="implementation"><input name="state" title="state" id="state" type="text" /></p>
             <script type="text/javascript">
@@ -215,22 +215,22 @@
                 }
 
             </script>
-        </section>
+        </div>
 
-        <section id="checkbox-single" class="example good">
+        <div id="checkbox-single" class="example good">
             <h3><span class="first-word">Principle:</span> Single checkbox</h3>
             <p>For a single checkbox you simply need to attach the label to the input element.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;input id=&quot;sendemail&quot; type=&quot;checkbox&quot; name=&quot;sendemail&quot; value=&quot;sendemail&quot; /&gt;<br />
 &lt;label for=&quot;sendemail&quot;&gt;Send me email updates.&lt;/label&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="implementation"><input id="sendemail" type="checkbox" name="sendemail" value="sendemail" /><label for="sendemail">Send me email updates.</label></p>
-        </section>
+        </div>
 
-        <section id="checkbox-multiple" class="example good">
+        <div id="checkbox-multiple" class="example good">
             <h3><span class="first-word">Principle:</span> Multiple related checkboxes</h3>
             <p>When you have a collection of related check boxes you need to include them in a fieldset and provide a legend. This helps visually identify related elements plus provides a description for how these items are related.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;fieldset&gt;
   &lt;legend&gt;Select your days of availability:&lt;/legend&gt;
   &lt;input id=&quot;monday&quot; type=&quot;checkbox&quot; name=&quot;availability&quot; value=&quot;monday&quot; /&gt;
@@ -240,7 +240,7 @@
   &lt;input id=&quot;wednesday&quot; type=&quot;checkbox&quot; name=&quot;availability&quot; value=&quot;wednesday&quot; /&gt;
   &lt;label for=&quot;wednesday&quot;&gt;Wednesday&lt;/label&gt;
 &lt;/fieldset&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <fieldset>
                 <legend>Select your days of availability:</legend>
                 <input id="monday" type="checkbox" name="availability" value="monday" />
@@ -250,12 +250,12 @@
                 <input id="wednesday" type="checkbox" name="availability" value="wednesday" />
                 <label for="wednesday">Wednesday</label>
             </fieldset>
-        </section>
+        </div>
 
-        <section id="radio" class="example good">
+        <div id="radio" class="example good">
             <h3><span class="first-word">Principle:</span> Radio button</h3>
             <p>To make a radio button accessible you first need to attach the label to the input element.When you have a radio button input you usually have more than one input. (If you only have one radio button, a checkbox is more appropriate because it gives the user the option to unselect it.) Using the fieldset and legend helps visually identify the related group of radio buttons plus provides a description for how they are related. NOTE: By giving all of the radio buttons the same name it creates a radio group where selecting one radio button unselects the others in the group.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;fieldset&gt;
 &lt;legend&gt;Payment Method&lt;/legend&gt;
 &lt;input id=&quot;cash&quot; type=&quot;radio&quot; name=&quot;payment&quot; value=&quot;cash&quot; /&gt;
@@ -265,7 +265,7 @@
 &lt;input id=&quot;credit&quot; type=&quot;radio&quot; name=&quot;payment&quot; value=&quot;credit&quot; /&gt;
 &lt;label for=&quot;credit&quot;&gt;Credit Card&lt;/label&gt;
 &lt;/fieldset&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <fieldset>
                 <legend>Payment Method</legend>
                 <input id="cash" type="radio" name="payment" value="cash" />
@@ -277,38 +277,38 @@
                 <input id="credit" type="radio" name="payment" value="credit" />
                 <label for="credit">Credit Card</label>
             </fieldset>
-        </section>
+        </div>
 
-        <section id="select-single" class="example good">
+        <div id="select-single" class="example good">
             <h3><span class="first-word">Principle:</span>Select menu, single item selection</h3>
             <p>To make a select menu accessible you simply need to attach the label to the input element.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;color&quot;&gt;Choose the color you want&lt;/label&gt;
   &lt;select id=&quot;color&quot; name=&quot;select&quot;&gt;
   &lt;option value=&quot;1&quot;&gt;Green&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;Blue&lt;/option&gt;
   &lt;option value=&quot;3&quot;&gt;Red&lt;/option&gt;
 &lt;/select&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <label for="color">Choose the color you want</label>
             <select id="color" name="select">
                 <option value="1">Green</option>
                 <option value="2">Blue</option>
                 <option value="3">Red</option>
             </select>
-        </section>
+        </div>
 
-        <section id="select-multi" class="example good">
+        <div id="select-multi" class="example good">
             <h3><span class="first-word">Principle:</span> Select menu, multiple item selection</h3>
             <p>It is possible to make a menu that allows multiple selections by adding the attribute multiple="multiple" to the select tag, <strong>however, this can be more difficult for some users to manipulate</strong>.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;color2&quot;&gt;Choose the colors you want&lt;/label&gt;&lt;br /&gt;
   &lt;select id=&quot;color2&quot; multiple=&quot;multiple&quot; name=&quot;select&quot;&gt;
   &lt;option value=&quot;1&quot;&gt;Green&lt;/option&gt;
   &lt;option value=&quot;2&quot;&gt;Blue&lt;/option&gt;
   &lt;option value=&quot;3&quot;&gt;Red&lt;/option&gt;
 &lt;/select&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <label for="color2">Choose the colors you want</label><br />
             <select id="color2" multiple="multiple" name="select">
                 <option value="1">Green</option>
@@ -316,26 +316,26 @@
                 <option value="3">Red</option>
             </select>
             <p class="tip"><strong>It is recommended to use a set of checkboxes to accomplish the same goal.</strong></p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;fieldset&gt;
   &lt;legend&gt;Choose the colors you want&lt;/legend&gt;
   &lt;input id=&quot;green&quot; name=&quot;colorcheckbox&quot; type=&quot;checkbox&quot; value=&quot;green&quot; /&gt;&lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;&lt;br /&gt;
   &lt;input id=&quot;blue&quot; name=&quot;colorcheckbox&quot; type=&quot;checkbox&quot; value=&quot;blue&quot; /&gt; &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;&lt;br /&gt;
   &lt;input id=&quot;red&quot; name=&quot;colorcheckbox&quot; type=&quot;checkbox&quot; value=&quot;red&quot; /&gt; &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
 &lt;/fieldset&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <fieldset>
                 <legend>Choose the colors you want</legend>
                 <input id="green" name="colorcheckbox" type="checkbox" value="green" /><label for="green">Green</label><br />
                 <input id="blue" name="colorcheckbox" type="checkbox" value="blue" /> <label for="blue">Blue</label><br />
                 <input id="red" name="colorcheckbox" type="checkbox" value="red" /> <label for="red">Red</label>
             </fieldset>
-        </section>
+        </div>
 
-        <section id="jump-go"class="example good">
+        <div id="jump-go"class="example good">
             <h3><span class="first-word">Principle:</span> Jump menu, with &quot;Go&quot; button</h3>
             <p>Many times select menus are turned into "jump menus" by executing some JavaScript as soon as the selection has changed. This creates accessibility issues for users because actions can be triggered accidentally by simply tabbing or arrowing through a menu. Instead of a jump menu, a "go" button should be used in conjunction with a select menu to achieve the same goal.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;menu&quot;&gt;Go to the Web Site:&lt;/label&gt;
 &lt;select id=&quot;menu&quot; name=&quot;menu&quot;&gt;
   &lt;option value=&quot;http://www.ncsu.edu/&quot; selected=&quot;&quot;&gt;NC State University&lt;/option&gt;
@@ -343,7 +343,7 @@
   &lt;option value=&quot;http://oit.ncsu.edu&quot;&gt;Office of Information Technology&lt;/option&gt;
 &lt;/select&gt;
 &lt;input type=&quot;button&quot; value=&quot;GO&quot; onclick=&quot;location= document.getElementById('menu').options[ document.getElementById('menu').selectedIndex].value;&quot;&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <label for="menu">Go to the Web Site:</label>
             <select id="menu" name="menu">
                 <option value="http://www.ncsu.edu/" selected="">NC State University</option>
@@ -351,51 +351,51 @@
                 <option value="http://oit.ncsu.edu">Office of Information Technology</option>
             </select>
             <input type="button" value="GO" onclick="location= document.getElementById('menu').options[ document.getElementById('menu').selectedIndex].value;">
-        </section>
+        </div>
 
-        <section id="textarea" class="example good">
+        <div id="textarea" class="example good">
             <h3><span class="first-word">Principle:</span> Text area</h3>
             <p>To make a text area accessible you simply need to attach the label to the input element.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;feedback&quot;&gt;Please leave your feedback:&lt;/label&gt;&lt;br /&gt;
 &lt;textarea id=&quot;feedback&quot; name=&quot;feedback&quot;&gt;&lt;/textarea&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <label for="feedback">Please leave your feedback:</label><br />
             <textarea id="feedback" name="feedback"></textarea>
-        </section>
+        </div>
 
-        <section id="button" class="example good">
+        <div id="button" class="example good">
             <h3><span class="first-word">Principle:</span> Button</h3>
             <p>Buttons are inherently accessible as long as the you provide an appropriate value attribute.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit this form&quot; /&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <input type="submit" name="submit" value="Submit this form" />
-        </section>
+        </div>
 
-        <section id="image-button"class="example good">
+        <div id="image-button"class="example good">
             <h3><span class="first-word">Principle:</span> Image buttons</h3>
             <p>If you use an image button make sure the alt attribute is set appropriately.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;input type=&quot;image&quot; name=&quot;submitbutton&quot; src=&quot;images/submit-this-form-button.jpg&quot; alt=&quot;Submit this form&quot; /&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <input type="image" name="submitbutton" src="images/submit-this-form-button.jpg" alt="Submit this form" />
-        </section>
+        </div>
         
         <h2>Incorrect Implementations</h2>
-        <section id ="unlabelled-input" class="example bad">
+        <div id ="unlabelled-input" class="example bad">
             <h3><span class="first-word">Principle:</span> Unlabeled input element</h3>
             <p>Some screen readers have built enough logic into their form parsing algorithms to be able to make guesses at how unlabeled form elements should be labeled. However, that logic should not be depended upon as an excuse for poor coding practices. Explicitly attaching labels to input elements is the only way to ensure all users will be able to correctly identify what is being asked for in a particular input field.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;p&gt;First Name: &lt;input name=&quot;first-name&quot; type=&quot;text&quot; /&gt;&lt;/p&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p>First Name: <input name="first-name" type="text" /></p> 
-        </section>
+        </div>
 
-        <section id="automatic-jump" class="example bad">
+        <div id="automatic-jump" class="example bad">
             <h3><span class="first-word">Principle:</span> Automatic jump menu</h3>
             <p>When you set up a select menu to automatically fire an action once the selection has changed, when keyboard-only users and screen reader users try to read the options in the list, oftentimes the action will fire as soon as their focus leaves the select menu, even if they did not want to execute the action.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;label for=&quot;menu&quot;&gt;Go to the Web Site:&lt;/label&gt;
 &lt;select id=&quot;bad-jump-menu&quot; name=&quot;menu&quot; onChange=&quot;location= document.getElementById('bad-jump-menu').options[ document.getElementById('bad-jump-menu').selectedIndex].value;&quot;&gt;
   &lt;option value=&quot;#&quot; selected=&quot;&quot;&gt;&lt;/option&gt;
@@ -403,7 +403,7 @@
   &lt;option value=&quot;http://accessibility.oit.ncsu.edu&quot;&gt;NC State IT Accessibility&lt;/option&gt;
   &lt;option value=&quot;http://oit.ncsu.edu&quot;&gt;Office of Information Technology&lt;/option&gt;
 &lt;/select&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <label for="menu">Go to the Web Site:</label>
             <select id="bad-jump-menu" name="menu" onChange="location= document.getElementById('bad-jump-menu').options[ document.getElementById('bad-jump-menu').selectedIndex].value;">
                 <option value="#" selected=""></option>
@@ -411,16 +411,16 @@
                 <option value="http://accessibility.oit.ncsu.edu">NC State IT Accessibility</option>
                 <option value="http://oit.ncsu.edu">Office of Information Technology</option>
             </select>
-        </section>
+        </div>
 
-        <section id="image-button-no-alt" class="example bad">
+        <div id="image-button-no-alt" class="example bad">
             <h3><span class="first-word">Principle:</span> Image button, no alt text</h3>
             <p>If your image button does not contain alternative text in the alt attribute, screen readers will not know what the function of the button is.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;input type=&quot;image&quot; name=&quot;submitbutton&quot; src=&quot;images/submit-this-form-button.jpg&quot; /&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <input type="image" name="submitbutton" src="images/submit-this-form-button.jpg" />
-        </section>
+        </div>
 
     </div></body>
 </html>

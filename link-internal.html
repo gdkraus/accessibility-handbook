@@ -75,32 +75,32 @@
 
         <p>If you want to make a link go to another point on the same page there are two ways to accomplish it - one correct way and one deprecated way.</p>
         <h2>Correct Implementation</h2>
-        <section class="example good">
+        <div class="example good">
             <h3><span class="first-word">Principle:</span> Using the ID attribute to make an internal link</h3>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;a href=&quot;#services&quot;&gt;View all of our services&lt;/a&gt;
 &lt;p&gt;...&lt;/p&gt;
 &lt;h2 id=&quot;services&quot;&gt;Our Service&lt;/h2&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <a href="#services">View all of our services</a>
             <p>...</p>
             <h2 id="services">Our Services</h2>
-        </section>
+        </div>
         <h2>Incorrect Implementation</h2>
-        <section class="example bad">
+        <div class="example bad">
             <h3><span class="first-word">Principle:</span> Using the name attribute to make an internal link</h3>
             <p>The name attribute has been deprecated in HTML5 and should not be used.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">&lt;a href=&quot;#services&quot;&gt;View all of our services&lt;/a&gt;
 &lt;p&gt;...&lt;/p&gt;
 &lt;a name=&quot;services&quot;&gt;&lt;/a&gt;
 &lt;h2&gt;Our Service&lt;/h2&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
 <a href="#services">View all of our services</a>
 <p>...</p>
 <a name="services"></a>
 <h2>Our Services</h2>
-        </section>
+        </div>
 
     </div></body>
 </html>

@@ -103,7 +103,9 @@ nav p.next a,nav p.next a:link, nav p.next a:visited, nav p.next a:hover, nav p.
     text-decoration: none;
 
 }
-
+nav#page-contents{
+    display:none;
+}
 table, th, td {
     border: 1px solid #333;
 }
@@ -136,6 +138,7 @@ caption {
     background-color:#fff;
     margin:1em 0.5em;
     padding:0.5em;
+    clear:both;
 }
 
 .good {
@@ -145,17 +148,17 @@ caption {
 .bad {
     border: thick solid #900;
 }
-section.example h3{
-    font-weight: normal;
+div.example h3{
+    font-weight: bold;
     font-size: 1.1em;
-    background-color:#eef;
+    /*background-color:#eef;*/
     padding: .5em 0;
 }
-section.example .first-word{
+div.example .first-word{
     font-weight: bold;
 }
 
-section.step {
+div.step {
     border-top: medium solid #666;
     border-bottom: medium solid #666;
     margin:1em 0;
@@ -211,30 +214,30 @@ a.skip-main:focus, a.skip-main:active {
         text-align:inherit;   
     }
 
-    nav {
+    nav#handbook-navigation {
         min-height:2.3em;
     }
-    nav p {
+    nav#handbook-navigation p {
         color:#000;
         margin:0;
         width:100%;
 
     }
-    nav p.toc {
+    nav#handbook-navigation p.toc {
         text-align: center;
         top:0.2em;
         position:relative;
         padding: 2px 0;
         height:1px;
     }
-    nav p.toc select {
+    nav#handbook-navigation p.toc select {
         width:25%;
     }
-    nav p.toc go-button {
+    nav#handbook-navigation p.toc go-button {
         width:4%;
     }
 
-    nav p.prev {
+    nav#handbook-navigation p.prev {
         padding-left:1%;
         width:29%;
         display:inline-block;
@@ -243,7 +246,7 @@ a.skip-main:focus, a.skip-main:active {
         background-color:inherit;
         min-height:1em;
     }
-    nav p.next{
+    nav#handbook-navigation p.next{
         left:38%;
         width:30%;
         text-align:right;
@@ -255,12 +258,12 @@ a.skip-main:focus, a.skip-main:active {
         min-height:1em;
     }
 
-    nav p.prev img {
+    nav#handbook-navigation p.prev img {
         position: relative;
         top:0.4em;
         margin-right:4px;
     }
-    nav p.next img {
+    nav#handbook-navigation p.next img {
         position: relative;
         top:0.4em;
         /*left:134px;*/
@@ -269,14 +272,32 @@ a.skip-main:focus, a.skip-main:active {
     #next-text {
         padding-right:20px;
     }
-    nav p.prev a,nav p.prev a:link, nav p.prev a:visited, nav p.prev a:hover, nav p.prev active {
+    nav#handbook-navigation p.prev a,nav#handbook-navigation p.prev a:link, nav#handbook-navigation p.prev a:visited, nav#handbook-navigation p.prev a:hover, nav#handbook-navigation p.prev active {
         color:inherit;
         text-decoration: inherit;
     }
-    nav p.next a,nav p.next a:link, nav p.next a:visited, nav p.next a:hover, nav p.next active {
+    nav#handbook-navigation p.next a,nav#handbook-navigation p.next a:link, nav#handbook-navigation p.next a:visited, nav#handbook-navigation p.next a:hover, nav#handbook-navigation p.next active {
         color:inherit;
         text-decoration: inherit;
 
+    }
+    nav#page-contents {
+        width:40%;
+        float:right;
+        background-color: #fff;
+        margin:0 1em .5em 1em;
+        display:inherit;
+        border:3px #67849c solid;
+        border-radius:15px;
+        padding:3px 6px;
+
+    }
+    nav#page-contents ul{
+        list-style: none;
+        padding-left:0;
+    }
+    nav#page-contents h2{
+        margin-top:0;
     }
 }
 

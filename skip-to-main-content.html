@@ -76,10 +76,10 @@
         <p>When keyboard-only users interact with your site they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.</p>
         <p>Note: These techniques are also sometimes referred to as "skip navigation links". </p>
         <h2>Correct Implementation</h2>
-        <section class="example good">
+        <div class="example good">
             <h3><span class="first-word">Principle:</span> Having a skip to main content link appear when it receives keyboard focus.</h3>
             <p>The text is hidden offscreen in a manner that allows screen reader users to interact with it.</p>
-            <h4>Source Code</h4>
+            <h3>Source Code</h3>
             <pre class="code">a.skip-main {
     left:-999px;
     position:absolute;
@@ -120,9 +120,9 @@ a.skip-main:focus, a.skip-main:active {
   &lt;li&gt;have it link to an internal anchor further down in the page where the main content begins.&lt;/li&gt;
   &lt;li&gt;use CSS :focus and :activate to make the skip link visible when the user tabs to it&lt;/li&gt;
 &lt;/ol&gt;</pre>
-            <h4>Implementation</h4>
+            <h3>Implementation</h3>
             <p class="implementation">View the <a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/skip-to-main-content-keyboard-accessible.html">skip to main content implementation</a> on another page.</p>
-        </section>
+        </div>
         
     </div></body>
 </html>
