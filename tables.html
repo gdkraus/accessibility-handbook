@@ -7,7 +7,7 @@
     </head>
     <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Tables</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -72,14 +72,24 @@
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/lists.html"><img src="images/left-arrow.png" alt="previous" />Lists</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/mouse-and-keyboard-events.html">Mouse and Keyboard Events<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+                <h2 id="page-contents-heading">Page Contents</h2>
+                <ul>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">A simple data table with column and row headings</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">A complex data table using header and id attributes</a></li>
+                    <li><a href="#3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">A layout table</a></li>
+                    <li><a href="#4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">A data table with no headings, but using bold text to mimic headings</a></li>
+                    <li><a href="#5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">A layout table with a summary attribute</a></li>
+                </ul>
+            </nav>
 
-        <h2>Overview</h2>
-        <p>Tables are primarily used to present tabular information, however, tables are also still used for creating layouts. While WCAG does not prohibit the use of tables for layouts, it encourages developers to use CSS instead.</p>
-        <p>Tables used to display tabular information can be divided into two groups - simple layouts and complex layouts. Simple layouts have a single row of headers at the top of the table and/or a single column of headers on the left side of the table. Additionally, there are no merged cells within the table. Complex data tables have either multiple rows or columns of headers, contain merged cells, or contain blank rows or columns for visual effect.</p>
-        <p>Additionally, data tables must also have a caption or a summary.</p>
-        <h2>Caption</h2>
-        <p>The caption element identifies the table. It can be thought of as a title or a heading for a table.</p>
-        <pre class="code">&lt;table&gt;
+            <h2>Overview</h2>
+            <p>Tables are primarily used to present tabular information, however, tables are also still used for creating layouts. While WCAG does not prohibit the use of tables for layouts, it encourages developers to use CSS instead.</p>
+            <p>Tables used to display tabular information can be divided into two groups - simple layouts and complex layouts. Simple layouts have a single row of headers at the top of the table and/or a single column of headers on the left side of the table. Additionally, there are no merged cells within the table. Complex data tables have either multiple rows or columns of headers, contain merged cells, or contain blank rows or columns for visual effect.</p>
+            <p>Additionally, data tables must also have a caption or a summary.</p>
+            <h2>Caption</h2>
+            <p>The caption element identifies the table. It can be thought of as a title or a heading for a table.</p>
+            <pre class="code">&lt;table&gt;
   &lt;caption&gt;Schedule for the week of March 6&lt;/caption&gt;
   &lt;tr&gt;
     &lt;th scope="col">State & First&lt;/th&gt;
@@ -96,14 +106,14 @@
   …
 
 &lt;/table&gt;
-</pre>
-        <h2>Summary</h2>
-        <p>The summary can perform two different functions. It is allowable to have the summary perform both functions at the same time.</p>
-        <ul>
-            <li>it can describe the layout of the table to help screen reader users know how to navigate the table</li>
-            <li>it can describe in narrative form what information the table is trying to convey</li>
-        </ul>
-        <pre class="code">&lt;table summary="Schedule for Route 7 going downtown. Service begins 
+            </pre>
+            <h2>Summary</h2>
+            <p>The summary can perform two different functions. It is allowable to have the summary perform both functions at the same time.</p>
+            <ul>
+                <li>it can describe the layout of the table to help screen reader users know how to navigate the table</li>
+                <li>it can describe in narrative form what information the table is trying to convey</li>
+            </ul>
+            <pre class="code">&lt;table summary="Schedule for Route 7 going downtown. Service begins 
 at 4:00 AM and ends at midnight. Intersections are listed in the top row. 
 Find the intersection closest to your starting point or destination, then read 
 down that column to find out what time the bus leaves that intersection."&gt;
@@ -121,26 +131,12 @@ down that column to find out what time the bus leaves that intersection."&gt;
   &lt;/tr&gt;
   …
 &lt;/table&gt;</pre>
-        <ul>
-            <li>Correct Implementations
-                <ul>
-                    <li><a href="#correct-simple">A simple data table with column and row headings</a></li>
-                    <li><a href="#correct-complex">A complex data table using header and id attributes</a></li>
-                    <li><a href="#correct-layout">A layout table</a></li>
-                </ul>
-            </li>
-            <li>Incorrect Implementations
-                <ul>
-                    <li><a href="#incorrect-headers">A data table with no headings, but using bold text to mimic headings</a></li>
-                    <li><a href="#incorrect-layout">A layout table with a summary attribute</a></li>
-                </ul>
-            </li>
-        </ul>
-        <h2>Correct Implementations</h2>
-        <div id="correct-simple" class="example good">
-            <h3><span class="first-word">Principle:</span> A simple data table with column and row headings</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.&quot;&gt;
+            
+
+            <div id="correct-simple" class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />A simple data table with column and row headings</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.&quot;&gt;
   &lt;caption&gt;Pizza Prices&lt;/caption&gt;
   &lt;tr&gt;
     &lt;th scope=&quot;col&quot;&gt;&amp;nbsp;&lt;/th&gt;
@@ -167,43 +163,43 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td&gt;$14&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h3>Implementation</h3>
-            <table border="1" summary="Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.">
-                <caption>
-                    Pizza Prices
-                </caption>
-                <tr>
-                    <th scope="col">&nbsp;</th>
-                    <th scope="col">Small</th>
-                    <th scope="col">Medum</th>
-                    <th scope="col">Large</th>
-                </tr>
-                <tr>
-                    <th scope="row">Cheese</th>
-                    <td>$8</td>
-                    <td>$10</td>
-                    <td>$12</td>
-                </tr>
-                <tr>
-                    <th scope="row">Veggie</th>
-                    <td>$10</td>
-                    <td>$12</td>
-                    <td>$14</td>
-                </tr>
-                <tr>
-                    <th scope="row">Pepperoni</th>
-                    <td>$10</td>
-                    <td>$12</td>
-                    <td>$14</td>
-                </tr>
-            </table>
+                <h3>Implementation</h3>
+                <table border="1" summary="Pizza sizes are listed in the first row. Types of pizza are listed in the first column. Cross-reference them to determine the price of the pizza.">
+                    <caption>
+                        Pizza Prices
+                    </caption>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Medum</th>
+                        <th scope="col">Large</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cheese</th>
+                        <td>$8</td>
+                        <td>$10</td>
+                        <td>$12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Veggie</th>
+                        <td>$10</td>
+                        <td>$12</td>
+                        <td>$14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pepperoni</th>
+                        <td>$10</td>
+                        <td>$12</td>
+                        <td>$14</td>
+                    </tr>
+                </table>
 
-        </div>
+            </div>
 
-        <div id="correct-complex" class="example good">
-            <h3><span class="first-word">Principle:</span> A complex data table using header and id attributes</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.&quot;&gt;
+            <div id="correct-complex" class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />A complex data table using header and id attributes</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;table border=&quot;1&quot; summary=&quot;Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.&quot;&gt;
   &lt;caption&gt;Topping Prices&lt;/caption&gt;
   &lt;tr&gt;
     &lt;th scope=&quot;col&quot;&gt;&amp;nbsp;&lt;/th&gt;
@@ -247,59 +243,59 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td headers=&quot;veg tom lg&quot;&gt;$1.00&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h3>Implementation</h3>
-            <table border="1" summary="Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.">
-                <caption>
-                    Topping Prices
-                </caption>
-                <tr>
-                    <th scope="col">&nbsp;</th>
-                    <th colspan="3" scope="col" id="meat">Meat Toppings</th>
-                    <th colspan="3" scope="col" id="veg">Vegetable Toppings</th>
-                </tr>
-                <tr>
-                    <th scope="col">&nbsp;</th>
-                    <th scope="col" id="pep">Pepperoni</th>
-                    <th scope="col" id="sa">Sausage</th>
-                    <th scope="col" id="bac">Bacon</th>
-                    <th scope="col" id="on">Onion</th>
-                    <th scope="col" id="ol">Olives</th>
-                    <th scope="col" id="tom">Tomato</th>
-                </tr>
-                <tr>
-                    <th scope="row" id="sm">Small</th>
-                    <td headers="meat pep sm">$0.80</td>
-                    <td headers="meat sa sm">$0.80</td>
-                    <td headers="meat bac sm">$1.00</td>
-                    <td headers="veg on sm">$0.60</td>
-                    <td headers="veg ol sm">$0.80</td>
-                    <td headers="veg tom sm">$0.60</td>
-                </tr>
-                <tr>
-                    <th scope="row" id="med">Medium</th>
-                    <td headers="meat pep med">$1.00</td>
-                    <td headers="meat sa med">$1.00</td>
-                    <td headers="meat bac med">$1.20</td>
-                    <td headers="veg on med">$0.80</td>
-                    <td headers="veg ol med">$1.00</td>
-                    <td headers="veg tom med">$0.80</td>
-                </tr>
-                <tr>
-                    <th scope="row" id="lg">Large</th>
-                    <td headers="meat pep lg">$1.20</td>
-                    <td headers="meat sa lg">$1.20</td>
-                    <td headers="meat bac lg">$1.40</td>
-                    <td headers="veg on lg">$1.00</td>
-                    <td headers="veg ol lg">$1.20</td>
-                    <td headers="veg tom lg">$1.00</td>
-                </tr>
-            </table>
-        </div>
+                <h3>Implementation</h3>
+                <table border="1" summary="Pizza toppings are listed in the first two rows. Sizes of pizza are listed in the first column. Cross reference them to determine the price of each topping.">
+                    <caption>
+                        Topping Prices
+                    </caption>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th colspan="3" scope="col" id="meat">Meat Toppings</th>
+                        <th colspan="3" scope="col" id="veg">Vegetable Toppings</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col" id="pep">Pepperoni</th>
+                        <th scope="col" id="sa">Sausage</th>
+                        <th scope="col" id="bac">Bacon</th>
+                        <th scope="col" id="on">Onion</th>
+                        <th scope="col" id="ol">Olives</th>
+                        <th scope="col" id="tom">Tomato</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="sm">Small</th>
+                        <td headers="meat pep sm">$0.80</td>
+                        <td headers="meat sa sm">$0.80</td>
+                        <td headers="meat bac sm">$1.00</td>
+                        <td headers="veg on sm">$0.60</td>
+                        <td headers="veg ol sm">$0.80</td>
+                        <td headers="veg tom sm">$0.60</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="med">Medium</th>
+                        <td headers="meat pep med">$1.00</td>
+                        <td headers="meat sa med">$1.00</td>
+                        <td headers="meat bac med">$1.20</td>
+                        <td headers="veg on med">$0.80</td>
+                        <td headers="veg ol med">$1.00</td>
+                        <td headers="veg tom med">$0.80</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="lg">Large</th>
+                        <td headers="meat pep lg">$1.20</td>
+                        <td headers="meat sa lg">$1.20</td>
+                        <td headers="meat bac lg">$1.40</td>
+                        <td headers="veg on lg">$1.00</td>
+                        <td headers="veg ol lg">$1.20</td>
+                        <td headers="veg tom lg">$1.00</td>
+                    </tr>
+                </table>
+            </div>
 
-        <div id="correct-layout" class="example good">
-            <h3><span class="first-word">Principle:</span> A layout table</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot;&gt;
+            <div id="correct-layout" class="example good">
+                <h2 id="3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />A layout table</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot;&gt;
   &lt;tr&gt;
     &lt;td colspan=&quot;2&quot; bgcolor=&quot;#c00&quot;&gt;&lt;h1 style=&quot;color:#fff&quot;&gt;Website Logo&lt;/h1&gt;&lt;/td&gt;
   &lt;/tr&gt;
@@ -320,37 +316,37 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td colspan=&quot;2&quot; align=&quot;center&quot; height=&quot;20&quot; bgcolor=&quot;#000&quot;&gt;&lt;p style=&quot;color:#fff&quot;&gt;Contact Info&lt;/p&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h3>Implementation</h3>
-            <table width="100%" border="0">
-                <tr>
-                    <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
+                <h3>Implementation</h3>
+                <table width="100%" border="0">
+                    <tr>
+                        <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
 
-                <tr>
-                    <td width="20%" valign="top" bgcolor="#ccc">
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a>
-                    </td>
+                    <tr>
+                        <td width="20%" valign="top" bgcolor="#ccc">
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a>
+                        </td>
 
-                    <td width="80%" valign="top" bgcolor="#fff">
+                        <td width="80%" valign="top" bgcolor="#fff">
 
-                        <h1>Welcome to our great site!</h1>
-                        <p>Come find out about all of the great things we do here at our company!</p>
-                    </td>
-                </tr>
+                            <h1>Welcome to our great site!</h1>
+                            <p>Come find out about all of the great things we do here at our company!</p>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
-                </tr>
-            </table>
-        </div>
-        <h2>Incorrect Implementation</h2>
-        <div id="incorrect-headers" class="example bad">
-            <h3><span class="first-word">Principle:</span> A data table with no headings, but using bold text to mimic headings</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;table border=&quot;1&quot;&gt;
+                    <tr>
+                        <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="incorrect-headers" class="example bad">
+                <h2 id="4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />A data table with no headings, but using bold text to mimic headings</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;table border=&quot;1&quot;&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td style=&quot;font-weight:bold&quot;&gt;Small&lt;/td&gt;
@@ -376,40 +372,40 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td&gt;$14&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h3>Implementation</h3>
-            <table border="1">
-                <tr>
-                    <td>&nbsp;</td>
-                    <td style="font-weight:bold">Small</td>
-                    <td style="font-weight:bold">Medum</td>
-                    <td style="font-weight:bold">Large</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:bold">Cheese</td>
-                    <td>$8</td>
-                    <td>$10</td>
-                    <td>$12</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:bold">Veggie</td>
-                    <td>$10</td>
-                    <td>$12</td>
-                    <td>$14</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:bold">Pepperoni</td>
-                    <td>$10</td>
-                    <td>$12</td>
-                    <td>$14</td>
-                </tr>
-            </table>
+                <h3>Implementation</h3>
+                <table border="1">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td style="font-weight:bold">Small</td>
+                        <td style="font-weight:bold">Medum</td>
+                        <td style="font-weight:bold">Large</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold">Cheese</td>
+                        <td>$8</td>
+                        <td>$10</td>
+                        <td>$12</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold">Veggie</td>
+                        <td>$10</td>
+                        <td>$12</td>
+                        <td>$14</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:bold">Pepperoni</td>
+                        <td>$10</td>
+                        <td>$12</td>
+                        <td>$14</td>
+                    </tr>
+                </table>
 
-        </div>
-        <div id="incorrect-layout" class="example bad">
-            <h3><span class="first-word">Principle:</span> A layout table with a summary attribute</h3>
-            <p>When you add the summary attribute to a layout table, screen reader users will have the summary attribute read to them. This is unnecessary and more cumbersome to the user. It is better to simply leave the summary attribute and caption element off.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot; summary=&quot;a layout table&quot;&gt;
+            </div>
+            <div id="incorrect-layout" class="example bad">
+                <h2 id="5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />A layout table with a summary attribute</h2>
+                <p>When you add the summary attribute to a layout table, screen reader users will have the summary attribute read to them. This is unnecessary and more cumbersome to the user. It is better to simply leave the summary attribute and caption element off.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;table width=&quot;100%&quot; border=&quot;0&quot; summary=&quot;a layout table&quot;&gt;
   &lt;tr&gt;
     &lt;td colspan=&quot;2&quot; bgcolor=&quot;#c00&quot;&gt;&lt;h1 style=&quot;color:#fff&quot;&gt;Website Logo&lt;/h1&gt;&lt;/td&gt;
   &lt;/tr&gt;
@@ -430,43 +426,43 @@ down that column to find out what time the bus leaves that intersection."&gt;
     &lt;td colspan=&quot;2&quot; align=&quot;center&quot; height=&quot;20&quot; bgcolor=&quot;#000&quot;&gt;&lt;p style=&quot;color:#fff&quot;&gt;Contact Info&lt;/p&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
-            <h3>Implementation</h3>
-            <table width="100%" border="0" summary="a layout table">
-                <tr>
-                    <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
+                <h3>Implementation</h3>
+                <table width="100%" border="0" summary="a layout table">
+                    <tr>
+                        <td colspan="2" bgcolor="#c00"><h1 style="color:#fff">Website Logo</h1></td></tr>
 
-                <tr>
-                    <td width="20%" valign="top" bgcolor="#ccc">
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a><br>
-                        <a href="#">Menu link</a>
-                    </td>
+                    <tr>
+                        <td width="20%" valign="top" bgcolor="#ccc">
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a><br>
+                            <a href="#">Menu link</a>
+                        </td>
 
-                    <td width="80%" valign="top" bgcolor="#fff">
+                        <td width="80%" valign="top" bgcolor="#fff">
 
-                        <h1>Welcome to our great site!</h1>
-                        <p>Come find out about all of the great things we do here at our company!</p>
-                    </td>
-                </tr>
+                            <h1>Welcome to our great site!</h1>
+                            <p>Come find out about all of the great things we do here at our company!</p>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
-                </tr>
-            </table>
-        </div>
+                    <tr>
+                        <td colspan="2" align="center" height="20" bgcolor="#000"><p style="color:#fff">Contact Info</p></td>
+                    </tr>
+                </table>
+            </div>
 
-        <div>
-            <h2>Further Reading</h2>
-            <ul>
-                <li><a href="http://webaim.org/techniques/tables/">WebAIM: Creating Accessible Tables</a></li>
-                <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H73.html">W3C: Summary Attribute Technique</a></li>
-                <li><a href="http://www.w3.org/TR/WCAG20-TECHS/F46.html">W3C: Correctly Making Layout Tables</a></li>
-                <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H43.html">W3C: Table Header and ID Attributes</a></li>
-                <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H51.html">W3C: Presenting Tabular Information</a></li>
-                <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H63.html">W3C: Table Scope Attribute</a></li>
-            </ul>
-        </div>
-    </div></body>
+            <div>
+                <h2>Further Reading</h2>
+                <ul>
+                    <li><a href="http://webaim.org/techniques/tables/">WebAIM: Creating Accessible Tables</a></li>
+                    <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H73.html">W3C: Summary Attribute Technique</a></li>
+                    <li><a href="http://www.w3.org/TR/WCAG20-TECHS/F46.html">W3C: Correctly Making Layout Tables</a></li>
+                    <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H43.html">W3C: Table Header and ID Attributes</a></li>
+                    <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H51.html">W3C: Presenting Tabular Information</a></li>
+                    <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H63.html">W3C: Table Scope Attribute</a></li>
+                </ul>
+            </div>
+        </div></body>
 </html>

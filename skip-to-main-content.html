@@ -7,7 +7,7 @@
     </head>
     <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Skip to main content</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -71,16 +71,21 @@
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/menus.html"><img src="images/left-arrow.png" alt="previous" />Menus</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/forms.html">Forms<img src="images/right-arrow.png" alt="next" /></a></p>
-        </nav><div id="main" role="main">
-
-        <p>When keyboard-only users interact with your site they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.</p>
-        <p>Note: These techniques are also sometimes referred to as "skip navigation links". </p>
-        <h2>Correct Implementation</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Having a skip to main content link appear when it receives keyboard focus.</h3>
-            <p>The text is hidden offscreen in a manner that allows screen reader users to interact with it.</p>
-            <h3>Source Code</h3>
-            <pre class="code">a.skip-main {
+        </nav>
+        <div id="main" role="main">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+                <h2 id="page-contents-heading">Page Contents</h2>
+                <ul>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Having a skip to main content link appear when it receives keyboard focus</a></li>
+                </ul>
+            </nav>
+            <p>When keyboard-only users interact with your site they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.</p>
+            <p>Note: These techniques are also sometimes referred to as "skip navigation links". </p>
+            <div class="example good">
+                <h2><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Having a skip to main content link appear when it receives keyboard focus</h2>
+                <p>The text is hidden offscreen in a manner that allows screen reader users to interact with it.</p>
+                <h3>Source Code</h3>
+                <pre class="code">a.skip-main {
     left:-999px;
     position:absolute;
     top:auto;
@@ -120,9 +125,9 @@ a.skip-main:focus, a.skip-main:active {
   &lt;li&gt;have it link to an internal anchor further down in the page where the main content begins.&lt;/li&gt;
   &lt;li&gt;use CSS :focus and :activate to make the skip link visible when the user tabs to it&lt;/li&gt;
 &lt;/ol&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation">View the <a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/skip-to-main-content-keyboard-accessible.html">skip to main content implementation</a> on another page.</p>
-        </div>
-        
-    </div></body>
+                <h3>Implementation</h3>
+                <p class="implementation">View the <a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/skip-to-main-content-keyboard-accessible.html">skip to main content implementation</a> on another page.</p>
+            </div>
+
+        </div></body>
 </html>
