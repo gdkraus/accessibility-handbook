@@ -6,9 +6,20 @@
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
         <link href="css/new-window.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Links and new windows</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -68,50 +79,50 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/links.html"><img src="images/left-arrow.png" alt="previous" />Links Overview</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-alt.html">Link Text or Alt Attribute<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-<nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
                 <h2 id="page-contents-heading">Page Contents</h2>
                 <ul>
-                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Using text to alert the user that the link is opening in a new window</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Using an image with alt text to alert the user the link is opening in a new window</a></li>
+                    <li><a href="#3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Using an image that is only visible on :hover and :focus that alerts the user the link is opening in a new window</a></li>
+                    <li><a href="#4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">The user will be taken to a window when clicking on the link and will not be notified</a></li>
                 </ul>
             </nav>
-        <p>When opening a link it is best to open it in the same window or tab where the user currently is. Opening a link in a new window causes three main problems.</p>
-        <ul>
-            <li>Screen reader users, screen magnifier users, and users with certain cognitive impairments can become disoriented when they are taken to a new window</li>
-            <li>The use of the back button, the most used button within the browser, is broken.</li>
-            <li>Certain user agents, like kiosks, are unable to open new windows or tabs.</li>
-        </ul>
-        <p>Users have the ability to choose if they want to open a particular link in a new window or tab.</p>
-        <p>There are times when it is appropriate to open a link in a new window, such as when launching a Web application. There are some cases where you do not want the user to be able to back out of an application. <strong>If you do open a link in a new window you need to alert the user that you are doing so.</strong></p>
-        <p>There are a number of solutions to this problem.</p>
-        <h2>Correct Implementations</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Using text to alert the user that the link is opening in a new window.</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility (new window)&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility (new window)</a></p>
-        </div>
+            <p>When opening a link it is best to open it in the same window or tab where the user currently is. Opening a link in a new window causes three main problems.</p>
+            <ul>
+                <li>Screen reader users, screen magnifier users, and users with certain cognitive impairments can become disoriented when they are taken to a new window</li>
+                <li>The use of the back button, the most used button within the browser, is broken.</li>
+                <li>Certain user agents, like kiosks, are unable to open new windows or tabs.</li>
+            </ul>
+            <p>Users have the ability to choose if they want to open a particular link in a new window or tab.</p>
+            <p>There are times when it is appropriate to open a link in a new window, such as when launching a Web application. There are some cases where you do not want the user to be able to back out of an application. <strong>If you do open a link in a new window you need to alert the user that you are doing so.</strong></p>
+            <p>There are a number of solutions to this problem.</p>
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Using text to alert the user that the link is opening in a new window.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility (new window)&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility (new window)</a></p>
+            </div>
 
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Using an image with alt text to alert the user the link is opening in a new window.</h3>
-                        <h3>Source Code</h3>
-            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility &lt;img src=&quot;images/new-window.jpg&quot; alt=&quot;opens in new window&quot;&gt;&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility <img src="images/new-window.jpg" alt="opens in new window"></a></p>
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Using an image with alt text to alert the user the link is opening in a new window.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility &lt;img src=&quot;images/new-window.jpg&quot; alt=&quot;opens in new window&quot;&gt;&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility <img src="images/new-window.jpg" alt="opens in new window"></a></p>
 
-        </div>
+            </div>
 
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Using an image that is only visible on :hover and :focus that alerts the user the link is opening in a new window</h3>
-            <h3>Source Code</h3>
-            <pre class="code">a.ncsu-a11y-link-new-window img {
+            <div class="example good">
+                <h2 id="3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Using an image that is only visible on :hover and :focus that alerts the user the link is opening in a new window</h2>
+                <h3>Source Code</h3>
+                <pre class="code">a.ncsu-a11y-link-new-window img {
     border: 0 none;
 }
 a.ncsu-a11y-link-new-window span {
@@ -137,18 +148,17 @@ a.ncsu-a11y-link-new-window:hover span, a.ncsu-a11y-link-new-window:focus span, 
 }
 
 &lt;a target=&quot;_blank&quot; href=&quot;http://www.ncsu.edu&quot; class=&quot;ncsu-a11y-link-new-window&quot;&gt;External link&lt;span&gt;&lt;img alt=&quot;opens in a new window&quot; src=&quot;images/new-window.jpg&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a target="_blank" href="http://www.ncsu.edu" class="ncsu-a11y-link-new-window">External link<span><img alt="opens in a new window" src="images/new-window.jpg"></span></a></p>
-        </div>
+                </pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a target="_blank" href="http://www.ncsu.edu" class="ncsu-a11y-link-new-window">External link<span><img alt="opens in a new window" src="images/new-window.jpg"></span></a></p>
+            </div>
 
-        <h2>Incorrect Implementation</h2>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> The user will be taken to a window when clicking on the link and will not be notified.</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility</a></p>
-        </div>
-    </div></body>
+            <div class="example bad">
+                <h2 id="4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />The user will be taken to a window when clicking on the link and will not be notified.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href=&quot;http://accessibility.oit.ncsu.edu&quot; target=&quot;_blank&quot;&gt;NC State IT Accessibility&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="http://accessibility.oit.ncsu.edu" target="_blank">NC State IT Accessibility</a></p>
+            </div>
+        </div></body>
 </html>

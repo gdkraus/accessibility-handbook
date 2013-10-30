@@ -5,9 +5,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>The link text should be descriptive of its target location</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -67,42 +78,40 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-behavior.html"><img src="images/left-arrow.png" alt="previous" />Link vs. Button</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-length.html">Length of Link Text<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-<nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
                 <h2 id="page-contents-heading">Page Contents</h2>
                 <ul>
-                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">The link text describes where the link will take the user</a></li>
+                    <li><a href="#2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">The text &quot;click here&quot; does not describe where the link will go. The description for the link follows the actual link</a></li>
+                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">The text &quot;click here&quot; is unnecessary because users already know they need to click a link to follow it</a></li>
                 </ul>
             </nav>
-        <p>The link text should be descriptive of its target location. Do not use “click here” as part of the text.</p>
-        <h2>Correct Implementations</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> The link text describes where the link will take the user.</h3>
-            <h3>Source Code</h3>
-            <pre class="code">Find out more information at the &lt;a href="http://accessibility.oit.ncsu.edu"&gt;NC State IT  Accessibility&lt;/a&gt; home page.</pre>
-            <h3>Implementation</h3>
-            <p>Find out more information at the <a href="http://accessibility.oit.ncsu.edu">NC State IT  Accessibility</a> home page.</p>
-        </div>
-        <h2>Incorrect Implementations</h2>
-        <div class="example bad">
-           <h3><span class="first-word">Principle:</span> The text click here does not describe where the link will go. The description for the link follows the actual link.</h3> 
-        <h3>Source Code</h3>
-        <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here&lt;/a&gt; to find out more information at the NC State  IT Accessibility home page.</pre>
-        <h3>Implementation</h3>
-        <p><a href="http://accessibility.oit.ncsu.edu">Click here</a> to find out more information at the NC State  IT Accessibility home page.</p>
-        </div>
-        <div class="example bad">
-          <h3><span class="first-word">Principle:</span> The text "click here" is unnecessary because users already know they need to click a link to follow it.</h3>
-              <h3>Source Code</h3>
-        <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here to find out more information at the NC State  IT Accessibility home page.&lt;/a&gt;</pre>
-<h3>Implementation</h3>
-<p><a href="http://accessibility.oit.ncsu.edu">Click here to find out more information at the NC State  IT Accessibility home page.</a></p>
-        </div>
-    </div></body>
+            <p>The link text should be descriptive of its target location. Do not use “click here” as part of the text.</p>
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />The link text describes where the link will take the user.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">Find out more information at the &lt;a href="http://accessibility.oit.ncsu.edu"&gt;NC State IT  Accessibility&lt;/a&gt; home page.</pre>
+                <h3>Implementation</h3>
+                <p>Find out more information at the <a href="http://accessibility.oit.ncsu.edu">NC State IT  Accessibility</a> home page.</p>
+            </div>
+            <div class="example bad">
+                <h2 id="2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />The text &quot;click here&quot; does not describe where the link will go. The description for the link follows the actual link.</h2> 
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here&lt;/a&gt; to find out more information at the NC State  IT Accessibility home page.</pre>
+                <h3>Implementation</h3>
+                <p><a href="http://accessibility.oit.ncsu.edu">Click here</a> to find out more information at the NC State  IT Accessibility home page.</p>
+            </div>
+            <div class="example bad">
+                <h2 id="3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />The text "click here" is unnecessary because users already know they need to click a link to follow it.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="http://accessibility.oit.ncsu.edu"&gt;Click here to find out more information at the NC State  IT Accessibility home page.&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p><a href="http://accessibility.oit.ncsu.edu">Click here to find out more information at the NC State  IT Accessibility home page.</a></p>
+            </div>
+        </div></body>
 </html>

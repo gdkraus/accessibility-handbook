@@ -5,9 +5,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Link text needs to be uniquely identifiable within the page</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -67,31 +78,28 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-length.html"><img src="images/left-arrow.png" alt="previous" />Length of Link Text</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-text-url.html">URL Text<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-<nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
                 <h2 id="page-contents-heading">Page Contents</h2>
                 <ul>
-                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Hidden link text</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Link as a Child of a Unique Parent Element</a></li>
+                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Link text found outside the context of a descriptive element</a></li>
+                    <li><a href="#4"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Link as a Child of a Unique Heading</a></li>
+                    <li><a href="#5"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Link as a Child of a Unique List Item</a></li>
                 </ul>
             </nav>
-        <p>The link text should be unique among all of the links on the page, or alternatively the unique function of the link should be able to be determined from the link’s context. This helps in determining what a link's function is and differentiating it among similar links. <strong>If it is necessary to have multiple links on the same page with the same link text</strong> there are a number of ways to address this problem.</p>
-        <ul>
-            <li><a href="#hidden">Hidden link text</a></li>
-            <li><a href="#parent">Link as a Child of a Unique Parent Element</a></li>
-            <li><a href="#heading">Link as a Child of a Unique Heading</a></li>
-            <li><a href="#list">Link as a Child of a Unique List Item</a></li>
-        </ul>
-        <h2 id="hidden">Hidden Link Text</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> The visible link text is not descriptive enough and might not be unique from other links on a page. The hidden text will be read by screen readers to give them enough context to discern the function of the link.</h3>
-            <h3>Source Code</h3>
-            <pre class="code">.offscreen {
+            <p>The link text should be unique among all of the links on the page, or alternatively the unique function of the link should be able to be determined from the link’s context. This helps in determining what a link's function is and differentiating it among similar links. <strong>If it is necessary to have multiple links on the same page with the same link text</strong> there are a number of ways to address this problem.</p>
+
+
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />The visible link text is not descriptive enough and might not be unique from other links on a page. The hidden text will be read by screen readers to give them enough context to discern the function of the link.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">.offscreen {
 position:absolute;
 left:-999px;
 width:1px;
@@ -100,39 +108,39 @@ top:auto;
 }
 
 &lt;p&gt;&lt;a href="#"&gt;Read more &lt;span class="offscreen"&gt;About NC State&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#">Read more<span style="position:absolute;left:-999px;width:1px;height:1px;top:auto;"> About NC State</span></a></p>
-        </div>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#">Read more<span style="position:absolute;left:-999px;width:1px;height:1px;top:auto;"> About NC State</span></a></p>
+            </div>
 
-        <h2 id="parent">Link as a Child of a Unique Parent Element</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> <strong>(Correct)</strong> Link text found within the context of a descriptive parent element</h3>
-            <p>This demonstrates the correct implementation where the non-unique or non-fully-descriptive text is found within the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a child of the descriptive &lt;p&gt;.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I’ve seen used the least. &lt;a href=&quot;file.html&quot;&gt;[Read more...]&lt;/a&gt;&lt;/p&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation">How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible
-                version is the one I’ve seen used the least. <a href="file.html">[Read more...]</a></p>
-        </div>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> <strong>(Incorrect)</strong> Link text found outside the context of a descriptive element</h3>
-            <p>This demonstrates the <strong>incorrect</strong> implementation where the non-unique or non-fully-descriptive text is found outside the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a sibling of the descriptive &lt;p&gt;</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I&rsquo;ve seen used the least.&lt;/p&gt;
+
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Link text found within the context of a descriptive parent element</h2>
+                <p>This demonstrates the correct implementation where the non-unique or non-fully-descriptive text is found within the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a child of the descriptive &lt;p&gt;.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I’ve seen used the least. &lt;a href=&quot;file.html&quot;&gt;[Read more...]&lt;/a&gt;&lt;/p&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation">How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible
+                    version is the one I’ve seen used the least. <a href="file.html">[Read more...]</a></p>
+            </div>
+            <div class="example bad">
+                <h2 id="3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Link text found outside the context of a descriptive element</h2>
+                <p>This demonstrates the <strong>incorrect</strong> implementation where the non-unique or non-fully-descriptive text is found outside the scope of the  unique and/or fully-descriptive text. The &lt;a&gt; is a sibling of the descriptive &lt;p&gt;</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;p&gt;How should you display the parts of a form that are read-only? There are three main implementations that I have seen, and unfortunately the accessible version is the one I&rsquo;ve seen used the least.&lt;/p&gt;
 &lt;p&gt;&lt;a href="file.html"&gt;[Read more...]&lt;/a&gt;&lt;/p&gt;</pre>
-            <h3>Implementation</h3>
-            <p>How should you display the parts of a form that are read-only? There are
-                three main implementations that I have seen, and unfortunately the accessible
-                version is the one I’ve seen used the least.</p>
-            <p><a href="file.html">[Read more...]</a></p>
-        </div>
+                <h3>Implementation</h3>
+                <p>How should you display the parts of a form that are read-only? There are
+                    three main implementations that I have seen, and unfortunately the accessible
+                    version is the one I’ve seen used the least.</p>
+                <p><a href="file.html">[Read more...]</a></p>
+            </div>
 
-        <h2 id="heading">Link as a Child of a Unique Heading</h2>
-        <div class="example good"> 
-            <h3><span class="first-word">Principle: </span>Link text paired with the text of the immediately preceding heading, forming a uniquely identifiable context.</h3>
-            <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent heading. This allows the unique function of the link to be determined.</p>
-            <h3>Source Code</h3>
-            <pre>&lt;h5&gt;Annual Report 2007-2008&lt;/h5&gt;
+
+            <div class="example good"> 
+                <h2 id="4"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Link text paired with the text of the immediately preceding heading, forming a uniquely identifiable context.</h2>
+                <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent heading. This allows the unique function of the link to be determined.</p>
+                <h3>Source Code</h3>
+                <pre>&lt;h5&gt;Annual Report 2007-2008&lt;/h5&gt;
   &lt;p&gt;
     &lt;a href=&quot;annrep0708.html&quot;&gt;(HTML)&lt;/a&gt;&amp;nbsp;
     &lt;a href=&quot;annrep0708.pdf&quot;&gt;(PDF)&lt;/a&gt;&amp;nbsp;
@@ -145,28 +153,27 @@ top:auto;
     &lt;a href=&quot;annrep0607.pdf&quot;&gt;(PDF)&lt;/a&gt;&amp;nbsp;
     &lt;a href=&quot;annrep0607.rtf&quot;&gt;(RTF)&lt;/a&gt;
   &lt;/p&gt;</pre>
-            <h3>Implementation</h3>
-            <h5>Annual Report 2007-2008</h5>
-            <p>
-                <a href="annrep0708.html">(HTML)</a>&nbsp;
-                <a href="annrep0708.pdf">(PDF)</a>&nbsp;
-                <a href="annrep0708.rtf">(RTF)</a>
-            </p>
+                <h3>Implementation</h3>
+                <h5>Annual Report 2007-2008</h5>
+                <p>
+                    <a href="annrep0708.html">(HTML)</a>&nbsp;
+                    <a href="annrep0708.pdf">(PDF)</a>&nbsp;
+                    <a href="annrep0708.rtf">(RTF)</a>
+                </p>
 
-            <h5>Annual Report 2006-2007</h5>
-            <p> 
-                <a href="annrep0607.html">(HTML)</a>&nbsp;
-                <a href="annrep0607.pdf">(PDF)</a>&nbsp;
-                <a href="annrep0607.rtf">(RTF)</a>
-            </p>
-        </div> 
-        
-        <h2 id="list">Link as a Child of a Unique List Item</h2>
-<div class="example good"> 
-        <h3><span class="first-word">Principle: </span>Link text paired with the text of the immediately preceeding parent list item, forming a uniquely identifiable context.</h3>
-            <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent list item. This allows the unique function of this link to be determined.</p>
-        <h3>Source Code</h3>
-        <pre class="code">&lt;ul&gt;
+                <h5>Annual Report 2006-2007</h5>
+                <p> 
+                    <a href="annrep0607.html">(HTML)</a>&nbsp;
+                    <a href="annrep0607.pdf">(PDF)</a>&nbsp;
+                    <a href="annrep0607.rtf">(RTF)</a>
+                </p>
+            </div> 
+
+            <div class="example good"> 
+                <h2 id="5"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Link text paired with the text of the immediately preceeding parent list item, forming a uniquely identifiable context.</h2>
+                <p>This demonstrates the <strong>correct</strong> implementation where the link text is paired with the unique text of the immediate parent list item. This allows the unique function of this link to be determined.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;ul&gt;
   &lt;li&gt;Annual Report 2005-2006
   &lt;ul&gt;
     &lt;li&gt;&lt;a  href=&quot;annrep0506.html&quot;&gt;(HTML)&lt;/a&gt;&lt;/li&gt;
@@ -182,24 +189,24 @@ top:auto;
   &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
-<h3>Implementation</h3>
-<ul>
-  <li>Annual Report 2005-2006
-  <ul>
-    <li><a  href="annrep0506.html">(HTML)</a></li>
-    <li><a  href="annrep0506.pdf">(PDF)</a></li>
-    <li><a  href="annrep0506.rtf">(RTF)</a></li>
-  </ul>
-  </li>
-  <li>Annual Report 2006-2007
-  <ul>
-    <li><a  href="annrep0607.html">(HTML)</a></li>
-    <li><a  href="annrep0607.pdf">(PDF)</a></li>
-    <li><a  href="annrep0607.rtf">(RTF)</a></li>
-  </ul>
-  </li>
-  </ul>
-</div>
+                <h3>Implementation</h3>
+                <ul>
+                    <li>Annual Report 2005-2006
+                        <ul>
+                            <li><a  href="annrep0506.html">(HTML)</a></li>
+                            <li><a  href="annrep0506.pdf">(PDF)</a></li>
+                            <li><a  href="annrep0506.rtf">(RTF)</a></li>
+                        </ul>
+                    </li>
+                    <li>Annual Report 2006-2007
+                        <ul>
+                            <li><a  href="annrep0607.html">(HTML)</a></li>
+                            <li><a  href="annrep0607.pdf">(PDF)</a></li>
+                            <li><a  href="annrep0607.rtf">(RTF)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-    </div></body>
+        </div></body>
 </html>

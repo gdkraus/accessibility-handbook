@@ -5,9 +5,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>ARIA Landmarks</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -67,51 +78,44 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/headings.html"><img src="images/left-arrow.png" alt="previous" />Headings</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/lists.html">Lists<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-<nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
-                <h2 id="page-contents-heading">Page Contents</h2>
-                <ul>
-                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                </ul>
-            </nav>
-        <p>ARIA landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region. The possible landmarks are as follows.</p>
-        <ul>
-            <li><strong>banner</strong> = contains the site-oriented content of each page, like the logo, usually located at the top of the page. There should only be one banner landmark per page.</li>
-            <li><strong>complementary</strong> = a section of content that complements the main content but also retains its meaning when separated from the main content</li>
-            <li><strong>contentinfo</strong> = contains content usually found in the footer of a page, like copyright and privacy statements. There should only be one contentinfo landmark per page.</li>
-            <li><strong>form</strong> = contains form input elements which can be edited and submitted by the user</li>
-            <li><strong>main</strong> = the main content of the page. There should only be one main landmark per page.</li>
-            <li><strong>navigation</strong> = a collection of navigation links to navigate the site or page</li>
-            <li><strong>search</strong> = a search tool</li>
-            <li><strong>application</strong> = represents a unique software unit, and keyboard commands are handled by the application rather than the browser itself. This role should be used sparingly.</li>
-        </ul>
-        <p>When you define parts of your page with these roles, it allows screen reader user the ability to easily jump from one section to another and know where they are going. For example, we often code our main menu like the following.</p>
-        <pre class="code">&lt;div id=&quot;nav&quot;&gt;
+
+            <p>ARIA landmarks are attributes you can add to elements in your page to define areas like the main content or a navigation region. The possible landmarks are as follows.</p>
+            <ul>
+                <li><strong>banner</strong> = contains the site-oriented content of each page, like the logo, usually located at the top of the page. There should only be one banner landmark per page.</li>
+                <li><strong>complementary</strong> = a section of content that complements the main content but also retains its meaning when separated from the main content</li>
+                <li><strong>contentinfo</strong> = contains content usually found in the footer of a page, like copyright and privacy statements. There should only be one contentinfo landmark per page.</li>
+                <li><strong>form</strong> = contains form input elements which can be edited and submitted by the user</li>
+                <li><strong>main</strong> = the main content of the page. There should only be one main landmark per page.</li>
+                <li><strong>navigation</strong> = a collection of navigation links to navigate the site or page</li>
+                <li><strong>search</strong> = a search tool</li>
+                <li><strong>application</strong> = represents a unique software unit, and keyboard commands are handled by the application rather than the browser itself. This role should be used sparingly.</li>
+            </ul>
+            <p>When you define parts of your page with these roles, it allows screen reader user the ability to easily jump from one section to another and know where they are going. For example, we often code our main menu like the following.</p>
+            <pre class="code">&lt;div id=&quot;nav&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;Home&lt;/li&gt;
     &lt;li&gt;Products&lt;/li&gt;
     &lt;li&gt;Support&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-        <p>When screen reader users encounter something like this they will hear a collection of links and have to intuit from the context that it is the main menu. Perhaps if they hear it read near the top of the page they can guess it is the main navigation for the page. However, with ARIA landmarks we can provide semantic information about the navigation area. By adding the attribute role=”navigation” to the containing &lt;div&gt;, we are marking this as a navigation region.</p>
-        <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot;&gt;
+            <p>When screen reader users encounter something like this they will hear a collection of links and have to intuit from the context that it is the main menu. Perhaps if they hear it read near the top of the page they can guess it is the main navigation for the page. However, with ARIA landmarks we can provide semantic information about the navigation area. By adding the attribute role=”navigation” to the containing &lt;div&gt;, we are marking this as a navigation region.</p>
+            <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;Home&lt;/li&gt;
     &lt;li&gt;Products&lt;/li&gt;
     &lt;li&gt;Support&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-        <p>In this case the screen reader user will hear something like &quot;navigation landmark.&quot;</p>
-        <p class="tip"><strong>You should not place the &quot;role&quot; attribute on another element that already has semantic meaning, like a &lt;ul&gt;. It should only be placed on &lt;div&gt; and &lt;span&gt; elements.</strong> While the specification allows you to place the &quot;role&quot; attribute on other types of elements, poor screen reader support necessitates placing the role attribute on an element with out semantic meaning. If you place the &quot;role&quot; attribute on something like a &lt;ul&gt;, most screen readers will override the element's native role with the specified one. NVDA is the only screen reader at the time of testing that implements this functionality correctly.</p>
-        <h2>aria-label</h2>
-        <p>We can take this a step further and describe this navigation region using the aria-label attribute. aria-label is a description that is never displayed on screen but is relayed to the screen reader user. This can be very helpful if you have multiple navigation areas within a single page.</p>
-        <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-label=&quot;main navigation&quot;&gt;
+            <p>In this case the screen reader user will hear something like &quot;navigation landmark.&quot;</p>
+            <p class="tip"><strong>You should not place the &quot;role&quot; attribute on another element that already has semantic meaning, like a &lt;ul&gt;. It should only be placed on &lt;div&gt; and &lt;span&gt; elements.</strong> While the specification allows you to place the &quot;role&quot; attribute on other types of elements, poor screen reader support necessitates placing the role attribute on an element with out semantic meaning. If you place the &quot;role&quot; attribute on something like a &lt;ul&gt;, most screen readers will override the element's native role with the specified one. NVDA is the only screen reader at the time of testing that implements this functionality correctly.</p>
+            <h2>aria-label</h2>
+            <p>We can take this a step further and describe this navigation region using the aria-label attribute. aria-label is a description that is never displayed on screen but is relayed to the screen reader user. This can be very helpful if you have multiple navigation areas within a single page.</p>
+            <pre class="code">&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-label=&quot;main navigation&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;Home&lt;/li&gt;
     &lt;li&gt;Products&lt;/li&gt;
@@ -126,10 +130,10 @@
     &lt;li&gt;Customer Reviews&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-        <p>In this case the screen reader user will hear something like &quot;navigation landmark, main navigation&quot;, then &quot;navigation landmark, product navigation&quot;</p>
-        <h2>aria-labelledby</h2>
-        <p>Another option for labeling an ARIA landmark is to use the aria-labelledby attribute. The aria-labelledby attribute is used when a particular landmark can be labelled by another on-screen element. You just list the id for the item that labels that landmark.</p>
-        <pre class="code">&lt;div role=&quot;navigation&quot; aria-labelledby=&quot;nav-heading&quot;&gt;
+            <p>In this case the screen reader user will hear something like &quot;navigation landmark, main navigation&quot;, then &quot;navigation landmark, product navigation&quot;</p>
+            <h2>aria-labelledby</h2>
+            <p>Another option for labeling an ARIA landmark is to use the aria-labelledby attribute. The aria-labelledby attribute is used when a particular landmark can be labelled by another on-screen element. You just list the id for the item that labels that landmark.</p>
+            <pre class="code">&lt;div role=&quot;navigation&quot; aria-labelledby=&quot;nav-heading&quot;&gt;
   &lt;h2 id=&quot;nav-heading&quot;&gt;Learn About This Product&lt;/h2&gt;
   &lt;ul&gt;
     &lt;li&gt;Product Description&lt;/li&gt;
@@ -137,10 +141,10 @@
     &lt;li&gt;Customer Reviews&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-        <p>In this case the screen reader user will hear something like &quot;navigation landmark, learn about this product.&quot;</p>
-        <h2>Full Implementation of ARIA Landmarks</h2>
-        <p>This demonstrates a simple Web page with most of the ARIA landmarks implemented. The application landmark is not demonstrated because it is used in specialized situations.</p>
-        <pre class="code">&lt;div role=&quot;banner&quot;&gt;banner&lt;/div&gt;
+            <p>In this case the screen reader user will hear something like &quot;navigation landmark, learn about this product.&quot;</p>
+            <h2>Full Implementation of ARIA Landmarks</h2>
+            <p>This demonstrates a simple Web page with most of the ARIA landmarks implemented. The application landmark is not demonstrated because it is used in specialized situations.</p>
+            <pre class="code">&lt;div role=&quot;banner&quot;&gt;banner&lt;/div&gt;
 &lt;div id=&quot;left-column&quot;&gt;
   &lt;div role=&quot;navigation&quot;&gt;
     &lt;ul&gt;
@@ -180,60 +184,60 @@
   &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Legal&lt;/a&gt;&lt;/p&gt;
   &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</pre>
-        <h2>ARIA and HTML5</h2>
-        <p>HTML5 introduces many new elements, several of which correspond to, or at least are similar to the ARIA attributes. Do you still need to use ARIA attributes like &quot;navigation&quot; if you use the if you use the &lt;nav&gt; element? At this point the browser and screen reader support is not strong enough to depend on only the HTML5 semantics to convey the meaning, so you should still use ARIA attributes in HTML5, even when the HTML5 element could potentially convey the same meaning.</p>
-        <pre class="code">&lt;nav role=&quot;navigation&quot;&gt;&lt;/nav&gt;</pre>
-        <p>The following table shows how ARIA landmarks should be applied to HTML5 Elements</p>
-        <table>
-            <caption>ARIA landmarks and their corresponding HTML5 elements</caption>
-            <thead>
-                <tr>
-                    <th scope="col">ARIA Landmark</th>
-                    <th scope="col">HTML5 Element</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>banner</td>
-                    <td>&lt;header&gt;</td>
-                </tr>
-                <tr>
-                    <td>complementary</td>
-                    <td>&lt;aside&gt;</td>
-                </tr>
-                <tr>
-                    <td>contentinfo</td>
-                    <td>generic &lt;div&gt; acting as the footer</td>
-                </tr>
-                <tr>
-                    <td>form</td>
-                    <td>&lt;form&gt; or generic &lt;div&gt;</td>
-                </tr>
-                <tr>
-                    <td>main</td>
-                    <td>&lt;main&gt;</td>
-                </tr>
-                <tr>
-                    <td>navigation</td>
-                    <td>&lt;nav&gt;</td>
-                </tr>
-                <tr>
-                    <td>search</td>
-                    <td>&lt;form&gt; or generic &lt;div&gt;</td>
-                </tr>
-                <tr>
-                    <td>application</td>
-                    <td>generic &lt;div&gt;</td>
-                </tr>
-            </tbody>
-        </table>
-        <div>
-            <h2>Further Reading</h2>
-            <ul>
-                <li><a href="http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013#table1/">Using WAI-ARIA Landmarks – 2013 from the Paciello Group</a></li>
-                <li><a href="http://www.html5accessibility.com/">HTML5 Accessibility</a></li>
-            </ul>
-        </div>
+            <h2>ARIA and HTML5</h2>
+            <p>HTML5 introduces many new elements, several of which correspond to, or at least are similar to the ARIA attributes. Do you still need to use ARIA attributes like &quot;navigation&quot; if you use the if you use the &lt;nav&gt; element? At this point the browser and screen reader support is not strong enough to depend on only the HTML5 semantics to convey the meaning, so you should still use ARIA attributes in HTML5, even when the HTML5 element could potentially convey the same meaning.</p>
+            <pre class="code">&lt;nav role=&quot;navigation&quot;&gt;&lt;/nav&gt;</pre>
+            <p>The following table shows how ARIA landmarks should be applied to HTML5 Elements</p>
+            <table>
+                <caption>ARIA landmarks and their corresponding HTML5 elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">ARIA Landmark</th>
+                        <th scope="col">HTML5 Element</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>banner</td>
+                        <td>&lt;header&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>complementary</td>
+                        <td>&lt;aside&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>contentinfo</td>
+                        <td>generic &lt;div&gt; acting as the footer</td>
+                    </tr>
+                    <tr>
+                        <td>form</td>
+                        <td>&lt;form&gt; or generic &lt;div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>main</td>
+                        <td>&lt;main&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>navigation</td>
+                        <td>&lt;nav&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td>&lt;form&gt; or generic &lt;div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>application</td>
+                        <td>generic &lt;div&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <h2>Further Reading</h2>
+                <ul>
+                    <li><a href="http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013#table1/">Using WAI-ARIA Landmarks – 2013 from the Paciello Group</a></li>
+                    <li><a href="http://www.html5accessibility.com/">HTML5 Accessibility</a></li>
+                </ul>
+            </div>
 
-    </div></body>
+        </div></body>
 </html>

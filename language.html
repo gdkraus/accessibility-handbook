@@ -5,9 +5,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Define the Language of the Document</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -67,39 +78,42 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/basics-overview.html"><img src="images/left-arrow.png" alt="previous" />Basics Overview</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html">Valid Code<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-        <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
-            <h2 id="page-contents-heading">Page Contents</h2>
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+                <h2 id="page-contents-heading">Page Contents</h2>
+                <ul>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Defining the language for an HTML5 or HTML 4 document</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Defining the language for an XHTML document</a></li>
+                    <li><a href="#3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Defining multiple languages within a document with one predominant language</a></li>
+                    <li><a href="#4"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Defining multiple languages within a document with the quantity of each language being roughly equally</a></li>
+                    <li><a href="#5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Not defining the language of the document</a></li>
+                    <li><a href="#6"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Simply defining the language of the doctype</a></li>
+                </ul>
+            </nav>
+            <p>Defining the language of the document allows the following.</p>
             <ul>
-                <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                <li><a href="#2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+                <li>Text-to-speech engines, like screen readers, know how to read the text</li>
+                <li>Spell checkers know what language to use</li>
+                <li>Text styling</li>
             </ul>
-        </nav>
-        <p>Defining the language of the document allows the following.</p>
-        <ul>
-            <li>Text-to-speech engines, like screen readers, know how to read the text</li>
-            <li>Spell checkers know what language to use</li>
-            <li>Text styling</li>
-        </ul>
-        <div class="example good">
-            <h2><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an HTML5 or HTML 4 document</h2>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;html lang=&quot;en-US&quot;&gt;</pre>
-        </div>
-        <div class="example good">
-            <h2><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an XHTML document</h2>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;html lang=&quot;en&quot; xml:lang=&quot;en&quot; xmlns= &quot;http://www.w3.org/1999/xhtml&quot;&gt;</pre>
-        </div>
-        <h2>Correct Implementation</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with one predominant language</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;!doctype html&gt;
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an HTML5 or HTML 4 document</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;html lang=&quot;en-US&quot;&gt;</pre>
+            </div>
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining the language for an XHTML document</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;html lang=&quot;en&quot; xml:lang=&quot;en&quot; xmlns= &quot;http://www.w3.org/1999/xhtml&quot;&gt;</pre>
+            </div>
+            <div class="example good">
+                <h2 id="3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining multiple languages within a document with one predominant language</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;!doctype html&gt;
 &lt;html lang=&quot;en-US&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -111,12 +125,11 @@
     &lt;p lang=&quot;fr&quot;&gt;Une petite quantité de texte en français...&lt;/p&gt;
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </div>
-        <h2>Correct Implementation</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> Defining multiple languages within a document with the quantity of each language being roughly equally</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;!doctype html&gt;
+            </div>
+            <div class="example good">
+                <h2 id="4"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Defining multiple languages within a document with the quantity of each language being roughly equally</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -133,13 +146,12 @@
     &lt;/div&gt; 
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </div>
-        <h2>Incorrect Implementation</h2>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> Not defining the language of the document.</h3>
-            <p>If you do not define the language of the page, the user agent will default to using its own default language setting for rendering the page. If both the page and the user agent are in the same language everything will work fine, however, if for instance the user agent is set up for English and the page is in French, a user agent such as a screen reader will attempt to speak the French text like a bad American tourist.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;!doctype html&gt;
+            </div>
+            <div class="example bad">
+                <h2 id="5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Not defining the language of the document.</h2>
+                <p>If you do not define the language of the page, the user agent will default to using its own default language setting for rendering the page. If both the page and the user agent are in the same language everything will work fine, however, if for instance the user agent is set up for English and the page is in French, a user agent such as a screen reader will attempt to speak the French text like a bad American tourist.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;!doctype html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -151,16 +163,15 @@
     &lt;p&gt;Une petite quantité de texte en français...&lt;/p&gt;
   &lt;/body&gt; 
 &lt;/html&gt;</pre>
-        </div>      
-        <h2>Incorrect Implementation</h2>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> Simply defining the language of the doctype.</h3>
-            <p>Defining the language in the doctype declaration simply defines the language of the doctype schema, not the language of the page itself. You must also define the language of the page using one of the previous techniques.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</pre>
-        </div>
+            </div>      
+            <div class="example bad">
+                <h2 id="6"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Simply defining the language of the doctype.</h2>
+                <p>Defining the language in the doctype declaration simply defines the language of the doctype schema, not the language of the page itself. You must also define the language of the page using one of the previous techniques.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</pre>
+            </div>
 
-        <h2>Further Reading</h2>
-        <p>For more information, please refer to the <a href="http://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479">W3C documentation on specifying languages</a>, from which these examples were created.</p>
-    </div></body>
+            <h2>Further Reading</h2>
+            <p>For more information, please refer to the <a href="http://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479">W3C documentation on specifying languages</a>, from which these examples were created.</p>
+        </div></body>
 </html>

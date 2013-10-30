@@ -5,9 +5,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width">         <link href="css/training.css" rel="stylesheet" type="text/css">
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>All links must contain either text or an image with alt text</h1>
-                <nav>
+        <nav>
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>                 <select id="toc-menu">
                     <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/">Table of Contents</option>
@@ -67,62 +78,62 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-new-window.html"><img src="images/left-arrow.png" alt="previous" />Links Opening in New Windows</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/link-internal.html">Internal Links<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-<nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
                 <h2 id="page-contents-heading">Page Contents</h2>
                 <ul>
-                    <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
-                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique"></a></li>
-                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique"></a></li>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">A plain text link</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">A linked image with appropriate alt text</a></li>
+                    <li><a href="#3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">A linked image with no text and an empty alt attribute.</a></li>
+                    <li><a href="#4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">A linked image with no text and a missing alt attribute</a></li>
+                    <li><a href="#5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">A linked image with no text, a missing alt attribute, but using the title attribute to convey the description of the image</a></li>
                 </ul>
             </nav>
-        <p>In order for a link to be readable by screen reader users links must all contain either plain text, or in the case of a linked image, alt text describing where the link goes. If the linked image contains text, a good general rule is to make the alt text the same, or similar to the text in the image.</p>
-        <h2>Correct Implementations</h2>
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> A plain text link.</h3>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href="#"&gt;Get Help&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#">Get Help</a></p>
-        </div>
+            <p>In order for a link to be readable by screen reader users links must all contain either plain text, or in the case of a linked image, alt text describing where the link goes. If the linked image contains text, a good general rule is to make the alt text the same, or similar to the text in the image.</p>
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />A plain text link.</h2>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="#"&gt;Get Help&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#">Get Help</a></p>
+            </div>
 
-        <div class="example good">
-            <h3><span class="first-word">Principle:</span> A linked image with appropriate alt text.</h3>
-            <p>In this case, screen readers will announce the alt attribute to the user.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" alt="Get Help">&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#"><img src="images/get-help.jpg" alt="Get Help"></a></p>
-        </div>
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />A linked image with appropriate alt text.</h2>
+                <p>In this case, screen readers will announce the alt attribute to the user.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" alt="Get Help">&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#"><img src="images/get-help.jpg" alt="Get Help"></a></p>
+            </div>
 
-        <h2>Incorrect Implementations</h2>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> A linked image with no text and an empty alt attribute.</h3>
-            <p>In this case screen reader users will know the function of this link.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" alt=""&gt;&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#"><img src="images/get-help.jpg" alt=""></a></p>
-        </div>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> A linked image with no text and a missing alt attribute. </h3>
-            <p>In this case screen reader users will know the function of this link.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg">&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#"><img src="images/get-help.jpg"></a></p>
-        </div>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> A linked image with no text, a missing alt attribute, but using the title attribute to convey the description of the image. </h3>
-            <p>Screen reader support for reading the title attribute for descriptions of images is inconsistent and should not be relied upon as the sole means to convey important information. However, it is alright to use the title attribute in conjunction with an alt attribute.</p>
-            <h3>Source Code</h3>
-            <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" title="Get Help">&lt;/a&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="implementation"><a href="#" title="Get Help"><img src="images/get-help.jpg"></a></p>
-        </div>
-    </div></body>
+            <div class="example bad">
+                <h2 id="3"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />A linked image with no text and an empty alt attribute.</h2>
+                <p>In this case screen reader users will know the function of this link.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" alt=""&gt;&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#"><img src="images/get-help.jpg" alt=""></a></p>
+            </div>
+            <div class="example bad">
+                <h2 id="4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />A linked image with no text and a missing alt attribute. </h2>
+                <p>In this case screen reader users will know the function of this link.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg">&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#"><img src="images/get-help.jpg"></a></p>
+            </div>
+            <div class="example bad">
+                <h2 id="5"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />A linked image with no text, a missing alt attribute, but using the title attribute to convey the description of the image. </h2>
+                <p>Screen reader support for reading the title attribute for descriptions of images is inconsistent and should not be relied upon as the sole means to convey important information. However, it is alright to use the title attribute in conjunction with an alt attribute.</p>
+                <h3>Source Code</h3>
+                <pre class="code">&lt;a href="#"&gt;&lt;img src="images/get-help.jpg" title="Get Help">&lt;/a&gt;</pre>
+                <h3>Implementation</h3>
+                <p class="implementation"><a href="#" title="Get Help"><img src="images/get-help.jpg"></a></p>
+            </div>
+        </div></body>
 </html>

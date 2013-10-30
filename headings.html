@@ -8,10 +8,21 @@
 
         <style> .really-big {font-size:1.4em; font-weight:bold;color:#000;margin:0;} .big {font-size:1.2em; font-weight:bold;color:#222;margin:0 2em;} .a-little-bigger {font-size:1em; font-weight:bold;color:#444;margin:0 4em;} </style>
     </head>
-    <body><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-40224544-1', 'ncsu.edu');   ga('send', 'pageview');  </script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
+    <body><script>   (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40224544-1', 'ncsu.edu');
+        ga('send', 'pageview');</script><a href="#main" title="Skip to main content" class="skip-main">Skip To Main Content</a>
         <h1>Headings</h1>
         <nav>
-            
+
             <p class="toc">
                 <label for="toc-menu" class="screen-reader">Table of Contents Menu</label>
                 <select id="toc-menu">
@@ -72,23 +83,25 @@
                         <option value="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/testing-tools.html">Appendix A - Testing Tools</option>
                     </optgroup>
                 </select>
-                <input id="go-button" type="button" value="GO" onclick="location= document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
+                <input id="go-button" type="button" value="GO" onclick="location = document.getElementById('toc-menu').options[ document.getElementById('toc-menu').selectedIndex].value;">
             </p>
             <p class="prev"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/valid-code.html"><img src="images/left-arrow.png" alt="previous" />Valid Code</a></p>
             <p class="next"><a href="http://accessibility.oit.ncsu.edu/training/accessibility-handbook/aria-landmarks.html">ARIA Landmarks<img src="images/right-arrow.png" alt="next" /></a></p>
         </nav><div id="main" role="main">
-                <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
-            <h2 id="page-contents-heading">Page Contents</h2>
-            <ul>
-                <li><a href="#1"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Use CSS to style the headings</a></li>
-                <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Use headings to define the page structure</a></li>
-            </ul>
-        </nav>
+            <nav id="page-contents" role="navigation" aria-labelledby="page-contents-heading">
+                <h2 id="page-contents-heading">Page Contents</h2>
+                <ul>
+                    <li><a href="#1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Use headings to define the page structure</a></li>
+                    <li><a href="#2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">Use CSS to style the headings</a></li>
+                    <li><a href="#3"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique">General Rules for Applying Headings</a></li>
+                    <li><a href="#4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique">Only using styles to denote headings</a></li>
+                </ul>
+            </nav>
             <p>The first level of structure to add to a page is headings. Headings are used to break up the content into a hierarchical structure much like an outline. Where sighted users can skim a page quickly by reading the visual headlines, a screen reader user can also skim a page by quickly traversing the headings. To semantically define headings simply use heading tags to label the beginning of each section.</p>
-        <div class="example good">
-            <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Use headings to define the page structure</h2>
-            <p>This both creates a semantic structure for your page and it allows screen reader users to be able to navigate by heading and jump from section to section.</p>
-            <pre class="code">&lt;h1&gt;Our News Site&lt;/h1&gt;
+            <div class="example good">
+                <h2 id="1"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Use headings to define the page structure</h2>
+                <p>This both creates a semantic structure for your page and it allows screen reader users to be able to navigate by heading and jump from section to section.</p>
+                <pre class="code">&lt;h1&gt;Our News Site&lt;/h1&gt;
   &lt;h2&gt;World News&lt;/h2&gt;
   &lt;h2&gt;National News&lt;/h2&gt;
     &lt;h3&gt;Hot Topics&lt;/h3&gt;
@@ -98,11 +111,11 @@
     &lt;h3&gt;Environment&lt;/h3&gt;
     &lt;h3&gt;Technology&lt;/h3&gt;
   &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
-        </div>
-        <div class="example good">
-            <h2 id="2"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Use CSS to style the headings</h2>
-            <p>If you don't like the way the default heading look, and most of us don't, just use CSS to style the headings.</p>
-            <pre class="code">&lt;style&gt;
+            </div>
+            <div class="example good">
+                <h2 id="2"><img src="images/checkmark-small.png" alt="Good Technique" title="Good Technique" />Use CSS to style the headings</h2>
+                <p>If you don't like the way the default heading look, and most of us don't, just use CSS to style the headings.</p>
+                <pre class="code">&lt;style&gt;
   h1 {font-size:1.4em; font-weight:bold; color:#000;}
   h2 {font-size:1.2em; font-weight:bold; color:#222;}
   h3 {font-size:1em; font-weight:bold; color:#444;}
@@ -118,21 +131,21 @@
     &lt;h3&gt;Environment&lt;/h3&gt;
     &lt;h3&gt;Technology&lt;/h3&gt;
   &lt;h2&gt;Entertainment&lt;/h2&gt;</pre>
-        </div>
-        <h2>General Rules for Applying Headings</h2>
-        <ul>
-            <li>Your &lt;h1&gt; should be where the unique main  content of your page begins, which usually means it will come after your navigation  system.</li>
-            <li>It is fine if your first heading on the page is not an &lt;h1&gt;, such as a having an &lt;h2&gt; come before your  first &lt;h1&gt;</li>
-            <li>You should have only 1 &lt;h1&gt; per page. If  you feel you must, you can use a second &lt;h1&gt; for the title of your page.</li>
-            <li>Don&rsquo;t obsess over making the first heading on  your page an &lt;h1&gt;.</li>
-            <li>Don&rsquo;t pick a heading level simply for font  sizing purposes. Pick a level that corresponds roughly to the outline of the  page.</li>
-            <li>It is not usually necessary to skip heading  levels, going from an &lt;h1&gt; directly to an &lt;h3&gt;.</li>
-            <li>There are always exceptions to rules. Just make  sure you are breaking the rules for a good reason.</li>
-        </ul>
-        <div class="example bad">
-            <h3><span class="first-word">Principle:</span> Only using styles to denote headings</h3>
-            <p>Do not use stylings as the only way to communicate what your headings are. This works for visual users, but screen reader users will not be able to easily divide your page into logical structures.</p>
-            <pre class="code">&lt;style&gt;
+            </div>
+            <h2 id="3">General Rules for Applying Headings</h2>
+            <ul>
+                <li>Your &lt;h1&gt; should be where the unique main  content of your page begins, which usually means it will come after your navigation  system.</li>
+                <li>It is fine if your first heading on the page is not an &lt;h1&gt;, such as a having an &lt;h2&gt; come before your  first &lt;h1&gt;</li>
+                <li>You should have only 1 &lt;h1&gt; per page. If  you feel you must, you can use a second &lt;h1&gt; for the title of your page.</li>
+                <li>Don&rsquo;t obsess over making the first heading on  your page an &lt;h1&gt;.</li>
+                <li>Don&rsquo;t pick a heading level simply for font  sizing purposes. Pick a level that corresponds roughly to the outline of the  page.</li>
+                <li>It is not usually necessary to skip heading  levels, going from an &lt;h1&gt; directly to an &lt;h3&gt;.</li>
+                <li>There are always exceptions to rules. Just make  sure you are breaking the rules for a good reason.</li>
+            </ul>
+            <div class="example bad">
+                <h2 id="4"><img src="images/x-small.png" alt="Bad Technique" title="Bad Technique" />Only using styles to denote headings</h2>
+                <p>Do not use stylings as the only way to communicate what your headings are. This works for visual users, but screen reader users will not be able to easily divide your page into logical structures.</p>
+                <pre class="code">&lt;style&gt;
   .really-big {font-size:1.4em; font-weight:bold; color:#000; margin:0;}
   .big {font-size:1.2em; font-weight:bold; color:#222; margin:0 2em;}
   .a-little-bigger {font-size:1em; font-weight:bold; color:#444; margin:0 4em;}
@@ -148,17 +161,17 @@
     &lt;p class=&quot;a-little-bigger&quot;&gt;Environment&lt;/p&gt;
     &lt;p class=&quot;a-little-bigger&quot;&gt;Technology&lt;/p&gt;
   &lt;p class=&quot;big&quot;&gt;Entertainment&lt;/p&gt;</pre>
-            <h3>Implementation</h3>
-            <p class="really-big">Our News Site</p> 
-            <p class="big">World News</p>
-            <p class="big">National News</p> 
-            <p class="a-little-bigger">Hot Topics</p>
-            <p class="a-little-bigger">Politics</p>
-            <p class="big">Science</p>
-            <p class="a-little-bigger">Health</p>
-            <p class="a-little-bigger">Environment</p>
-            <p class="a-little-bigger">Technology</p> 
-            <p class="big">Entertainment</p>
-        </div>
-    </div></body>
+                <h3>Implementation</h3>
+                <p class="really-big">Our News Site</p> 
+                <p class="big">World News</p>
+                <p class="big">National News</p> 
+                <p class="a-little-bigger">Hot Topics</p>
+                <p class="a-little-bigger">Politics</p>
+                <p class="big">Science</p>
+                <p class="a-little-bigger">Health</p>
+                <p class="a-little-bigger">Environment</p>
+                <p class="a-little-bigger">Technology</p> 
+                <p class="big">Entertainment</p>
+            </div>
+        </div></body>
 </html>
