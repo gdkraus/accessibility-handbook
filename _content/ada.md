@@ -1,0 +1,46 @@
+The ADA is currently being updated. It will most likely require all
+public and private entities to make their Web sites adhere to the
+equivalent of WCAG 2 Level AA conformance.
+
+The Americans with Disabilities Act of 1990 guarantees certain rights to
+people with disabilities in three main areas.
+
+-   Title I: Employment
+-   Title II: Public entities, including state and local government and
+    their departments and agencies
+-   Title III: Places of public accommodations and private entities
+
+Currently the ADA does not define a technical standard for determining
+if something is accessible or not. The ADA simply ensures all users can
+have equitable access. They are currently considering adopting technical
+standards equivalent to WCAG 2 Level AA conformance.
+
+Title I of the ADA ensures that people with disabilities will not be
+discriminated against in the work place and will receive accommodations
+to perform their jobs when necessary. Web accessibility comes into play
+here because if you have an employee who has a disability and must
+interact with the Web or other electronic content as part of their job,
+you as the employer must provide the level of access that the person
+needs in order to perform their job.
+
+Title II of the ADA ensures that people with disabilities will not be
+discriminated against in programs run by State and local governments. If
+you are a school or a government, the Web resources that you make
+available to participants in your program or to the general public must
+be accessible.
+
+Title III of the ADA ensures that people with disabilities will not be
+discriminated against in places of public accommodation, such as
+brick-and-mortar businesses. There are mixed rulings from different US
+Courts of Appeals as to whether a Web site constitutes a place of public
+accommodation since it does not exist as a physical space. As a result,
+in some parts of the country Title III requirements apply to private
+businesses and other places of public accommodations, and in other parts
+of the county they don’t.
+
+So does Title III apply to your part of the country? That’s the wrong
+question to ask given recent statements by Federal agencies and actions
+they are currently taking, which are outlined in the following sections.
+If you do want to know the details of the applicability of Title III to
+places of public accommodation in your state, please contact your local
+U.S. Court of Appeals or a good lawyer.

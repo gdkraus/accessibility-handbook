@@ -1,0 +1,48 @@
+To understand what "accessible" means it’s helpful to first look at a
+broader term that encompasses much of accessibility - universal design.
+
+> Universal Design is the design of products and environments to be
+> usable by all people, to the greatest extent possible, without the
+> need for adaptation or specialized design.
+>
+> Ron Mace, Center for Universal Design, NC State University
+
+Basically, universal design means that as many people as possible will
+be able to use our products without the user having to do any extra work
+or jump through any extra hoops.
+
+The history of accessibility for people with disabilities is full of
+hoop jumping and often falling flat on their faces. Special arrangements
+are constantly needing to be made in order for people with certain
+disabilities to interact with things many of us take for granted. One of
+the great promises of the Web is that through technology, people with
+disabilities can often fully engage with an environment as effectively
+as people without disabilities. The advances in assistive technologies -
+technologies people with disabilities use to compensate for their
+impairment - have made this a reality, and often no special arrangement
+has to be made to allow them to do so.
+
+When something is accessible, it means that user can interact with your
+Web page with any assistive technology they may use, such as the
+following.
+
+-   screen reading software which reads the page to the user
+-   magnification software that enlarges the screen
+-   speech recognition software that allows users to control your page
+    with voice commands
+-   alternative input devices that mimic a standard keyboard
+-   refreshable braille displays which transform the content into
+    braille
+
+In order to make all of this work careful planning must be made when
+designing electronic content. While assistive technologies have made
+significant advances, they cannot perform magic. There are standards
+defined that tell developers how things need to be created in order to
+work with assistive technologies, and they tell the assistive technology
+vendors what to expect so they can build their devices to handle the
+content.
+
+These standards are not just for people with disabilities. These are the
+same standards promoted by international organizations to help define a
+common language for Web technologies so that all of our browsers, Web
+pages, and Web applications can work together.
