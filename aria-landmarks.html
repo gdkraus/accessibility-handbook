@@ -131,6 +131,7 @@
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
             <p>In this case the screen reader user will hear something like &quot;navigation landmark, main navigation&quot;, then &quot;navigation landmark, product navigation&quot;</p>
+            <p class="tip"><strong>Not all screen reading software will read the text in the aria-label attribute to the user.</strong> Essential information should not be included in this attribute. Rather, use this attribute to provide additional navigation aids to the Web page.</p>
             <h2>aria-labelledby</h2>
             <p>Another option for labeling an ARIA landmark is to use the aria-labelledby attribute. The aria-labelledby attribute is used when a particular landmark can be labelled by another on-screen element. You just list the id for the item that labels that landmark.</p>
             <pre class="code">&lt;div role=&quot;navigation&quot; aria-labelledby=&quot;nav-heading&quot;&gt;
@@ -234,6 +235,7 @@
             <div>
                 <h2>Further Reading</h2>
                 <ul>
+                    <li><a href="http://accessibility.oit.ncsu.edu/tools/web-evaluation-tools/">Web Evaluation Tools - for checking ARIA landmarks and their labels</a></li>
                     <li><a href="http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013#table1/">Using WAI-ARIA Landmarks – 2013 from the Paciello Group</a></li>
                     <li><a href="http://www.html5accessibility.com/">HTML5 Accessibility</a></li>
                 </ul>
