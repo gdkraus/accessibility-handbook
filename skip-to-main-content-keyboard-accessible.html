@@ -41,10 +41,11 @@
             <li><a href="#">Nav Item 3</a></li>
             <li><a href="#">Nav Item 4</a></li>
         </ul>
-        <p id="main">This is the main content. In this example you will note that the &quot;Skip to main content&quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screen reader users, an easy way to skip repetitive navigation. The key components to implementing this are</p>
+        <p id="main" tabindex="-1">This is the main content. In this example you will note that the &quot;Skip to main content&quot; link appears when I tab through the page. This allows keyboard-only users, in addition to screen reader users, an easy way to skip repetitive navigation. The key components to implementing this are</p>
         <ol>
             <li>provide a link at the top of the page that says &quot;skip to main content&quot;</li>
-            <li>have it link to an internal anchor further down in the page where the main content begins.</li>
+            <li>have it link to an internal ID further down in the page where the main content begins.</li>
+            <li>put a tabindex=&quot;-1&quot; attribute on the target ID to add support for Chrome and IE</li>
             <li>use CSS :focus and :activate to make the skip link visible when the user tabs to it</li>
         </ol>
         <p>For <a href="http://accessibility.oit.ncsu.edu/blog/">more tutorials visit http://accessibility.oit.ncsu.edu/blog/</a>.</p>
